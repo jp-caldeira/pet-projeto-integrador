@@ -10,67 +10,152 @@
 </head>
 <body>
 
-       <!-- LOGIN -->
+<!--
+<header>
+      <nav class="navbar navbar-expand-lg navbar-dark" style='background-color: #03989e;'>
+          <div class='container-fluid cabecalho'>
+              <a class="navbar-brand col-2">Logo da empresa aqui</a>
+          <form class="form-inline col-8">
+              <input class="form-control col-10" type="search" placeholder="Digite aqui o que você quer encontrar (ex.: ração para gatos)">
+              <button class="btn btn-light" type="submit">Pesquisar</button>
+          </form>
+          <ul class='navbar-nav'>
+              <li class="nav-item">
+                  <a class="btn btn-light" href=#>Login</a>
+              </li>
+          </ul>
 
+      </div>
+    </nav>
+  </header> 
 
+  -->
 
+       <!-- LOGIN 
 
-      <!-- ESPAÇO PARA CADASTRO DE PESSOA -->
+<section class="container">
 
-      <section class="container first-section">
-    <form action="" method="post" enctype = "multipart/form-data">
-      <h1>Cadastre -se </h1>
-    <label for="nomeCompleto">Nome Completo</label> <br>
-    <input type="text" name="nomeCompleto" id="nomeCompleto"placeholder="Ana Maria Silva" class="form-control" >
-   
-    <br>
-    <label for="email">Email</label>
+<div class="row">
+    <div class="col-lg-offset-6 col-lg-6  col-xs-12 >
+<form action="" method="post" enctype = "multipart/form-data">
+      <h1>Entrar </h1>
+        <label for="nomeCompleto">Nome Completo</label> <br>
+        <input type="text" name="nomeCompleto" id="nomeCompleto"placeholder="Ana Maria Silva" class="form-control" > 
+        <br>
+</div>
+</div>
+
+<div class="row">
+    <div class=" col-lg-offset-6 col-lg-6 col-xs-12">
+       <label for="email">Email</label>
     <br>
     <input type="email" name="email" id="email" placeholder="nome@email.com" class="form-control">
     <br>
+    </div>
+    </div>
 
-    <label for="cpf">CPF</label> <br>
-                
-    <input type="text" name="cpf" id="cpf" 
-     \ pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" \
-     title="Digite um CPF no formato: xxx.xxx.xxx-xx" 
-     placeholder="000.000.000-00 " class="form-control" >
-                
+    <div class="row">
+   <div class=" col-lg-offset-6 col-lg-6  col-xs-12">
+        <label for="senha">Senha</label>
+        <br>
+        <input type="password" name="senha" id="senha"class="form-control">
+        <br>
+   </div>
+   </div>
+
+<div class="row"> 
+    <div class=" col-lg-offset-6 col-lg-6 col-xs-12">
+    <button type="submit"class="btn btn-success btn-lg btn-block">Entrar</button>
+</div>   
+</div>
+</form> 
+ -->
+
+ <!-- ESPAÇO PARA CADASTRO DE PESSOA -->
+
+<section class="container">
+
+<div class="row">
+    <div class="col-lg-6  col-xs-12" >
+<form action="" method="post" enctype = "multipart/form-data">
+      <h1>Cadastre-se </h1>
+        <label for="nomeCompleto">Nome Completo</label> <br>
+        <input type="text" name="nomeCompleto" id="nomeCompleto"placeholder="Ana Maria Silva" class="form-control" > 
+        <br>
+</div>
+</div>
+
+<div class="row">
+    <div class="col-lg-6 col-xs-12">
+       <label for="email">Email</label>
     <br>
+    <input type="email" name="email" id="email" placeholder="nome@email.com" class="form-control">
+    <br>
+    </div>
+    </div>
 
+<div class="row">
+  <div class="col-lg-3 col-xs-12">
+    <label for="cpf">CPF</label> <br>         
+        <input type="text" name="cpf" id="cpf" 
+        \ pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" \
+         title="Digite um CPF no formato: xxx.xxx.xxx-xx" 
+         placeholder="000.000.000-00 " class="form-control" >
+    <br>
+  </div>
+  <div class="col-lg-3 col-xs-12">
     <label for="fone">Celular</label> <br>
     <input type="fone" name="fone" id="fone" placeholder="(00)00000-0000 " class="form-control" >
     <br>
+  </div>
+</div>
 
-    <label for="genero">Genero</label>
-    <br>
-    <label for="Feminino"><input type="radio" name="genero[]" id="feminino" value="feminino" checked>Feminino</label>
-    <label for="masculino"><input type="radio" name="genero[]" id= "masculino" value="masculino">Masculino</label>
-    <label for="n/a"><input type="radio" name="genero[]" id= "n/a" value="n/a">N/A</label>
-    <br>
-    
-    <label for="senha">Crie uma Senha</label>
-    <br>
-      <input type="password" name="senha" id="senha"class="form-control">
-    <br>
+<div class="row">
+    <div class="col-lg-6 col-xs-12">
+        <select name="genero"class="form-control">
+            <option selected disabled>Genero</option>
+            <option value="feminino">Feminino</option>
+             <option value="masculino">Masculino</option>
+             <option value="n/a">N/A</option>
+        </select>
+        <br>
+    </div>
+</div>
 
-    <label for="senhacripto">Confirme sua senha</label>
+<div class="row">
+   <div class="col-lg-3  col-xs-12">
+        <label for="senha">Crie uma Senha</label>
+        <br>
+        <input type="password" name="senha" id="senha"class="form-control">
+        <br>
+   </div>
+        <div class="col-lg-3  col-xs-12">
+        <label for="senhacripto">Confirme sua senha</label>
+        <br>
+        <input type="password" name="senhacripto" class="form-control">
+        <br>
+   </div>   
+</div>
+<div class="row"> 
+    <div class="col-lg-6 col-xs-12">
+    <label for="receberPromoções"></label>
     <br>
-      <input type="password" name="senhacripto" class="form-control">
+    <label for="receberPromoções"><input type="checkbox" name="receberPromoções" id="receberPromoções" value="receberPromoções" checked>Quero receber ofertas e promoções exclusivas para meu Pet</label>
     <br>
+    </div>   
+</div>
+<div class="row"> 
+    <div class="col-lg-6 col-xs-12">
+    <button type="submit"  class="btn btn-success btn-lg btn-block">Cadastrar</button>
+</div>   
+</div>
+  </form>
 
-    
-    <button type="submit"  class="btn btn-primary">Enviar</button>
-<button type="reset" class="btn btn-default">Limpar campos</button>
+</section>
 
-    </form>
-  </section>
+
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>
-
-<?php
-
-var_dump ($_POST);
