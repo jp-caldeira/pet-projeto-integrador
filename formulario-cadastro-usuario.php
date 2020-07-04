@@ -7,38 +7,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="css\formularios.css">
 </head>
 <body>
 
 <!--
 <header>
-      <nav class="navbar navbar-expand-lg navbar-dark" style='background-color: #03989e;'>
-          <div class='container-fluid cabecalho'>
-              <a class="navbar-brand col-2">Logo da empresa aqui</a>
-          <form class="form-inline col-8">
-              <input class="form-control col-10" type="search" placeholder="Digite aqui o que você quer encontrar (ex.: ração para gatos)">
-              <button class="btn btn-light" type="submit">Pesquisar</button>
-          </form>
-          <ul class='navbar-nav'>
-              <li class="nav-item">
-                  <a class="btn btn-light" href=#>Login</a>
-              </li>
-          </ul>
-
-      </div>
-    </nav>
+     
   </header> 
 
   -->
 
-       <!-- LOGIN 
+    <!-- login -->
 
 <section class="container">
-
 <div class="row">
-    <div class="col-lg-offset-6 col-lg-6  col-xs-12 >
+    <div class="col-lg-6  col-xs-12" >
 <form action="" method="post" enctype = "multipart/form-data">
-      <h1>Entrar </h1>
+      <h1>Faça Login </h1>
         <label for="nomeCompleto">Nome Completo</label> <br>
         <input type="text" name="nomeCompleto" id="nomeCompleto"placeholder="Ana Maria Silva" class="form-control" > 
         <br>
@@ -46,7 +32,7 @@
 </div>
 
 <div class="row">
-    <div class=" col-lg-offset-6 col-lg-6 col-xs-12">
+    <div class="col-lg-6 col-xs-12">
        <label for="email">Email</label>
     <br>
     <input type="email" name="email" id="email" placeholder="nome@email.com" class="form-control">
@@ -55,7 +41,7 @@
     </div>
 
     <div class="row">
-   <div class=" col-lg-offset-6 col-lg-6  col-xs-12">
+   <div class="col-lg-6  col-xs-12">
         <label for="senha">Senha</label>
         <br>
         <input type="password" name="senha" id="senha"class="form-control">
@@ -64,17 +50,16 @@
    </div>
 
 <div class="row"> 
-    <div class=" col-lg-offset-6 col-lg-6 col-xs-12">
+    <div class="col-lg-6 col-xs-12">
     <button type="submit"class="btn btn-success btn-lg btn-block">Entrar</button>
 </div>   
 </div>
 </form> 
- -->
+ 
 
  <!-- ESPAÇO PARA CADASTRO DE PESSOA -->
 
 <section class="container">
-
 <div class="row">
     <div class="col-lg-6  col-xs-12" >
 <form action="" method="post" enctype = "multipart/form-data">
@@ -157,5 +142,13 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!--
+<footer>
+     
+</footer> 
+
+  -->
+
+
 </body>
 </html>
