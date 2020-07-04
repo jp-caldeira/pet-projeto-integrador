@@ -10,13 +10,16 @@
 </head>
 <body>
 
+       <!-- LOGIN -->
 
-<section class="container first-section">
-    <form action="" method="post" enctype = "multipart/form-data">
+
+
 
       <!-- ESPAÇO PARA CADASTRO DE PESSOA -->
 
-      <h1>Cadastro de Usuário</h1>
+      <section class="container first-section">
+    <form action="" method="post" enctype = "multipart/form-data">
+      <h1>Cadastre -se </h1>
     <label for="nomeCompleto">Nome Completo</label> <br>
     <input type="text" name="nomeCompleto" id="nomeCompleto"placeholder="Ana Maria Silva" class="form-control" >
    
@@ -27,16 +30,23 @@
     <br>
 
     <label for="cpf">CPF</label> <br>
-    <input type="" name="" id="" placeholder="000.000.000-00 " class="" >
+                
+    <input type="text" name="cpf" id="cpf" 
+     \ pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" \
+     title="Digite um CPF no formato: xxx.xxx.xxx-xx" 
+     placeholder="000.000.000-00 " class="form-control" >
+                
+    <br>
 
-    <label for="celular">Celular</label> <br>
-    <input type="" name="" id="" placeholder="(00)00000-0000 " class="" >
+    <label for="fone">Celular</label> <br>
+    <input type="fone" name="fone" id="fone" placeholder="(00)00000-0000 " class="form-control" >
+    <br>
 
     <label for="genero">Genero</label>
     <br>
-    <label for="Feminino"><input type="radio" name="genero" id="feminino" value="feminino" checked>Feminino</label>
-    <label for="masculino"><input type="radio" name="genero" id= "masculino" value="masculino">Masculino</label>
-    <label for="n/a"><input type="radio" name="genero" id= "n/a" value="n/a">N/A</label>
+    <label for="Feminino"><input type="radio" name="genero[]" id="feminino" value="feminino" checked>Feminino</label>
+    <label for="masculino"><input type="radio" name="genero[]" id= "masculino" value="masculino">Masculino</label>
+    <label for="n/a"><input type="radio" name="genero[]" id= "n/a" value="n/a">N/A</label>
     <br>
     
     <label for="senha">Crie uma Senha</label>
@@ -60,4 +70,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>
+
 <?php
+
+var_dump ($_POST);
