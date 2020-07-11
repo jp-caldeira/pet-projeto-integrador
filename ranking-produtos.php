@@ -53,31 +53,28 @@ $produtos = [
 <body>
   <header>
       <nav class="navbar navbar-expand-lg navbar-dark" style='background-color: #03989e;'>
-          <div class='container-fluid cabecalho'>
-              <a class="navbar-brand col-2">Logo da empresa aqui</a>
-          <form class="form-inline col-8">
-              <input class="form-control col-10" type="search" placeholder="Digite aqui o que você quer encontrar (ex.: ração para gatos)">
-              <button class="btn btn-light" type="submit">Pesquisar</button>
+          <div class='container-fluid cabecalho row'>
+              <a class="navbar-brand col-2">Logo empresa</a>
+          <form class="barra-pesquisa form-inline col-8">
+              <input class="form-control col-lg-8 col-sm-6 ml-lg-0 mr-1 ml-sm-5" type="search" placeholder="Digite aqui o que você quer encontrar (ex.: ração para gatos)">
+              <button class="btn btn-light col-2 col-sm-3" type="submit">Pesquisar</button>
           </form>
-          <ul class='navbar-nav'>
-              <li class="nav-item">
-                  <a class="btn btn-light" href=#>Login</a>
-              </li>
-          </ul>
-
+              <a class="btn btn-dark" href=#>Login</a>
       </div>
     </nav>
   </header>
+
+
 <div class="site-content">
         <div class="container titulo-principal">
             <h1 class="display-4">Ranking de Produtos</h1>
         </div>
         <div class="produtos">
             <div class="row">
-              <div class="col-lg-10 offset-lg-2">
+              <div class="col-lg-10 offset-lg-1">
                 <div class="row">
         <?php foreach($produtos as $produto){?>
-                  <div class="col-lg-5">
+                  <div class="col-lg-6">
                         <img src=<?=$produto['imagem']?> class="img-fluid" alt="produto">
                         <h4><a href="#"><?=$produto['nome']?></a></h4>
                         <p><?=$produto['descrição']?></p>
@@ -94,15 +91,15 @@ $produtos = [
 </div>
       <div class="site-footer">
             <nav class='navbar navbar-expand-lg'>
-                <a class="navbar-brand col-2">Logo da empresa aqui</a>
-              <ul class='navbar-nav offset-lg-7'>
-                  <li class="nav-link" href="#">
+                <a class="navbar-brand col-lg-2">Logo da empresa aqui</a>
+              <ul class='navbar-nav offset-lg-6 col-lg-4'>
+                  <li class="nav-link mx-2" href="#">
                       Quem Somos
                   </li>
-                  <li class="nav-link" href="#">
+                  <li class="nav-link mx-2" href="#">
                       Contato
                   </li>
-                  <li class="nav-link" href='#'>
+                  <li class="nav-link mx-2" href='#'>
                       Cadastre-se
                   </li>
               </ul>

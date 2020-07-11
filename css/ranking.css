@@ -9,25 +9,43 @@ body {
 }
 
 .site-content{
-  margin: 10px;
+  margin: 1rem;
 }
 
 
 .titulo-principal {
   text-align: center;
   max-height: 4.5rem;
-  margin-top: 30px;
+  margin-top: 2rem;
 
 }
 
 .produtos {
   text-align: center;
-  /* background-color: green; */
-  margin: 10px;
-  padding: 85px;
+  margin: 2rem;
+  padding: 3rem;
 }
 
 .site-footer {
     background-color: #6666;
     padding: 2.5rem;
+}
+
+@media(max-width: 600px){
+.barra-pesquisa{display: none;}
+}
+
+@media(max-width: 996px){
+  .produtos {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .titulo-principal {
+    text-align: center;
+    max-height: 3.5rem;
+    margin-top: 1.2rem;
+
+  }
+
 }
