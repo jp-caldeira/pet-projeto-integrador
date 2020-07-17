@@ -31,8 +31,17 @@ body {
     padding: 2.5rem;
 }
 
-@media(max-width: 600px){
-.barra-pesquisa{display: none;}
+@media (max-width: 601px){
+  .barra-1 {display:none;}
+  .titulo-principal {
+    max-height: 6.5rem;
+  }
+
+  }
+
+@media(min-width:600px){
+  .barra-2 {display:none;}
+
 }
 
 @media(max-width: 996px){
@@ -43,9 +52,7 @@ body {
 
   .titulo-principal {
     text-align: center;
-    max-height: 3.5rem;
     margin-top: 1.2rem;
 
   }
-
 }
