@@ -62,29 +62,36 @@ $produtos = [
               <a class="btn btn-dark" href=#>Login</a>
       </div>
     </nav>
+
+<!-- barra tela menor -->
     <nav class="navbar navbar-expand-lg navbar-dark barra-2" style='background-color: #03989e;'>
-        <div class='container-fluid justify-content-center cabecalho row'>
-            <a class="navbar-brand">Logo empresa</a>
+        <div class='container-fluid cabecalho row'>
+            <a class="navbar-brand col-8">Logo empresa</a>
+            <a class="login-button btn btn-dark" href=#>Login</a>
         </div>
-        <div class='container-fluid justify-content-center row'>
-        <form class="barra-pesquisa form-inline">
-            <input class="form-control col-8 mx-2" type="search">
-            <button class="btn btn-light btn-sm" type="submit">Pesquisar</button>
-        </form>
-        </div>
-        <div class="container-fluid justify-content-center row">
-            <a class="btn btn-dark btn" href=#>Login</a>
+      </nav>
+      <nav class="navbar navbar-expand-lg navbar-dark barra-2" style='background-color: #03989e;'>
+        <div class="container-fluid cabecalho row">
+                <div class="col-8">
+                      <input class="form-control" type="search">
+                  </div>
+                  <div class="col">
+                    <button class="btn btn-light" type="submit">Pesquisar</button>
+                  </div>
+              </div>
         </div>
     </nav>
 
-
   </header>
+
+
+
 
 
 <div class="site-content">
         <div class="container titulo-principal">
             <h1 class="display-4">Ranking de Produtos</h1>
-        </div>        
+        </div>
         <div class="produtos">
             <div class="row">
               <div class="col-lg-10 offset-lg-1">
