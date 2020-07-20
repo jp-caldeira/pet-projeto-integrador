@@ -8,26 +8,57 @@ body {
   padding: 1.2rem;
 }
 
+
+
 .site-content{
-  margin: 10px;
+  margin: 1rem;
 }
 
 
 .titulo-principal {
   text-align: center;
   max-height: 4.5rem;
-  margin-top: 30px;
+  margin-top: 2rem;
 
 }
 
 .produtos {
   text-align: center;
-  /* background-color: green; */
-  margin: 10px;
-  padding: 85px;
+  margin: 2rem;
+  padding: 3rem;
 }
 
 .site-footer {
     background-color: #6666;
     padding: 2.5rem;
+}
+
+
+
+@media (max-width: 600px){
+  .barra-1 {display:none;}
+  .titulo-principal {max-height: 6.5rem;}
+  }
+
+   .login-button {
+    margin-left: 1rem;
+    }
+
+    .cabecalho {padding: 0.3rem;}
+
+@media(min-width:600px){
+  .barra-2 {display:none;}
+}
+
+
+@media(max-width: 996px){
+  .produtos {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .titulo-principal {
+    text-align: center;
+    margin-top: 1.2rem;
+  }
 }
