@@ -15,6 +15,7 @@
 <nav class="container-fluid">
 <div class="row">
     <div class="col-lg-12 col-xs-12">
+    
         <button class="tablinka">Compara Pet!</button>
         <button class="tablink" onclick="openPage('Adote', this, 'white')">Adote!</button>
         <button class="tablink" onclick="openPage('Cadastro', this, 'white')">Cadastro do Seu Pet</button>
@@ -131,6 +132,7 @@
             <h5>Remédios</h5>
   </div>   
   </div>
+  <img class=img src="imagem.png" alt="Gato">
 </div>
 <br>
 
