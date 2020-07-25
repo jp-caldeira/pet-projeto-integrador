@@ -21,13 +21,62 @@ section {
 }
 
 footer {
+position: relative;
+left: 0;
+bottom: 0;
+right: 0;
+
+}
+
+.container-login{
+    width: 50%;
+    float: left;
+    padding-left: 13%;
+    padding-right: 5%;
+    
+    }
+    
+.container-cadastro{
+    width: 50%;
+    float: right;
+    padding-right: 13%;
+    padding-left: 5%;
+    
+       
+}
+
+.container-itens {
+    width: 90%;
+    float: right;
+    margin-left: 10%;
+}
+
+.container-footer {
+     background-color;
+     color;
+     padding-left: 50px;
+     padding-right: 50px;
+     padding-bottom: 10px;
+    
+    
+}
+
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+float: right;
+padding: 20px;
 
 
 }
-/*.cadastro{
-position: relative;
-float: right;
-}*/
+ul li a {
+    text-decoration: none;
+    color:  rgb(3, 152, 158);
+}
 
 .tablinka {
     background-color: rgb(255, 255, 255);
@@ -41,7 +90,7 @@ float: right;
     border-radius: 3px;
     width: 200px;
     margin-top: 10px;
-    margin-left: 90px;
+    margin-left: 12%;
 }
 
 .tablink {
@@ -80,19 +129,26 @@ float: right;
     height: 410px;
 }*/
 
-p {
-    margin-left: 50px;
-    font-stretch: condensed;
-}
+ p {
+    
+} 
 
-h3,
-h4 {
+h1 {
+    font-size: 27px;
+}
+h3 {
     color: rgb(3, 152, 158);
     font-size: 27px;
     margin-top: 50px;
     margin-left: 50px;
 }
 
+h4 {
+    color: rgb(3, 152, 158);
+    font-size: 20px;
+    margin-top: 50px;
+    margin-left: 50px;
+}
 h3:hover {
     color: rgb(104, 104, 104);
     width: 150px;
@@ -139,15 +195,20 @@ h2 {
 }
 
 .itensa {
-    width: 75px;
-    margin-left: 30px;
-   
+    width: 70px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    position: relative;
 }
 
 h5 {
     float: left;
     font-size: 15px;
-    margin-left: 45px;
+    margin-left: 30px;
+    padding:10px;
+    position: relative;
+    text-align: center;
 }
 
 h5:hover {
@@ -161,7 +222,5 @@ h6 {
     color: rgb(119, 119, 119);
     font-size: 15px;
     margin-bottom: 20px;
-    position: relative;
-    text-align: center;
-
+    margin-left: 40px;
 }

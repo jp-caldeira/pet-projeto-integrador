@@ -27,69 +27,43 @@
 
     <!-- login -->
 
-<section class="container">
+<section class="container-login">
 <div class="login">
-<div class="row">
-    <div class="col-lg-6  col-xs-12" >
 <form action="" method="post" enctype = "multipart/form-data">
       <h1>Faça Login </h1>
         <label for="nomeCompleto">Nome Completo</label> <br>
         <input type="text" name="nomeCompleto" id="nomeCompleto"placeholder="Ana Maria Silva" class="form-control" > 
         <br>
-</div>
-</div>
-
-<div class="row">
-    <div class="col-lg-6 col-xs-12">
        <label for="email">Email</label>
     <br>
     <input type="email" name="email" id="email" placeholder="nome@email.com" class="form-control">
     <br>
-    </div>
-    </div>
-
-    <div class="row">
-   <div class="col-lg-6  col-xs-12">
         <label for="senha">Senha</label>
         <br>
         <input type="password" name="senha" id="senha"class="form-control">
         <br>
-   </div>
-   </div>
-
-<div class="row"> 
-    <div class="col-lg-6 col-xs-12">
-    <button type="submit"class="btn btn-success btn-lg btn-block" style='background-color: #03989e;'>Entrar</button>
+    <button type="submit"class="btn btn-success btn-lg btn-block" style='background-color: rgb(7, 95, 98);'>Entrar</button>
 </div>   
-</div>
-</div>
 </form> 
 </section>
 
  <!-- ESPAÇO PARA CADASTRO DE PESSOA -->
-<section class="container">
+<section class="container-cadastro">
 <div class="cadastro">
-<div class="row">
-    <div class="col-lg-6 col-xs-12" >
 <form action="" method="post" enctype = "multipart/form-data">
       <h1>Cadastre-se </h1>
         <label for="nomeCompleto">Nome Completo</label> <br>
         <input type="text" name="nomeCompleto" id="nomeCompleto"placeholder="Ana Maria Silva" class="form-control" > 
         <br>
 </div>
-</div>
-
-<div class="row">
-    <div class="col-lg-6 col-xs-12">
+<div>
        <label for="email">Email</label>
     <br>
     <input type="email" name="email" id="email" placeholder="nome@email.com" class="form-control">
     <br>
     </div>
-    </div>
-
 <div class="row">
-  <div class="col-lg-3 col-xs-12">
+  <div class="col-lg-6 col-xs-12">
     <label for="cpf">CPF</label> <br>         
         <input type="text" name="cpf" id="cpf" 
         \ pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" \
@@ -97,16 +71,15 @@
          placeholder="000.000.000-00 " class="form-control" >
     <br>
   </div>
-  <div class="col-lg-3 col-xs-12">
+  <div class="col-lg-6 col-xs-12">
     <label for="fone">Celular</label> <br>
     <input type="fone" name="fone" id="fone" placeholder="(00)00000-0000 " class="form-control" >
     <br>
   </div>
 </div>
 
-<div class="row">
-    <div class="col-lg-6 col-xs-12">
-        <select name="genero"class="form-control">
+<div >
+<select name="genero"class="form-control">
             <option selected disabled>Genero</option>
             <option value="feminino">Feminino</option>
              <option value="masculino">Masculino</option>
@@ -114,44 +87,34 @@
         </select>
         <br>
     </div>
-</div>
 
 <div class="row">
-   <div class="col-lg-3  col-xs-12">
+   <div class="col-lg-6  col-xs-12">
         <label for="senha">Crie uma Senha</label>
         <br>
         <input type="password" name="senha" id="senha"class="form-control">
         <br>
    </div>
-        <div class="col-lg-3  col-xs-12">
+        <div class="col-lg-6  col-xs-12">
         <label for="senhacripto">Confirme sua senha</label>
         <br>
         <input type="password" name="senhacripto" class="form-control">
         <br>
    </div>   
 </div>
-<div class="row"> 
-    <div class="col-lg-6 col-xs-12">
+<div>
     <label for="receberPromoções"></label>
     <br>
-    <label for="receberPromoções"><input type="checkbox" name="receberPromoções" id="receberPromoções" value="receberPromoções" checked>Quero receber ofertas e promoções exclusivas para meu Pet</label>
+    <label for="receberPromoções"><input type="checkbox" name="receberPromoções" id="receberPromoções" value="receberPromoções" checked> Quero receber ofertas e promoções exclusivas para meu Pet</label>
     <br>
     </div>   
-</div>
-<div class="row"> 
-    <div class="col-lg-6 col-xs-12">
-    <button type="submit"  class="btn btn-success btn-lg btn-block" style='background-color: #03989e;'>Cadastrar</button>
+<div>
+    <button type="submit"  class="btn btn-success btn-lg btn-block" style='background-color:rgb(7, 95, 98);'>Cadastrar</button>
 </div>   
-</div>
-</div>
   </form>
+  <br>
 </section>
-
-
- 
-
-<footer>    
-<section class="container"> 
+<div class="container-itens"> 
 <div class="row"> 
 <div class="col-lg-6 col-xs-12">
             <h4>O que você Procura?</h4>
@@ -168,11 +131,28 @@
             <h5>Remédios</h5>
   </div>   
   </div>
- <div class="row"> 
- <div class="col-lg-6 col-xs-12">
-      <h6>Aqui você pode realizar a busca de acordo com o Perfil do seu Pet!</h6>
+</div>
+<br>
+
+<footer>    
+<div class="container-footer">
+<div class="row"> 
+  <ul>
+    <li>
+     <a href="#"> Entre em contato</a>
+    </li>
+    <li>
+    <a href="#"> Precisa de ajuda?</a>
+    </li>
+    <li>
+    <a href="#"> Aceita uma dica?</a> 
+    </li>
+    <li>
+    O uso deste site está sujeito aos termos e condições do Termo de Uso e Política de privacidade.
+    </li>
+  </ul>
   </div>
-  </div>
+</div>
 
 </footer> 
 
