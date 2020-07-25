@@ -5,6 +5,14 @@ html {
     font-family: 'Quicksand', sans-serif;
 }
 
+header {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    overflow: hidden;
+    padding: 10px 10px;
+    background-color: #d3d3d3;
+}
 .tablinka {
     background-color: rgb(255, 255, 255);
     color: rgb(3, 152, 158);

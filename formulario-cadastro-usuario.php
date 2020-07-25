@@ -1,26 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-
-  <title>Cadastre-se</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link rel="stylesheet" href="css\formularios.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/form.css">
 </head>
 <body>
 
-<!--
-<header>
-     
-  </header> 
 
-  -->
+<header>
+<nav class="container-fluid">
+<div class="row">
+    <div class="col-lg-12 col-xs-12">
+        <button class="tablinka">Compara Pet!</button>
+        <button class="tablink" onclick="openPage('Adote', this, 'white')">Adote!</button>
+        <button class="tablink" onclick="openPage('Cadastro', this, 'white')">Cadastro do Seu Pet</button>
+        <button class="tablink" onclick="openPage('Ranking', this, 'white')" id="defaultOpen">Ranking de Produtos</button>
+        <button class="tablink" onclick="openPage('Home', this, 'white')">Nosso site</button>
+        </div>
+</div>
+</nav>
+</header>
 
     <!-- login -->
 
 <section class="container">
+<div class="login">
 <div class="row">
     <div class="col-lg-6  col-xs-12" >
 <form action="" method="post" enctype = "multipart/form-data">
@@ -51,17 +59,18 @@
 
 <div class="row"> 
     <div class="col-lg-6 col-xs-12">
-    <button type="submit"class="btn btn-success btn-lg btn-block">Entrar</button>
+    <button type="submit"class="btn btn-success btn-lg btn-block" style='background-color: #03989e;'>Entrar</button>
 </div>   
 </div>
+</div>
 </form> 
- 
+</section>
 
  <!-- ESPAÇO PARA CADASTRO DE PESSOA -->
-
 <section class="container">
+<div class="cadastro">
 <div class="row">
-    <div class="col-lg-6  col-xs-12" >
+    <div class="col-lg-6 col-xs-12" >
 <form action="" method="post" enctype = "multipart/form-data">
       <h1>Cadastre-se </h1>
         <label for="nomeCompleto">Nome Completo</label> <br>
@@ -131,24 +140,46 @@
 </div>
 <div class="row"> 
     <div class="col-lg-6 col-xs-12">
-    <button type="submit"  class="btn btn-success btn-lg btn-block">Cadastrar</button>
+    <button type="submit"  class="btn btn-success btn-lg btn-block" style='background-color: #03989e;'>Cadastrar</button>
 </div>   
 </div>
+</div>
   </form>
-
 </section>
 
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<!--
-<footer>
-     
+ 
+
+<footer>    
+<section class="container"> 
+<div class="row"> 
+<div class="col-lg-6 col-xs-12">
+            <h4>O que você Procura?</h4>
+            <img class="itensa" src="tipopet.png">
+            <img class="itensa" src="tiporação.png" alt="botaoraçao">
+            <img class="itensa" src="brinquedo.png" alt="botaobrinquedo">
+            <img class="itensa" src="tipoace.png" alt="botaoace">
+            <img class="itensa" src="tiporemedio.png" alt="botaoremedio">
+            <br>
+            <h5>Cães </h5>
+            <h5>Ração</h5>
+            <h5>Brinquedos</h5>
+            <h5>Acessórios</h5>
+            <h5>Remédios</h5>
+  </div>   
+  </div>
+ <div class="row"> 
+ <div class="col-lg-6 col-xs-12">
+      <h6>Aqui você pode realizar a busca de acordo com o Perfil do seu Pet!</h6>
+  </div>
+  </div>
+
 </footer> 
 
-  -->
 
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 </body>
 </html>
