@@ -16,7 +16,7 @@ header {
     background-color:rgb(255, 255, 255);
     
 }
-section {
+section{
     margin-top: 100px;
 }
 
@@ -29,16 +29,58 @@ right: 0;
 }
 
 .container-pet-form{
-    width: 75%;
-    background-color: aqua;
-    /* float: right;
-    padding-right: 13%;
-    padding-left: 5%; */
+    width: 50%;
+    float: left;
+    padding-right:5%;
+    padding-left: 13%;
            
 }
 
+.container-pet-foto{
+    width: 50%;
+    float: right;
+    padding-right: 13%;
+    padding-left: 5%;
+           
+}
 
-.container-login{
+.container-pet-preferencias{
+    width: 50%;
+    float: right;
+    padding-right: 13%;
+    padding-left: 5%;
+
+
+}
+.foto {
+    width: 25%; 
+    height: 25%;
+    float: left;
+    padding-left: 3%;
+    padding-top: 3%;
+}
+
+.comentarios{
+     width: 70%; 
+    /* height: 60%;  */
+    /* float: left; */
+    float: right; 
+
+}
+
+.caption{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 13px;
+}
+/* .barra {
+background-color:rgb(7, 95, 98);
+position: absolute;
+left: 0;
+bottom: 0;
+right: 0;
+} */
+
+/* .container-login{
     width: 50%;
     float: left;
     padding-left: 13%;
@@ -52,7 +94,7 @@ right: 0;
     padding-right: 13%;
     padding-left: 5%;
            
-}
+} */
 
 .container-itens {
     width: 90%;
