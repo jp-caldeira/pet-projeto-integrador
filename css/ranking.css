@@ -51,6 +51,8 @@ body {
 }
 
 
+
+
 @media(max-width: 996px){
   .produtos {
     margin: 1rem;
@@ -61,4 +63,26 @@ body {
     text-align: center;
     margin-top: 1.2rem;
   }
+}
+
+@media (max-width:360px){
+ .navbar a {
+   width:100%;
+   float:none;
+   align-items: center;
+ }
+
+  a.navbar-brand{
+    width:100%;
+    margin: auto;
+    padding: auto;
+  }
+
+  .botao {
+    width:100%;
+    float:none;
+
+  }
+
+
 }
