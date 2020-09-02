@@ -16,3 +16,28 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/home', function(){
+    return view('home');
+});
+
+Route::get('/ranking', function(){
+  return view('ranking-produtos');
+});
+
+Route::get('/adocao', function (){
+    return view('pag_adocao');
+}
+);
+
+Route::get('/cadastro-pet', function(){
+    return view('formulario-cadastro-pet');
+});
+
+Route::get('/cadastro-user', function(){
+  return view('formulario-cadastro-usuario');
+});
+
+Route::get('/compara-pet', function(){
+    return view('projeto');
+});
