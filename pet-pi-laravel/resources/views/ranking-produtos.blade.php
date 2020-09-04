@@ -1,37 +1,37 @@
 <?php
 
 $produtos = [
-              ["imagem"=> "img/racao1.jpg",
+              ["imagem"=> "storage/img/racao1.jpg",
                "nome" => "Ração Magnus para cachorro 2kg",
                "descrição" => "Indicada para cães de grande porte",
                "preço" => "R$ 29,90"
             ],
 
-            ["imagem" => "img/racao2.jpg",
+            ["imagem" => "storage/img/racao2.jpg",
              "nome" => "Ração Magnus para cachorro 2kg",
              "descrição" => "Indicada para cães de grande porte",
              "preço" => "R$ 29,90"
             ],
 
-            ["imagem" => "img/racao3.jpg",
+            ["imagem" => "storage/img/racao3.jpg",
              "nome" => "Ração Magnus para cachorro 2kg",
              "descrição" => "Indicada para cães de grande porte",
              "preço" => "R$ 29,90"
             ],
 
-            ["imagem" => "img/racao4.jpg",
+            ["imagem" => "storage/img/racao4.jpg",
              "nome" => "Ração Magnus para cachorro 2kg",
              "descrição" => "Indicada para cães de grande porte",
              "preço" => "R$ 29,90"
           ],
 
-          ["imagem" => "img/racao5.jpg",
+          ["imagem" => "storage/img/racao5.jpg",
            "nome" => "Ração Magnus para cachorro 2kg",
            "descrição" => "Indicada para cães de grande porte",
            "preço" => "R$ 29,90"
         ],
 
-        ["imagem" => "img/racao6.jpg",
+        ["imagem" => "storage/img/racao6.jpg",
          "nome" => "Ração Magnus para cachorro 2kg",
          "descrição" => "Indicada para cães de grande porte",
          "preço" => "R$ 29,90"
@@ -46,8 +46,8 @@ $produtos = [
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ranking de Produtos</title>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/ranking.css">
+    <link rel="stylesheet" href={{asset('css/app.css')}}>
+    <link rel="stylesheet" href={{asset('css/ranking.css')}}>
   </head>
 <body>
   <header>
@@ -83,8 +83,6 @@ $produtos = [
 
 
 
-
-
 <div class="site-content">
         <div class="container titulo-principal">
             <h1 class="display-4">Ranking de Produtos</h1>
@@ -93,17 +91,17 @@ $produtos = [
             <div class="row">
               <div class="col-lg-10 offset-lg-1">
                 <div class="row">
-        <?php foreach($produtos as $produto){?>
+            @foreach($produtos as $produto)
                   <div class="col-lg-6">
-                        <img src=<?=$produto['imagem']?> class="img-fluid" alt="produto">
-                        <h4><a href="#"><?=$produto['nome']?></a></h4>
-                        <p><?=$produto['descrição']?></p>
-                        <p><?=$produto['preço']?></p>
+                        <img src={{asset($produto['imagem'])}} class="img-fluid" alt="produto">
+                        <h4><a href="#">{{$produto['nome']}}</a></h4>
+                        <p>{{$produto['descrição']}}</p>
+                        <p>{{$produto['preço']}}</p>
                         <a class='btn btn-danger btn-lg' href='#'>Comprar</a>
                   </div>
                   <br>
                   <br>
-              <?php } ?>
+              @endforeach
                 </div>
               </div>
         </div>
