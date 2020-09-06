@@ -14,6 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+Route::get('/usuarios','api\UsuarioController@exibirTodosUsuarios');
+//retorna um unico usuario//
+Route::get('/usuarios/{id}','api\UsuarioController@exibirUmUsuario');
+//criar um novo usuario//
+Route::post('/usuarios','api\UsuarioController@criarUmUsuario');
+//atualizar um usuario//
+Route::put('/usuarios/{id}','api\UsuarioController@atualizarUmUsuario');
+//deletar um usuario//
+Route::delete('/usuarios/{id}','api\UsuarioController@deletarUmUsuario');

@@ -41,3 +41,7 @@ Route::get('/cadastro-user', function(){
 Route::get('/compara-pet', function(){
     return view('projeto');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
