@@ -26,6 +26,9 @@ class UsuarioController extends Controller
     $usuario->name = $request->name;
     $usuario->email= $request->email;
     $usuario->password= Hash::make($request->password);
+    // $usuario->phone = $request->phone;
+    // $usuario->genero = $request->genero;
+    // $usuario->cpf = $request->cpf;
     $usuario->save();
     return response()->json(['Usuario criado com sucesso!']);
   }
@@ -35,6 +38,9 @@ class UsuarioController extends Controller
     $usuario->name = $request->name;
     $usuario->email= $request->email;
     $usuario->password= Hash::make($request->password);
+    // $usuario->phone = $request->phone;
+    // $usuario->genero = $request->genero;
+    // $usuario->cpf = $request->cpf;
     $usuario->save();
     return response()->json(['Usuario atualizado com sucesso!']);
   }
