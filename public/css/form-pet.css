@@ -1,0 +1,83 @@
+body,
+html {
+    margin-left: 90px;
+    margin-right: 50px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.base {
+    float: left;
+    margin-top: 20px;
+}
+
+.container-pet-form {
+    width: 50%;
+    float: left;
+    padding-right: 5%;
+    padding-left: 13%;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.container-pet-foto {
+    width: 50%;
+    float: right;
+    padding-right: 13%;
+    padding-left: 5%;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.container-pet-preferencias {
+    width: 50%;
+    float: right;
+    padding-right: 13%;
+    padding-left: 5%;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.foto {
+    width: 25%;
+    height: 25%;
+    float: left;
+    padding-left: 3%;
+    padding-top: 3%;
+}
+
+.comentarios {
+    width: 70%;
+    /* height: 60%;  */
+    /* float: left; */
+    float: right;
+}
+
+.caption {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 13px;
+}
+
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    float: right;
+    padding: 20px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: rgb(3, 152, 158);
+}
+
+.img {
+    width: 100px;
+    height: 100px;
+    float: right;
+    position: relative;
+    right: 35px;
+}
+
+h1 {
+    font-size: 27px;
+}
