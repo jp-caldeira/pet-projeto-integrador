@@ -90,7 +90,7 @@
                     <a href="/cadastro-user">Faça seu cadastro</a>
                     <a href="/ranking">Ranking de produtos</a>
                     <a href="/adocao">Adote</a>
-                    <a href="/compara-pet">Compara Pet</a>
+                    <a href="/adminlog">Admin</a>
                     <a href="https://github.com/jp-caldeira/pet-projeto-integrador">GitHub</a>
                 </div>
             </div>

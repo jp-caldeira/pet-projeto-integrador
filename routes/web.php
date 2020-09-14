@@ -53,3 +53,14 @@ Route::get('/footer', function(){
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//Paginas Adm
+
+Route::get('/headeradm', function(){
+    return view ('headeradm');
+})->name("headeradm");
+
+Route::get('/adminlog', function(){
+    return view ('adminlog');
+})->middleware('checkAdmin');
+

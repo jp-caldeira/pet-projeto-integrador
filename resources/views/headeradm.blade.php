@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,6 +53,7 @@
                     text-decoration:none;
                     cursor:pointer;
                 }
+
                 p{
                     font-family: 'Quicksand', sans-serif;
                     color: rgb(3, 152, 158);
@@ -67,30 +67,20 @@
 
     <section class="container first-section">
     <a href="{{ route('homepage') }}"><img  class=img1 src="/img/logo1.png" alt="logo"></a>
-        <a href="{{ route('homepage') }}" class="tablink"  onclick="openPage('Cadastro', this, 'white')">Nosso site</a>
-        <a href="{{ route('ranking') }}" class="tablink"  onclick="openPage('Cadastro', this, 'white')">Ranking</a>
-        <a href="{{ route('cadastropet') }}" class="tablink" onclick="openPage('Cadastro', this, 'white')">Cadastro Pet</button></a>
-        <a href="{{ route('adote') }}" class="tablink" onclick="openPage('Adote', this, 'white')">Adote!</button></a>
-        @guest
-
-        <a href="{{ route('login') }}" class="tablink" onclick="openPage('Adote', this, 'white')">Login</button></a>
-
-        @if (Route::has('register'))
-        <a href="{{ route('register') }}" class="tablink" onclick="openPage('Adote', this, 'white')">Registrar-se</button></a>
-        @endif
-        @else
-        </a>
+        <a href="{{ route('homepage') }}"  class="tablink"  onclick="openPage('Cadastro', this, 'white')">Nosso site</a>
+        <a href="" class="tablink"   onclick="openPage('Cadastro', this, 'white')">Produtos</a>
+        <a href="" class="tablink"  onclick="openPage('Cadastro', this, 'white')">Adicionar Produtos</button></a>
+        <a href="" class="tablink"  onclick="openPage('Adote', this, 'white')">Editar Avaliações</button></a>
+        <a href="" class="tablink"  onclick="openPage('Adote', this, 'white')">Usuarios</button></a>
         <a class="tablink" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
-        
-        <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-            <p>Bem Vinda! {{ Auth::user()->name }}</p>
-            
-        <form id="logout-form" action="{{ route('logout') }}" method="POST">
-            @csrf
-        </form>
-            @endguest
 
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                @csrf
+            </form>
+
+        <p>Você esta logado como : {{ Auth::user()->name }}</p>
 
     </section>
+
 </body>
 </html>

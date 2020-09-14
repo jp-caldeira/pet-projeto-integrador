@@ -41,3 +41,15 @@ Route::post('/pets','api\PetController@criarUmPet');
 Route::put('/pets/{id}','api\PetController@atualizarUmPet');
 //deletar um usuario//
 Route::delete('/pets/{id}','api\PetController@deletarUmPet');
+
+
+//rotas produtos//
+Route::get('/produtos','api\ProdutoController@exibirTodosProdutos');
+//retorna um unico produtos//
+Route::get('produtos/{id}','api\ProdutoController@exibirUmProduto');
+//criar um novo produtos//
+Route::post('/produtos','api\ProdutoController@criarUmProduto');
+//atualizar um produtos//
+Route::put('/produtos/{id}','api\ProdutoController@atualizarUmProduto');
+//deletar um produtos//
+Route::delete('/produtos/{id}','api\ProdutoController@deletarUmProduto');
