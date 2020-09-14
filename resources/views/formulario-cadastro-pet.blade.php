@@ -21,9 +21,10 @@
 <section class="container-pet-form">
 <h1>Cadastre o seu Pet </h1> <br>
 <div class="form-especie">
-   <form action="" method="post" enctype = "multipart/form-data">
+  {{-- <form method="POST" action="{{ route('cadastro-pet') }}"> --}}
+     @csrf
         <select name="especie"class="form-control">
-            <option selected disabled>Olá, qual a espécie do seu Pet? </option>
+            <option selected disabled>{{ __('Olá, qual a espécie do seu Pet?') }} </option>
             <option value="cachorro">Cachorro</option>
              <option value="gato">Gato</option>
              <option value="passaro">Pássaro</option>
@@ -32,25 +33,33 @@
              <option value="peixe">Peixe</option>
         </select>
 </div>
-    <br>
-    <div class="form-nome">
-        <label for="nome">Nome </label> <br>
-        <input type="text" name="nome" id="nome"placeholder="Snoopy da Silva" class="form-control" > 
+        <div class="form-nome">
+        <label for="nome">{{ __('Nome') }}</label> <br>
+        <input id="nome" type="text" class="form-control @error('nome') is-invalid @enderror" name="nome" value="{{ old('nome') }}" placeholder="Snoopy da Silva" required autocomplete="nome" autofocus>
         <div>
-        <br>
+        
         <div class="form-genero">
-        <select name="genero"class="form-control">
-        <option selected disabled>Genero</option>
-            <option value="feminino">Fêmea</option>
-             <option value="masculino">Macho</option>
-        </select>
+      <label for="genero">{{ __('Genero') }}</label>
+            <select name="genero"class="form-control" value="{{ old('genero') }}"required autocomplete="genero">
+                      <option selected disabled>{{ __('Selecione') }}</option>
+                      <option value="femea">Femea</option>
+                      <option value="macho">Macho</option>
+                      <option value="n/a">N/A</option>
+            </select>
 </div>
         
         <div class="form-aniversario">
-        <label for="nascimento">Data de nascimento</label>
-        <input id="date" type="date"class="form-control">
-             
+       <div class="data"> 
+                <label for="nascimento">{{ __('Data de Nascimento') }}</label><br>
+                <input id="date" type="date"class="form-control" name="cpf" value="{{ old('nascimento') }}"required autocomplete="nascimento" >
+            </div>  
 </div>
+        <div class = "comentarios">
+      <label for="comentarios"></label>
+        <br>
+        <textarea name="comentarios" class="form-control" rows="6" cols="5">Conte-nos um pouco mais sobre o seu Pet</textarea>
+        <br>
+        </div>
 </section>
 <br>
 
@@ -62,11 +71,7 @@
     </a>
     </div>
 </div>
-<div class = "comentarios">
-      <label for="comentarios"></label>
-    <br>
-    <textarea name="comentarios" class="form-control" rows="5" cols="5">Conte-nos um pouco mais sobre o seu Pet</textarea>
-    <br>
+
     <div class="caption" >
       <input type="file" name="arquivo" value =  " " >
       <br>
@@ -74,7 +79,7 @@
 </div>
 </section>
       <div class="container-pet-preferencias">
-      <label for="preferencias">Selecione os interesses principais do seu Pet:</label>
+      <label for="preferencias">{{ __('Selecione os interesses principais do seu Pet:') }}</label>
     <br>
     <label for="rações"><input type="checkbox" name="preferencias[]" id = "rações" value="rações"> Rações e comidinhas </label>
     <br>
