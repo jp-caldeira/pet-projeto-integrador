@@ -56,6 +56,7 @@ class RegisterController extends Controller
             'phone' => ['required', 'string', 'max:15'],
             'genero' => ['required', 'string'],
             'cpf' => ['required', 'string', 'max:15', 'unique:users'],
+            'nascimento' => ['required', 'date'],
         ]);
     }
 
@@ -74,6 +75,7 @@ class RegisterController extends Controller
             'phone'=> $data['phone'],
             'genero'=> $data ['genero'],
             'cpf'=> $data['cpf'],
+            'nascimento'=> $data ['nascimento'],
             
         ]);
     }

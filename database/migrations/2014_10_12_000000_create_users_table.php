@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('phone');
             $table->string('genero');
             $table->char('cpf')->unique();
+            $table->date('nascimento');
             // $table->int('receberPromocoes');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

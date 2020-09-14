@@ -62,9 +62,10 @@
               <label for="cpf">{{ __('CPF') }}</label> <br>         
               <input id="cpf" type="text" class="form-control @error('cpf') is-invalid @enderror" name="cpf" value="{{ old('cpf') }}"required autocomplete="cpf" >
              </div>
+
              <div class="data"> 
                 <label for="nascimento">{{ __('Data de Nascimento') }}</label><br>
-                <input id="date" type="date"class="form-control" name="nascimento" value="{{ old('nascimento') }}"required autocomplete="nascimento" >
+                <input id="nascimento" type="date"class="form-control" name="nascimento" value="{{ old('nascimento') }}"required autocomplete="nascimento" >
             </div>
             
             <div class="row">   
