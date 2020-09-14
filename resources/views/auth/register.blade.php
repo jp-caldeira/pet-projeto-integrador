@@ -68,7 +68,7 @@
             </div>
 
             
-            <div class="row">
+            <div class="row">   
                 <div class="col-lg-6  col-xs-12">
                     <label for="password">{{ __('Senha') }}</label>
                     <br>
@@ -82,7 +82,7 @@
                     <br>
                 </div></div>
 
-                <div class="col-lg-6  col-xs-12" style="margin-left:150px">
+                <div class="col-lg-6  col-xs-12" style="margin-l    eft:150px">
                     <label for="password-confirm">{{ __('Confirme sua senha') }}</label>
                     <br>
                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
