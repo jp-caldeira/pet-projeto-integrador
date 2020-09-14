@@ -1,44 +1,3 @@
-<?php
-
-$produtos = [
-              ["imagem"=> "img/racao1.jpg",
-               "nome" => "Ração Magnus para cachorro 2kg",
-               "descrição" => "Indicada para cães de grande porte",
-               "preço" => "R$ 29,90"
-            ],
-
-            ["imagem" => "img/racao2.jpg",
-             "nome" => "Ração Magnus para cachorro 2kg",
-             "descrição" => "Indicada para cães de grande porte",
-             "preço" => "R$ 29,90"
-            ],
-
-            ["imagem" => "img/racao3.jpg",
-             "nome" => "Ração Magnus para cachorro 2kg",
-             "descrição" => "Indicada para cães de grande porte",
-             "preço" => "R$ 29,90"
-            ],
-
-            ["imagem" => "img/racao4.jpg",
-             "nome" => "Ração Magnus para cachorro 2kg",
-             "descrição" => "Indicada para cães de grande porte",
-             "preço" => "R$ 29,90"
-          ],
-
-          ["imagem" => "img/racao5.jpg",
-           "nome" => "Ração Magnus para cachorro 2kg",
-           "descrição" => "Indicada para cães de grande porte",
-           "preço" => "R$ 29,90"
-        ],
-
-        ["imagem" => "img/racao6.jpg",
-         "nome" => "Ração Magnus para cachorro 2kg",
-         "descrição" => "Indicada para cães de grande porte",
-         "preço" => "R$ 29,90"
-      ],
-];
- ?>
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -79,19 +38,19 @@ $produtos = [
             <div class="row">
               <div class="col-lg-10 offset-lg-1">
                 <div class="row">
-        <?php foreach($produtos as $produto){?>
+        @foreach($todosProdutos as $produto)
                   <div class="col-lg-6">
-                        <img src=<?=$produto['imagem']?> class="img-fluid" alt="produto">
-                        <h4><a href="#"><?=$produto['nome']?></a></h4>
-                        <p><?=$produto['descrição']?></p>
-                        <p><?=$produto['preço']?></p>
+                        <img src='img/{{$produto->imagem}}' class="img-fluid" alt="produto">
+                        <h4><a href="#">{{$produto->nome}}</a></h4>
+                        <p>{{$produto->descricao ?? ""}}</p>
+                        <p>R$ {{$produto->preco}}</p>
                         <br>
-                        <a class='btn btn-lg active' style="background-color:rgb(3, 152, 158); color:white; width:200px" href="{{ route('produtos') }}">Ver Avaliação</a>
+                        <a class='btn btn-lg active' style="background-color:rgb(3, 152, 158); color:white; width:200px" href="/produto/{{$produto->id}}">Ver Avaliação</a>
                         <br>
                   </div>
                   <br>
                   <br>
-              <?php } ?>
+         @endforeach
                 </div>
               </div>
         </div>

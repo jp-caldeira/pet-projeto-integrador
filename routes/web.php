@@ -23,9 +23,9 @@ Route::get('/homepage', function(){
     return view('homepage');
 })->name("homepage");
 
-Route::get('/ranking', function(){
-  return view('ranking-produtos');
-})->name("ranking");
+Route::get('/ranking', 'ProdutoController@exibirTodosProdutos')->name("ranking");
+
+Route::get('/produtos', 'ProdutoController@exibirUmProduto')->name("produtos");
 
 Route::get('/adocao', function (){
     return view('pag_adocao');
@@ -69,7 +69,3 @@ Route::get('/adminlog', function(){
 })->middleware('checkAdmin');
 
 //Paginas Produto
-
-Route::get('/produtos', function(){
-    return view ('produtos');
-})->name("produtos");

@@ -10,14 +10,18 @@ class ProdutoController extends Controller
 {
     public function exibirTodosProdutos(Request $request)
   {
-    $todosProdutos = Produto::all();
-    return response()->json($todosProdutos);
+    $todosProdutos = ProdutoModel::all();
+    return view('ranking-produtos', ["todosProdutos" => $todosProdutos]);
+
   }
-  public function exibirUmProduto(Request $request,$id)
+
+  public function exibirUmProduto(Request $request)
   {
-    $produtos = User::find($id);
-    return response()->json($produtos);
+    //$produto = ProdutoModel::find($id);
+    return view('produtos');
   }
+
+
   public function criarUmProduto(Request $request){
       if ($request->isMethod('GET')){
       return view ('cadastrarFilme');
