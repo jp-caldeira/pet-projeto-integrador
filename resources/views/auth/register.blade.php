@@ -48,28 +48,20 @@
 
             <label for="fone">{{ __('Telefone') }}</label> <br>
             <input id="phone" type="text" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone">
-            <br>
-
-            
+           
+             <label for="genero">{{ __('Genero') }}</label>
             <select name="genero"class="form-control" value="{{ old('genero') }}"required autocomplete="genero">
-                      <option selected disabled>{{ __('Genero') }}</option>
+                      <option selected disabled>{{ __('Selecione') }}</option>
                       <option value="feminino">Feminino</option>
                       <option value="masculino">Masculino</option>
                       <option value="n/a">N/A</option>
             </select>
-            <br>
                       
-            
-            <div class="row">
-            <div class="col-lg-6 col-xs-12">
               <label for="cpf">{{ __('CPF') }}</label> <br>         
               <input id="cpf" type="text" class="form-control @error('cpf') is-invalid @enderror" name="cpf" value="{{ old('cpf') }}"required autocomplete="cpf" >
-              <br>
-            </div>
-
+             
             
-            <div class="row">
-                <div class="col-lg-6  col-xs-12">
+            <div class="senha">
                     <label for="password">{{ __('Senha') }}</label>
                     <br>
                     <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
@@ -79,15 +71,17 @@
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
-                    <br>
-                </div></div>
+                </div>
+               
 
-                <div class="col-lg-6  col-xs-12" style="margin-left:150px">
+                <div class="senha">
+                
                     <label for="password-confirm">{{ __('Confirme sua senha') }}</label>
                     <br>
                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                     <br>
-                </div>   </div>
+                </div>
+                
             
             
             <div class="promo">
@@ -103,7 +97,9 @@
             </div>   
 
             </form>
+             </section>
 </div>
+ </div> 
     
     </section>
         <section class="base">
