@@ -54,11 +54,7 @@
                     cursor:pointer;
                 }
 
-                p{
-                    font-family: 'Quicksand', sans-serif;
-                    color: rgb(3, 152, 158);
-                    font-size: 15px;
-                }
+                
                 </style>
 </head>
 

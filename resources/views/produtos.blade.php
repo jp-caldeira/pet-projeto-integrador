@@ -1,36 +1,7 @@
 <?php
 
 $produtos = [
-              ["imagem"=> "img/racao1.jpg",
-               "nome" => "Ração Magnus para cachorro 2kg",
-               "descrição" => "Indicada para cães de grande porte",
-               "preço" => "R$ 29,90"
-            ],
-
-            ["imagem" => "img/racao2.jpg",
-             "nome" => "Ração Magnus para cachorro 2kg",
-             "descrição" => "Indicada para cães de grande porte",
-             "preço" => "R$ 29,90"
-            ],
-
-            ["imagem" => "img/racao3.jpg",
-             "nome" => "Ração Magnus para cachorro 2kg",
-             "descrição" => "Indicada para cães de grande porte",
-             "preço" => "R$ 29,90"
-            ],
-
-            ["imagem" => "img/racao4.jpg",
-             "nome" => "Ração Magnus para cachorro 2kg",
-             "descrição" => "Indicada para cães de grande porte",
-             "preço" => "R$ 29,90"
-          ],
-
-          ["imagem" => "img/racao5.jpg",
-           "nome" => "Ração Magnus para cachorro 2kg",
-           "descrição" => "Indicada para cães de grande porte",
-           "preço" => "R$ 29,90"
-        ],
-
+              
         ["imagem" => "img/racao6.jpg",
          "nome" => "Ração Magnus para cachorro 2kg",
          "descrição" => "Indicada para cães de grande porte",
@@ -86,7 +57,6 @@ $produtos = [
                         <p><?=$produto['descrição']?></p>
                         <p><?=$produto['preço']?></p>
                         <br>
-                        <a class='btn btn-lg active' style="background-color:rgb(3, 152, 158); color:white; width:200px" href="{{ route('produtos') }}">Ver Avaliação</a>
                         <br>
                   </div>
                   <br>

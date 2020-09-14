@@ -54,11 +54,6 @@
                     text-decoration:none;
                     cursor:pointer;
                 }
-                p{
-                    font-family: 'Quicksand', sans-serif;
-                    color: rgb(3, 152, 158);
-                    font-size: 15px;
-                }
                 </style>
 </head>
 
@@ -82,7 +77,7 @@
         </a>
         <a class="tablink" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
         
-        <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+        <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre></a>
             <p>Bem Vinda! {{ Auth::user()->name }}</p>
             
         <form id="logout-form" action="{{ route('logout') }}" method="POST">

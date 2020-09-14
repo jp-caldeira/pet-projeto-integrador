@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//Paginas Principais
+
 Route::get('/homepage', function(){
     return view('homepage');
 })->name("homepage");
@@ -41,6 +43,8 @@ Route::get('/compara-pet', function(){
     return view('projeto');
 });
 
+//Paginas Header e Footer
+
 
 Route::get('/header', function(){
     return view ('header');
@@ -64,3 +68,8 @@ Route::get('/adminlog', function(){
     return view ('adminlog');
 })->middleware('checkAdmin');
 
+//Paginas Produto
+
+Route::get('/produtos', function(){
+    return view ('produtos');
+})->name("produtos");
