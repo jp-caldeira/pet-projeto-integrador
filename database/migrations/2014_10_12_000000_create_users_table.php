@@ -19,7 +19,8 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('phone');
             $table->string('genero');
-            $table->string('cpf')->unique();
+            $table->char('cpf')->unique();
+            // $table->int('receberPromocoes');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

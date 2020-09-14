@@ -24,7 +24,7 @@
           <div class="cadastro">
 
 
-          <h1>Cadastre-se </h1>
+          <h1>Cadastre-se </h1><br>
             <label for="nomeCompleto">{{ __('Nome Completo') }}</label> <br>
             <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
@@ -56,10 +56,15 @@
                       <option value="masculino">Masculino</option>
                       <option value="n/a">N/A</option>
             </select>
-                      
+
+            <div class="cpf">        
               <label for="cpf">{{ __('CPF') }}</label> <br>         
               <input id="cpf" type="text" class="form-control @error('cpf') is-invalid @enderror" name="cpf" value="{{ old('cpf') }}"required autocomplete="cpf" >
-             
+             </div>
+             <div class="data"> 
+                <label for="nascimento">{{ __('Data de Nascimento') }}</label><br>
+                <input id="date" type="date"class="form-control" name="cpf" value="{{ old('nascimento') }}"required autocomplete="nascimento" >
+            </div>
             
             <div class="senha">
                     <label for="password">{{ __('Senha') }}</label>
@@ -74,7 +79,7 @@
                 </div>
                
 
-                <div class="senha">
+                <div class="senhaConfirma">
                 
                     <label for="password-confirm">{{ __('Confirme sua senha') }}</label>
                     <br>
@@ -84,12 +89,12 @@
                 
             
             
-            <div class="promo">
-              <label for="receberPromoções"></label>
+            {{-- <div class="promo">
+              <label for="receberPromocoes"></label>
               <br>
-              <label for="receberPromoções"><input type="checkbox" name="receberPromoções" id="receberPromoções" value="receberPromoções" checked> Quero receber ofertas e promoções exclusivas para meu Pet</label>
+              <label for="receberPromocoes"><input type="checkbox" name="receberPromocoes" id="receberPromocoes" value="receberPromocoes" checked> Quero receber ofertas e promoções exclusivas para meu Pet</label>
               <br>
-            </div>   
+            </div>    --}}
           
               
             <div>
