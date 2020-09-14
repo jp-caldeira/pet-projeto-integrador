@@ -39,6 +39,7 @@ p {
 
 h1 {
     font-size: 27px;
+    
 }
 
 label {
@@ -54,4 +55,29 @@ label {
     margin-top: 100px;
     float: left;
     margin-left: 50px;
+}
+.senha{
+    width: 50%;
+    float: left;
+    padding-right: 2%;
+}
+.senhaConfirma{
+    width: 50%;
+    float: left;
+    padding-left: 2%;
+}
+
+.data{
+    width: 50%;
+    float: left;
+    padding-left: 2%;
+}
+.cpf{
+    width: 50%;
+    float: left;
+    padding-right: 2%;
+}
+.espacamento{
+    margin-top: 100px;
+
 }

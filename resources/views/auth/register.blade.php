@@ -15,6 +15,7 @@
 @include('header')
 </header>
 
+<div class= "espacamento"><div>
 
 <form method="POST" action="{{ route('register') }}">
      @csrf
@@ -24,7 +25,7 @@
           <div class="cadastro">
 
 
-          <h1>Cadastre-se </h1>
+          <h1>Cadastre-se </h1><br>
             <label for="nomeCompleto">{{ __('Nome Completo') }}</label> <br>
             <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
@@ -48,25 +49,23 @@
 
             <label for="fone">{{ __('Telefone') }}</label> <br>
             <input id="phone" type="text" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone">
-            <br>
-
-            
+           
+             <label for="genero">{{ __('Genero') }}</label>
             <select name="genero"class="form-control" value="{{ old('genero') }}"required autocomplete="genero">
-                      <option selected disabled>{{ __('Genero') }}</option>
+                      <option selected disabled>{{ __('Selecione') }}</option>
                       <option value="feminino">Feminino</option>
                       <option value="masculino">Masculino</option>
                       <option value="n/a">N/A</option>
             </select>
-            <br>
-                      
-            
-            <div class="row">
-            <div class="col-lg-6 col-xs-12">
+
+            <div class="cpf">        
               <label for="cpf">{{ __('CPF') }}</label> <br>         
               <input id="cpf" type="text" class="form-control @error('cpf') is-invalid @enderror" name="cpf" value="{{ old('cpf') }}"required autocomplete="cpf" >
-              <br>
+             </div>
+             <div class="data"> 
+                <label for="nascimento">{{ __('Data de Nascimento') }}</label><br>
+                <input id="date" type="date"class="form-control" name="nascimento" value="{{ old('nascimento') }}"required autocomplete="nascimento" >
             </div>
-
             
             <div class="row">   
                 <div class="col-lg-6  col-xs-12">
@@ -79,23 +78,24 @@
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
-                    <br>
-                </div></div>
+                </div>
+               
 
                 <div class="col-lg-6  col-xs-12" style="margin-l    eft:150px">
                     <label for="password-confirm">{{ __('Confirme sua senha') }}</label>
                     <br>
                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                     <br>
-                </div>   </div>
+                </div>
+                
             
             
-            <div class="promo">
-              <label for="receberPromoções"></label>
+            {{-- <div class="promo">
+              <label for="receberPromocoes"></label>
               <br>
-              <label for="receberPromoções"><input type="checkbox" name="receberPromoções" id="receberPromoções" value="receberPromoções" checked> Quero receber ofertas e promoções exclusivas para meu Pet</label>
+              <label for="receberPromocoes"><input type="checkbox" name="receberPromocoes" id="receberPromocoes" value="receberPromocoes" checked> Quero receber ofertas e promoções exclusivas para meu Pet</label>
               <br>
-            </div>   
+            </div>    --}}
           
               
             <div>
@@ -103,7 +103,9 @@
             </div>   
 
             </form>
+             </section>
 </div>
+ </div> 
     
     </section>
         <section class="base">

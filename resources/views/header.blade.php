@@ -13,8 +13,22 @@
 
     <!-- Styles -->
     <style>
-            html, body {
+            .container{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 2;
+                background-color: white;
+                padding:10px;
+                
+                
+            }
+         
+
+            html, body{
                 font-family: 'Quicksand', sans-serif;
+
 
             }
                 /*--INICIO PARTE SUPERIOR DO SITE --*/
@@ -54,6 +68,14 @@
                     text-decoration:none;
                     cursor:pointer;
                 }
+
+
+                .botoes{
+                    float: right;
+                }
+                .logo{
+                   margin-left: 7%; 
+                }
                 </style>
 </head>
 
@@ -61,7 +83,10 @@
     <!-- Menu superior do site com logo -->
 
     <section class="container first-section">
+    <div class = "logo">
     <a href="{{ route('homepage') }}"><img  class=img1 src="/img/logo1.png" alt="logo"></a>
+    <div>
+      <div class="botoes">
         <a href="{{ route('homepage') }}" class="tablink"  onclick="openPage('Cadastro', this, 'white')">Nosso site</a>
         <a href="{{ route('ranking') }}" class="tablink"  onclick="openPage('Cadastro', this, 'white')">Ranking</a>
         <a href="{{ route('cadastropet') }}" class="tablink" onclick="openPage('Cadastro', this, 'white')">Cadastro Pet</button></a>
@@ -82,6 +107,7 @@
             
         <form id="logout-form" action="{{ route('logout') }}" method="POST">
             @csrf
+            </div>
         </form>
             @endguest
 

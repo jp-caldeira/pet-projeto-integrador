@@ -47,11 +47,11 @@ $pets = [
 </head>
 <body>
 
-
-
 <header>
 @include('header')
 </header>
+
+<div class= "espacamento"><div>
 
     <!-- ESPAÇO PARA CADASTRO DO PET -->
 

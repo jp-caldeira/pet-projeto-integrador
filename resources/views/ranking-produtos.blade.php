@@ -50,9 +50,12 @@ $produtos = [
     <link rel="stylesheet" href="css/ranking.css">
   </head>
 <body>
+
 <header>
 @include('header')
 </header>
+
+<div class= "espacamento"><div>
 
   <section>
       <nav class="navbar navbar-expand-lg navbar-dark barra-1" style='background-color: #03989e;'>
@@ -66,9 +69,6 @@ $produtos = [
     </nav>
     </div>
   </section>
-
-
-
 
 
 <div class="site-content">
