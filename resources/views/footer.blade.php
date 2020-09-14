@@ -24,6 +24,7 @@
                     background-color: rgb(3, 152, 158);
                     height:40px;
                     position: absolute;
+                    
                     margin-top:10px;
                     margin-left: 20px;
                     margin-right:20px;

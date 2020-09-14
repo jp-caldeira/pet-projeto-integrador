@@ -14,10 +14,12 @@
 <header>
 @include('header')
 </header>
+
+<div class= "espacamento"><div>
     <!-- ESPAÇO PARA CADASTRO DO PET -->
 
 <section class="container-pet-form">
-<h1>Cadastre o seu Pet </h1>  
+<h1>Cadastre o seu Pet </h1> <br>
 <div class="form-especie">
    <form action="" method="post" enctype = "multipart/form-data">
         <select name="especie"class="form-control">
@@ -32,8 +34,8 @@
 </div>
     <br>
     <div class="form-nome">
-        <label for="nomePet">Nome </label> <br>
-        <input type="text" name="nomePet" id="nomePet"placeholder="Snoopy da Silva" class="form-control" > 
+        <label for="nome">Nome </label> <br>
+        <input type="text" name="nome" id="nome"placeholder="Snoopy da Silva" class="form-control" > 
         <div>
         <br>
         <div class="form-genero">
@@ -43,13 +45,11 @@
              <option value="masculino">Macho</option>
         </select>
 </div>
-        <br>
+        
         <div class="form-aniversario">
         <label for="nascimento">Data de nascimento</label>
         <input id="date" type="date"class="form-control">
-        <div class="row">
-        <div class="col-lg-4  col-xs-12" >
-        
+             
 </div>
 </section>
 <br>

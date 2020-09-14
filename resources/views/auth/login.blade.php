@@ -16,7 +16,7 @@
 @include('header')
 </header> 
 
-
+<div class= "espacamento"><div>
     <!-- login -->
 
     <section class="container-login">
@@ -28,7 +28,7 @@
      @csrf
 
          
-        <h1>{{ __('Login') }} </h1>
+        <h1>{{ __('Login') }} </h1><br>
            
         <label for="email">{{ __('E-Mail Address') }}</label>
         <br>
@@ -52,9 +52,8 @@
             <br>
             <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Lembre-se de mim') }}
-                                    </label>
+            <label class="form-check-label" for="remember">{{ __('Lembre-se de mim') }}</label>
+            <br>
         <button type="submit"class="btn btn-lg btn-block" style='color:white; background-color:rgb(3, 152, 158);'>{{ __('Entrar') }}</button>
 
     </div>   

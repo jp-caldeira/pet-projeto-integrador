@@ -39,6 +39,7 @@ p {
 
 h1 {
     font-size: 27px;
+    
 }
 
 label {
@@ -75,4 +76,8 @@ label {
     width: 50%;
     float: left;
     padding-right: 2%;
+}
+.espacamento{
+    margin-top: 100px;
+
 }

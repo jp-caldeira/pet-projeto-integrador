@@ -15,6 +15,7 @@
 @include('header')
 </header>
 
+<div class= "espacamento"><div>
 
 <form method="POST" action="{{ route('register') }}">
      @csrf

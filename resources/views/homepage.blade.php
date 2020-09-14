@@ -15,6 +15,7 @@
 @include('header')
 </header>
 
+<div class= "espacamento"><div>
     <!-- Setor direciona ranking -->
 <section>
     <div class="tabcontent">
