@@ -31,6 +31,8 @@ class CreateProdutoTable extends Migration
             $table->string('corante', 40)->nullable();
             $table->string('indicacao', 40)->nullable();
             $table->string('porte', 40)->nullable();
+            $table->decimal('nota', 8, 2)->nullable();
+            $table->string('comentários', 255)->nullable();
         });
     }
 
