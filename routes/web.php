@@ -39,9 +39,9 @@ Route::get('/cadastro-user', function(){
   return view('formulario-cadastro-usuario');
 })->name("login");
 
-Route::get('/compara-pet', function(){
-    return view('projeto');
-});
+// Route::get('/compara-pet', function(){
+//     return view('projeto');
+// });
 
 //Paginas Header e Footer
 
@@ -56,7 +56,7 @@ Route::get('/footer', function(){
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home','HomeController@index')->name('home');
 
 //Paginas Adm
 
