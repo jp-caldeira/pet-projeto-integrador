@@ -8,71 +8,98 @@ use App\ProdutoModel;
 
 class ProdutoController extends Controller
 {
-    public function exibirTodosProdutos(Request $request)
-  {
-    $todosProdutos = ProdutoModel::all();
-    return view('ranking-produtos', ["todosProdutos" => $todosProdutos]);
+    public function exibirTodosProdutos() {
+    $produto = ProdutoModel::all();
+    return view('produtos', ["produtos" => $produto]);
 
   }
 
-  public function exibirUmProduto(Request $request)
-  {
-    //$produto = ProdutoModel::find($id);
-    return view('produtos');
+
+  public function exibirUmProduto($id) {
+    $produto = ProdutoModel::find($id);
+    return view('exibirprodutos', ["produtos"=> $produto]);
   }
 
 
   public function criarUmProduto(Request $request){
       if ($request->isMethod('GET')){
-      return view ('cadastrarFilme');
+      return view ('criarUmProduto');
     }
-    $produtos = new ProdutoModel();
-    $produtos->nome = $request->nome;
-    $produtos->tipo_produto= $request->tipo_produto;
-    $produtos->categoria = $request->categoria;
-    $produtos->marca = $request->marca;
-    $produtos->raca = $request->raca;
-    $produtos->idade = $request->idade;
-    $produtos->linha = $request->linha;
-    $produtos->tipo_racao = $request->tipo_racao;
-    $produtos->preco = $request->preco;
-    $produtos->sabor = $request->sabor;
-    $produtos->cor = $request->cor;
-    $produtos->castrado = $request->castrado;
-    $produtos->corante = $request->corante;
-    $produtos->indicacao = $request->indicacao;
-    $produtos->porte = $request->porte;
-    $resultado = $novopeoduto->save();
+    $novoproduto = new ProdutoModel();
+    $novoproduto->nome = $request->nome;
+    $novoproduto->tipo_produto= $request->tipo_produto;
+    $novoproduto->categoria = $request->categoria;
+    $novoproduto->marca = $request->marca;
+    $novoproduto->imagem = "imagem tretas";
 
-    return view ("criarUmProdto", ['resultado'=>$resultado]);
+    //salvar imagem- nao comunica com o banco - ira ser resolvido em breve =)
+    //if($request->hasfile('imagem')){
+      //$file = $request->file('imagem');
+      //$extension = $file->getClientOriginalExtesion(); //getting image extension
+      //$filename = time(). '.' . $extension;
+      //$file->move("public/img" , $filename);
+      //$file->imagem = $filename;
+    //}else{
+      //return $request;
+      //$file->imagem = '';
+    //}
+
+    $novoproduto->raca = $request->raca;
+    $novoproduto->idade = $request->idade;
+    $novoproduto->linha = $request->linha;
+    $novoproduto->tipo_racao = $request->tipo_racao;
+    $novoproduto->preco = $request->preco;
+    $novoproduto->sabor = $request->sabor;
+    $novoproduto->cor = $request->cor;
+    $novoproduto->castrado = $request->castrado;
+    $novoproduto->corante = $request->corante;
+    $novoproduto->indicacao = $request->indicacao;
+    $novoproduto->porte = $request->porte;
+    
+    $resultado = $novoproduto->save();
+
+    return response()->json(['Produto criado com sucesso!']);
 
 }
 
   public function atualizarUmProduto(Request $request,$id)
   {
-    $produtos = Produto::find($id);
-    $produtos->nome = $request->nome;
-    $produtos->tipo_produto= $request->tipo_produto;
-    $produtos->categoria = $request->categoria;
-    $produtos->marca = $request->marca;
-    $produtos->raca = $request->raca;
-    $produtos->idade = $request->idade;
-    $produtos->linha = $request->linha;
-    $produtos->tipo_racao = $request->tipo_racao;
-    $produtos->preco = $request->preco;
-    $produtos->sabor = $request->sabor;
-    $produtos->cor = $request->cor;
-    $produtos->castrado = $request->castrado;
-    $produtos->corante = $request->corante;
-    $produtos->indicacao = $request->indicacao;
-    $produtos->porte = $request->porte;
-    $produtos->save();
+    $produto = Produto::find($id);
+    $produto->nome = $request->nome;
+    $produto->tipo_produto= $request->tipo_produto;
+    $produto->categoria = $request->categoria;
+    $produto->marca = $request->marca;
+    $produto->raca = $request->raca;
+    $produto->idade = $request->idade;
+    $produto->linha = $request->linha;
+    $produto->tipo_racao = $request->tipo_racao;
+    $produto->preco = $request->preco;
+    $produto->sabor = $request->sabor;
+    $produto->cor = $request->cor;
+    $produto->castrado = $request->castrado;
+    $produto->corante = $request->corante;
+    $produto->indicacao = $request->indicacao;
+    $produto->porte = $request->porte;
+    $produto->save();
     return response()->json(['Produto atualizado com sucesso!']);
   }
   public function deletarUmProduto(Request $request,$id)
   {
-    $produtos = Produto::find($id);
-    $produtos->delete();
+    $produto = Produto::find($id);
+    $produto->delete();
     return response()->json(['Produto deletado!']);
   }
+
+  //public function enviarFiles(Request $request)
+  //{
+    //if($request->isMethod('GET')){
+     // return view ('uploads');
+   // }
+   // $nome = $request->file('file')->getClientOriginalName();
+   // $save = $request->file('file')->storeAs("public/img", $nome);
+    //$urlBase = 'storage/img' .$nome;
+
+    //return view('uploads',['linkImg'=>$urlBase]);
+  //}
+
 }

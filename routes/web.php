@@ -23,7 +23,10 @@ Route::get('/homepage', function(){
     return view('homepage');
 })->name("homepage");
 
-Route::get('/ranking', 'ProdutoController@exibirTodosProdutos')->name("ranking");
+Route::get('/ranking-produtos', function (){
+    return view('ranking-produtos');
+})->name("ranking");
+
 
 Route::get('/produtos', 'ProdutoController@exibirUmProduto')->name("produtos");
 
@@ -69,3 +72,11 @@ Route::get('/adminlog', function(){
 })->middleware('checkAdmin');
 
 //Paginas Produto
+
+Route::get('/criarUmProduto', function(){
+    return view ('criarUmProduto');
+})->name("criar_produto");
+
+
+Route::get('/criarUmProduto','ProdutoController@criarUmProduto');
+Route::post('/criarUmProduto', 'ProdutoController@criarUmProduto')->name('criarUmProduto');

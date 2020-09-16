@@ -44,12 +44,12 @@ Route::delete('/pets/{id}','api\PetController@deletarUmPet');
 
 
 //rotas produtos//
-Route::get('/produtos','api\ProdutoController@exibirTodosProdutos');
+Route::get('/produto','api\ProdutoController@exibirTodosProdutos');
 //retorna um unico produtos//
-Route::get('produtos/{id}','api\ProdutoController@exibirUmProduto');
+Route::get('produto/{id}','api\ProdutoController@exibirUmProduto');
 //criar um novo produtos//
-Route::post('/produtos','api\ProdutoController@criarUmProduto');
+Route::post('/produto','api\ProdutoController@criarUmProduto');
 //atualizar um produtos//
-Route::put('/produtos/{id}','api\ProdutoController@atualizarUmProduto');
+Route::put('/produto/{id}','api\ProdutoController@atualizarUmProduto');
 //deletar um produtos//
-Route::delete('/produtos/{id}','api\ProdutoController@deletarUmProduto');
+Route::delete('/produto/{id}','api\ProdutoController@deletarUmProduto');

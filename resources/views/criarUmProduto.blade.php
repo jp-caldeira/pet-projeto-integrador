@@ -1,3 +1,13 @@
+<?php
+
+$produto = [
+         "imagem" => "img/racao6.jpg",
+         "nome" => "Ração Magnus para cachorro 2kg",
+         "descrição" => "Indicada para cães de grande porte",
+         "preço" => "R$ 29,90"
+];
+ ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -9,12 +19,9 @@
     <link rel="stylesheet" href="css/ranking.css">
   </head>
 <body>
-
 <header>
 @include('header')
 </header>
-
-<div class= "espacamento"><div>
 
   <section>
       <nav class="navbar navbar-expand-lg navbar-dark barra-1" style='background-color: #03989e;'>
@@ -30,6 +37,9 @@
   </section>
 
 
+
+
+
 <div class="site-content">
         <div class="container titulo-principal">
             <h1 class="display-4">Ranking de Produtos</h1>
@@ -38,19 +48,13 @@
             <div class="row">
               <div class="col-lg-10 offset-lg-1">
                 <div class="row">
-        @foreach ($novoproduto ?? '' as $produtos)
                   <div class="col-lg-6">
-                        <img src='img/{{$produto->imagem}}' class="img-fluid" alt="produto">
-                        <h4><a href="#">{{$produto->nome}}</a></h4>
-                        <p>{{$produto->tipo_produto}}</p>
-                        <p>R$ {{$produto->preco}}</p> -->
-                        <br>
-                        <a class='btn btn-lg active' style="background-color:rgb(3, 152, 158); color:white; width:200px" href="/produto/{{$produto->id}}">Ver Avaliação</a>
-                        <br>
+                        <h4>Foi??</a></h4>
+                        
                   </div>
                   <br>
                   <br>
-         @endforeach
+
                 </div>
               </div>
         </div>

@@ -87,8 +87,8 @@
                 <div class="links">
                     <a href="/homepage">Home</a>
                     <a href="/cadastro-pet">Cadastre seu pet</a>
-                    <a href="/cadastro-user">Faça seu cadastro</a>
-                    <a href="/ranking">Ranking de produtos</a>
+                    <a href="/register">Faça seu cadastro</a>
+                    <a href="/ranking-produtos">Ranking de produtos</a>
                     <a href="/adocao">Adote</a>
                     <a href="/adminlog">Admin</a>
                     <a href="https://github.com/jp-caldeira/pet-projeto-integrador">GitHub</a>
