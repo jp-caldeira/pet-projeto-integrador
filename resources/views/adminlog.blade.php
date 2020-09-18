@@ -124,13 +124,13 @@
                         <div class="file-field">
                             <a class="btn-floating blue-gradient mt-0 float-right">
                                 <i class="far fa-heart" aria-hidden="true"></i>
-                                <input type="file" name="file" value="">
+                                <input type="file" name="imagem" value="">
                                 </a>
                                 <div class="file-path-wrapper">
                             </div>
                         </div>
                     </select>
-
+    
                 <button type="submit" style="height:40px; width:200px; float:left;" class="tablinkb">Cadastrar</button> <br>
             </form>
         </div>

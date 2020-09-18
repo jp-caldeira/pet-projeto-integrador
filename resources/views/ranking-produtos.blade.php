@@ -13,49 +13,47 @@
 <header>
 @include('header')
 </header>
-
-<div class= "espacamento"><div>
-
-  <section>
-      <nav class="navbar navbar-expand-lg navbar-dark barra-1" style='background-color: #03989e;'>
-          <div class='container-fluid cabecalho row'>
-              <a class="navbar-brand col-2" style="margin-left:110px"> Mundo Pet</a>
-          <form class="barra-pesquisa form-inline col-8">
-              <input class="form-control col-lg-7 col-sm-6 ml-lg-0 ml-sm-5" type="search" placeholder="Digite aqui o que você quer encontrar (ex.: ração para gatos)">
-              <button class="btn btn-light col-3" type="submit">Pesquisar</button>
+  
+  <section class="pesquisa">
+            <!--Barra de Pesquisa-->
+        <nav class="navbar navbar-expand-lg navbar-dark teal lighten-2 mb-4">
+        <a class="navbar-brand" href="#" style="margin-left:150px;">Mundo Pet</a>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <form class="form-inline ml-auto">
+                  <div class="md-form my-0">
+                <input class="form-control" style="width:500px; margin-left:120px;" type="search" placeholder="Digite aqui o que você quer encontrar (ex.: ração para gatos)">
+               <button class="btn btn-light" type="submit">Pesquisar</button>
+            </div>
           </form>
       </div>
     </nav>
-    </div>
   </section>
 
-
-<div class="site-content">
-        <div class="container titulo-principal">
-            <h1 class="display-4">Ranking de Produtos</h1>
-        </div>
-        <div class="produtos">
-            <div class="row">
-              <div class="col-lg-10 offset-lg-1">
+      <div class="produtos" style="margin-left:250px;">
                 <div class="row">
-        @foreach ($novoproduto ?? '' as $produtos)
-                  <div class="col-lg-6">
-                        <img src='img/{{$produto->imagem}}' class="img-fluid" alt="produto">
-                        <h4><a href="#">{{$produto->nome}}</a></h4>
-                        <p>{{$produto->tipo_produto}}</p>
-                        <p>R$ {{$produto->preco}}</p> -->
+                  <div class="col-lg-10 offset-lg-1">
+                    <div class="row">
+            @foreach ($produtos as $produto)
+                      <div class="col-lg-6">
                         <br>
-                        <a class='btn btn-lg active' style="background-color:rgb(3, 152, 158); color:white; width:200px" href="/produto/{{$produto->id}}">Ver Avaliação</a>
-                        <br>
-                  </div>
-                  <br>
-                  <br>
-         @endforeach
-                </div>
-              </div>
+                    <img src="{{ asset('storage/img/' . $produto->imagem) }}" class="img-fluid" alt="produto"><br>
+                      <h4 style="margin-left:70px">{{$produto->nome}}</h4>
+                      <p style="margin-left:70px">{{$produto->tipo_produto}}</p>
+                      <p style="margin-left:70px">R$ {{$produto->preco}}</p><br>
+                      <a class='btn btn-lg active' style="background-color:rgb(3, 152, 158); color:white; width:200px" href="/produto/{{$produto->id}}">Ver Avaliação</a><br>
+                    </div>
+                <br>
+              <br>
+            @endforeach
+          </div>
         </div>
-      </div>
 </div>
+</div>
+
+
+
+<br>
+
 <section class="base">
           @include('footer')
     </section>

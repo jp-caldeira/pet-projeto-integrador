@@ -23,9 +23,7 @@ Route::get('/homepage', function(){
     return view('homepage');
 })->name("homepage");
 
-Route::get('/ranking-produtos', function (){
-    return view('ranking-produtos');
-})->name("ranking");
+Route::get('/ranking-produtos', 'ProdutoController@exibirTodosProdutos')->name("ranking");
 
 
 Route::get('/produtos', 'ProdutoController@exibirUmProduto')->name("produtos");

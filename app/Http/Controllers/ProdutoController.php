@@ -10,7 +10,7 @@ class ProdutoController extends Controller
 {
     public function exibirTodosProdutos() {
     $produto = ProdutoModel::all();
-    return view('produtos', ["produtos" => $produto]);
+    return view('ranking-produtos', ["produtos" => $produto]);
 
   }
 
@@ -30,19 +30,18 @@ class ProdutoController extends Controller
     $novoproduto->tipo_produto= $request->tipo_produto;
     $novoproduto->categoria = $request->categoria;
     $novoproduto->marca = $request->marca;
-    $novoproduto->imagem = "imagem tretas";
 
-    //salvar imagem- nao comunica com o banco - ira ser resolvido em breve =)
-    //if($request->hasfile('imagem')){
-      //$file = $request->file('imagem');
-      //$extension = $file->getClientOriginalExtesion(); //getting image extension
-      //$filename = time(). '.' . $extension;
-      //$file->move("public/img" , $filename);
-      //$file->imagem = $filename;
-    //}else{
-      //return $request;
-      //$file->imagem = '';
-    //}
+    if($request->hasfile('imagem')){
+      // $file = $request->file('imagem');
+      // $extension = $file->extension(); //getting image extension
+      $filename = date('YmdGisu'). $request->imagem->getClientOriginalName();
+      // $file->move("public/img" , $filename);
+      $request->imagem->storeAs("public/img", $filename);
+      $novoproduto->imagem = $filename;
+    }else{
+      $novoproduto->imagem = "sem imagem";
+
+    }
 
     $novoproduto->raca = $request->raca;
     $novoproduto->idade = $request->idade;
