@@ -21,8 +21,9 @@
 <section class="container-pet-form">
 <h1>Cadastre o seu Pet </h1> <br>
 <div class="form-especie">
-  {{-- <form method="POST" action="{{ route('cadastro-pet') }}"> --}}
+  <form method="POST" action="{{ route('cadastropet') }}">
      @csrf
+
         <select name="especie"class="form-control">
             <option selected disabled>{{ __('Olá, qual a espécie do seu Pet?') }} </option>
             <option value="cachorro">Cachorro</option>
@@ -50,14 +51,14 @@
         
         <div class="form-aniversario">
        <div class="data"> 
-                <label for="nascimento">{{ __('Data de Nascimento') }}</label><br>
-                <input id="date" type="date"class="form-control" name="cpf" value="{{ old('nascimento') }}"required autocomplete="nascimento" >
+                <label for="data">{{ __('Data de Nascimento') }}</label><br>
+                <input id="date" type="date"class="form-control" name="data" value="{{ old('data') }}"required autocomplete="data" >
             </div>  
 </div>
         <div class = "comentarios">
       <label for="comentarios"></label>
         <br>
-        <textarea name="comentarios" class="form-control" rows="6" cols="5">Conte-nos um pouco mais sobre o seu Pet</textarea>
+        <textarea name="comentarios" class="form-control" rows="6" cols="5" value="{{ old('comentarios') }}"required autocomplete="comentarios" >{{ __('Conte nos um pouco mais sobre o seu Pet') }} </textarea>
         <br>
         </div>
 </section>
@@ -95,7 +96,9 @@
     <br>
 <div class="row"> 
     <div class="col-lg-12 col-xs-12">
-    <button type="submit"  class="btn btn-lg btn-block" style='color:white; background-color:rgb(3, 152, 158)'>Cadastrar</button>
+
+     <button type="submit"  class="btn btn-lg btn-block" style='color:white; background-color:rgb(3, 152, 158);'> {{ __('Cadastrar') }}</button>
+     
 </div>   
 </div>
 </div>

@@ -11,8 +11,9 @@ class Pets extends Model
   public $timestamp = false;
   public $guarded = [];
 
-  // protected $fillable = [
-  //   'nome', 'especie', 'genero','nascimento',];
+  protected $fillable = [
+    'nome', 'especie', 'genero','data',
+  ];
   
   
 
