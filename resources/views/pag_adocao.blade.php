@@ -51,18 +51,19 @@ $pets = [
 @include('header')
 </header>
 
-<div class= "espacamento"><div>
 
     <!-- ESPAÇO PARA CADASTRO DO PET -->
-
     <section class="container-pet-form">
     <section>     
-        <div class="encontre">
-            <b >Encontre aqui seu novo Pet!</b>
+        <div class="encontre" style="margin-left:350px">
+            <b>Encontre aqui seu novo Pet!</b><br>
         </div>
+      <div class="bloco1">
           <ul>
             <li>
-                <a href="#"><div class="text-cachorro"><b>Cadastre-se aqui</b><br>
+            <div class="text-cachorro">
+              <br>
+              <a href='#' style="float:left;"><b>Cadastre-se aqui</b></a><br>
                   <b>E Divulgue um Pet para adoção! <br> Divulgue de forma responsável!</b></div>
                   <div class="foto-cachorro">
                     <img src="img/cachorro.jpg" alt="cachorro" width="190px" height="200px"/>
@@ -73,15 +74,24 @@ $pets = [
                    <img src="img/pata1.png" width="100px" height="100px"/>
                   </div>
             <li>
-                <a href="#"><div class="text-gato"><b>Cadastre-se aqui <br>
-                  Para adotar seu novo amigo! <br> A gente te ajuda!</b></div>
-                  <div class="foto-gato">
-                   <img src="img/gato2.jpg" width="290px" height="180px"/>
+              
+                <div class="text-gato">
+                <br>
+                <a href='#'><b>Cadastre-se aqui</b></a> 
+                <br>
+                 <b> Para adotar seu novo amigo! <br> A gente te ajuda!</b>
+                </div>
+                      <div class="foto-gato">
+                    <img src="img/gato2.jpg" width="290px" height="180px"/>
                   </div>
                 </a>
             </li>
           </ul>
-        <form class="form-adocao">
+      </div>
+<!-- FORMULARIO DE PESQUISA -->
+
+    <form class="form-adocao">
+      <br>
         <label for="inputState"><b>Filtre pelo Pet que você deseja</b></label>
         <select id="inputState" class="form-control">
                 <option selected>Espécie</option>
@@ -92,25 +102,20 @@ $pets = [
             </div>
             <select id="inputState" class="form-control">
                 <option selected>Estado</option>
-                <option>São Paulo</option>
-                <option>Rio De Janeiro</option>
+                  <option>São Paulo</option>
+                  <option>Rio De Janeiro</option>
                 <option>Minas gerais</option>
               </select><br>
-              <div class="busca">
-              <button type="submit"class="btn  btn-lg btn-block" style='color:white; background-color: rgb(3, 152, 158);'>Buscar</button></div>
+                <div class="busca">
+                <button type="submit"class="btn  btn-lg btn-block" style='color:white; background-color: rgb(3, 152, 158);'>Buscar</button></div>
             </div>
-          </div>
+              </div>
             </label>
           </div>
         </form>
-</div>
-
-
-<div class="site-content">
-        <div class="container titulo-principal">
-            <h1 class="adocao">Pets para adoção</h1>
-        </div>
-        <div class="produtos">
+    </div>
+<!-- EXPOSIÇÃO ANIMAIS PARA ADOÇÃO -->
+        <div class="animais">
             <div class="row">
               <div class="col-lg-10 offset-lg-1">
                 <div class="row">

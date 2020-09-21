@@ -49,12 +49,8 @@ $produto = [
               <div class="col-lg-10 offset-lg-1">
                 <div class="row">
                   <div class="col-lg-6">
-                        <img src=<?=$produto['imagem']?> class="img-fluid" alt="produto">
-                        <h4><a href="#"><?=$produto['nome']?></a></h4>
-                        <p><?=$produto['descrição']?></p>
-                        <p><?=$produto['preço']?></p>
-                        <br>
-                        <br>
+                        <h4>Foi??</a></h4>
+                        
                   </div>
                   <br>
                   <br>

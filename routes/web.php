@@ -23,9 +23,10 @@ Route::get('/homepage', function(){
     return view('homepage');
 })->name("homepage");
 
-Route::get('/ranking', function(){
-  return view('ranking-produtos');
-})->name("ranking");
+Route::get('/ranking-produtos', 'ProdutoController@exibirTodosProdutos')->name("ranking");
+
+
+Route::get('/produtos', 'ProdutoController@exibirUmProduto')->name("produtos");
 
 Route::get('/adocao', function (){
     return view('pag_adocao');
@@ -39,9 +40,9 @@ Route::get('/cadastro-user', function(){
   return view('formulario-cadastro-usuario');
 })->name("login");
 
-// Route::get('/compara-pet', function(){
-//     return view('projeto');
-// });
+//Route::get('/compara-pet', function(){
+    //return view('projeto');
+//});
 
 //Paginas Header e Footer
 
@@ -70,6 +71,10 @@ Route::get('/adminlog', function(){
 
 //Paginas Produto
 
-Route::get('/produtos', function(){
-    return view ('produtos');
-})->name("produtos");
+Route::get('/criarUmProduto', function(){
+    return view ('criarUmProduto');
+})->name("criar_produto");
+
+
+Route::get('/criarUmProduto','ProdutoController@criarUmProduto');
+Route::post('/criarUmProduto', 'ProdutoController@criarUmProduto')->name('criarUmProduto');

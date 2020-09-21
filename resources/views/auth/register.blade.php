@@ -68,7 +68,8 @@
                 <input id="nascimento" type="date"class="form-control" name="nascimento" value="{{ old('nascimento') }}"required autocomplete="nascimento" >
             </div>
             
-            <div class="senha">
+            <div class="row">   
+                <div class="col-lg-6  col-xs-12">
                     <label for="password">{{ __('Senha') }}</label>
                     <br>
                     <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
@@ -81,8 +82,7 @@
                 </div>
                
 
-                <div class="senhaConfirma">
-                
+                <div class="col-lg-6  col-xs-12" style="margin-l    eft:150px">
                     <label for="password-confirm">{{ __('Confirme sua senha') }}</label>
                     <br>
                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">

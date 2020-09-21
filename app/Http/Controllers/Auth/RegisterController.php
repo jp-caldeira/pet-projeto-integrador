@@ -8,6 +8,8 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rule;
+
 
 class RegisterController extends Controller
 {
@@ -55,7 +57,7 @@ class RegisterController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'phone' => ['required', 'string', 'max:15'],
             'genero' => ['required', 'string'],
-            'cpf' => ['required', 'string', 'max:15', 'unique:users'],
+            'cpf' => ['required', 'string', 'max:15','unique:\App\User,cpf'],
             'nascimento' => ['required', 'date'],
         ]);
     }
