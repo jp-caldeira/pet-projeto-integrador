@@ -21,7 +21,7 @@
 <section class="container-pet-form">
 <h1>Cadastre o seu Pet </h1> <br>
 <div class="form-especie">
-  <form method="POST" action="{{ route('cadastropet') }}">
+  <form method="post" action="{{ route('criarUmPet') }}">
      @csrf
 
         <select name="especie"class="form-control">
@@ -50,9 +50,9 @@
 </div>
         
         <div class="form-aniversario">
-       <div class="data"> 
-                <label for="data">{{ __('Data de Nascimento') }}</label><br>
-                <input id="date" type="date"class="form-control" name="data" value="{{ old('data') }}"required autocomplete="data" >
+       <div class="nascimento"> 
+                <label for="nascimento">{{ __('Data de Nascimento') }}</label><br>
+                <input id="nascimento" type="date"class="form-control" name="nascimento" value="{{ old('nascimento') }}"required autocomplete="nascimento" >
             </div>  
 </div>
         <div class = "comentarios">

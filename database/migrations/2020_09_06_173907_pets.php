@@ -15,10 +15,11 @@ class Pets extends Migration
     {
        Schema::create('Pets', function(Blueprint $table){
            $table->bigIncrements('id');
-           $table->string('nome',100);
            $table->string('especie',100);
+           $table->string('nome',100);
            $table->string('genero',100);
-           $table->string('nascimento',20);
+           $table->date('nascimento',20);
+           $table->string('comentarios',300);
            $table->timestamps();
        });
     }
