@@ -13,7 +13,7 @@
 <header>
 @include('header')
 </header>
-  
+
   <section class="pesquisa">
             <!--Barra de Pesquisa-->
         <nav class="navbar navbar-expand-lg navbar-dark teal lighten-2 mb-4">
@@ -29,14 +29,14 @@
     </nav>
   </section>
 
-      <div class="produtos" style="margin-left:250px;">
+      <div class="produtos" style="margin-left:250px">
                 <div class="row">
                   <div class="col-lg-10 offset-lg-1">
                     <div class="row">
             @foreach ($produtos as $produto)
                       <div class="col-lg-6">
                         <br>
-                    <img src="{{ asset('storage/img/' . $produto->imagem) }}" class="img-fluid" alt="produto"><br>
+                    <img src="{{ asset('img/' . $produto->imagem) }}" class="img-fluid" alt="produto"><br>
                       <h4 style="margin-left:70px">{{$produto->nome}}</h4>
                       <p style="margin-left:70px">{{$produto->tipo_produto}}</p>
                       <p style="margin-left:70px">R$ {{$produto->preco}}</p><br>

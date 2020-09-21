@@ -54,7 +54,7 @@ class ProdutoController extends Controller
     $novoproduto->corante = $request->corante;
     $novoproduto->indicacao = $request->indicacao;
     $novoproduto->porte = $request->porte;
-    
+
     $resultado = $novoproduto->save();
 
     return response()->json(['Produto criado com sucesso!']);

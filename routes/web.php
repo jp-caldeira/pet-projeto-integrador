@@ -26,7 +26,7 @@ Route::get('/homepage', function(){
 Route::get('/ranking-produtos', 'ProdutoController@exibirTodosProdutos')->name("ranking");
 
 
-Route::get('/produtos', 'ProdutoController@exibirUmProduto')->name("produtos");
+Route::get('/produtos/{id}', 'ProdutoController@exibirUmProduto')->name("produtos");
 
 Route::get('/adocao', function (){
     return view('pag_adocao');
