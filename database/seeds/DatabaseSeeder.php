@@ -13,5 +13,6 @@ class DatabaseSeeder extends Seeder
     {
       //$this->call(CriarPetsSeeder::class);
       $this->call(produtos_seeder::class);
+
     }
 }
