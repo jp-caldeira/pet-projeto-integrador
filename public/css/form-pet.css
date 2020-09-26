@@ -85,3 +85,114 @@ h1 {
     margin-top: 100px;
 
 }
+
+input[type=radio] {
+    visibility: hidden;
+  }
+  input[type=radio] + label {
+      background-size:cover;
+      background-position:center;
+      background-repeat: no-repeat;
+      height: 100px;
+      width: 100px;
+      display:inline-block;
+  }
+
+  #cachorro+label {
+    display: block;
+    float: left;
+    cursor:pointer;
+    border:3px solid #EEE;
+    border-radius:15px;
+    padding:10px;
+}
+  input#cachorro + label {
+    background-image: url("../img/cao.jpg");
+    
+  }
+  input#cachorro:checked + label {
+    border:3px solid #3F51B5;
+    background-image: url("../img/memecachorro.jpg");
+      
+  }
+  
+  #gato+label {
+    display: block;
+    float: left;
+    cursor:pointer;
+    border:3px solid #EEE;
+    border-radius:15px;
+    padding:10px;
+  }
+  input#gato + label {
+    background-image: url("../img/gato.jpg");
+  }
+  input#gato:checked + label {
+    border:3px solid #3F51B5;
+    background-image: url("../img/memegato.jpg");
+  } 
+
+
+  #passaro+label {
+    display: block;
+    float: left;
+    cursor:pointer;
+    border:3px solid #EEE;
+    border-radius:15px;
+    padding:10px;
+  }
+  input#passaro + label {
+    background-image: url("../img/passaro.jpg");
+  }
+  input#passaro:checked + label {
+    border:3px solid #3F51B5;
+    background-image: url("../img/memepassaro.jpg");
+  } 
+
+  #roedor+label {
+    display: block;
+    float: left;
+    cursor:pointer;
+    border:3px solid #EEE;
+    border-radius:15px;
+    padding:10px;
+  }
+  input#roedor + label {
+    background-image: url("../img/roedor.jpg");
+  }
+  input#roedor:checked + label {
+    border:3px solid #3F51B5;
+    background-image: url("../img/memerato.jpg");
+  }
+
+  #reptil+label {
+    display: block;
+    float: left;
+    cursor:pointer;
+    border:3px solid #EEE;
+    border-radius:15px;
+    padding:10px;
+  }
+  input#reptil + label {
+    background-image: url("../img/reptil.jpg");
+  }
+  input#reptil:checked + label {
+    border:3px solid #3F51B5;
+    background-image: url("../img/memetartaruga.jpg");
+  }
+
+  #peixe+label {
+    display: block;
+    float: left;
+    cursor:pointer;
+    border:3px solid #EEE;
+    border-radius:15px;
+    padding:10px;
+  }
+  input#peixe + label {
+    background-image: url("../img/peixe.jpg");
+  }
+  input#peixe:checked + label {
+    border:3px solid #3F51B5;
+    background-image: url("../img/memepeixe.jpg");
+  }

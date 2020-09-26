@@ -24,16 +24,17 @@
   <form method="post" action="{{ route('adicionarUmPet') }}">
      @csrf
 
-        <select name="especie"class="form-control">
-            <option selected disabled>{{ __('Olá, qual a espécie do seu Pet?') }} </option>
-            <option value="cachorro">Cachorro</option>
-             <option value="gato">Gato</option>
-             <option value="passaro">Pássaro</option>
-             <option value="roedor">Roedor</option>
-             <option value="reptil">Reptil</option>
-             <option value="peixe">Peixe</option>
-        </select>
+<label for="especie">{{ __('Olá, qual a espécie do seu Pet?') }} </label><br>
+
+<input type="radio" name="especie" id="cachorro" value="cachorro"><label for="cachorro"></label>
+<input type="radio" name="especie" id="gato" value="gato"><label for="gato"></label>
+<input type="radio" name="especie" id="passaro" value= "passaro"><label for="passaro"></label>
+<input type="radio" name="especie" id="roedor" value= "roedor"><label for="roedor"></label>
+<input type="radio" name="especie" id="reptil" value= "reptil"><label for="reptil"></label>
+<input type="radio" name="especie" id="peixe" value= "peixe"><label for="peixe"></label> 
+
 </div>
+<br>
         <div class="form-nome">
         <label for="nome">{{ __('Nome') }}</label> <br>
         <input id="nome" type="text" class="form-control @error('nome') is-invalid @enderror" name="nome" value="{{ old('nome') }}" placeholder="Snoopy da Silva" required autocomplete="nome" autofocus>
@@ -73,10 +74,10 @@
     </div>
 </div>
 
-    <div class="caption" >
+    {{-- <div class="caption" >
       <input type="file" name="arquivo" value =  " " >
       <br>
-</div>
+</div> --}}
 </div>
 </section>
       <div class="container-pet-preferencias">

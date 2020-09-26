@@ -13,6 +13,7 @@ class PetController extends Controller
     {
       $pets = new Pets();
       $pets->especie= $request->especie;
+      // $pets->especie = implode(',',$request->especie);
       $pets->nome = $request->nome;
       $pets->genero= $request->genero;
       $pets->nascimento= $request->nascimento;
