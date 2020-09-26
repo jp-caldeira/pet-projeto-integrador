@@ -63,7 +63,7 @@ $pets = [
             <li>
             <div class="text-cachorro">
               <br>
-              <a href='#' style="float:left;"><b>Cadastre-se aqui</b></a><br>
+              <a href='#'><b>Cadastre-se aqui</b></a><br>
                   <b>E Divulgue um Pet para adoção! <br> Divulgue de forma responsável!</b></div>
                   <div class="foto-cachorro">
                     <img src="img/cachorro.jpg" alt="cachorro" width="190px" height="200px"/>
@@ -77,14 +77,14 @@ $pets = [
               
                 <div class="text-gato">
                 <br>
-                <a href='#'><b>Cadastre-se aqui</b></a> 
+                <a href='#'><b>Cadastre-se aqui</b> 
                 <br>
                  <b> Para adotar seu novo amigo! <br> A gente te ajuda!</b>
                 </div>
+                </a>
                       <div class="foto-gato">
                     <img src="img/gato2.jpg" width="290px" height="180px"/>
                   </div>
-                </a>
             </li>
           </ul>
       </div>
@@ -119,7 +119,7 @@ $pets = [
             <div class="row">
               <div class="col-lg-10 offset-lg-1">
                 <div class="row">
-        <?php foreach($pets as $petsAdocao){?>
+            @foreach($pets as $petsAdocao)
                   <div class="col-lg-6">
                     <br>
                         <img src=<?=$petsAdocao['imagem']?> class="img-fluid" alt="produto">
@@ -128,8 +128,7 @@ $pets = [
                         <br>
                         <a class='btn btn-lg' style='color:white; background-color: rgb(3, 152, 158);' href='#'>Adotar</a>
                   </div>
-                 
-              <?php } ?>
+            @endforeach
                 </div>
               </div>
         </div>
