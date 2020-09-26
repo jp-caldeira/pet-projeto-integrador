@@ -28,6 +28,14 @@ body {
     right: 50px;
 }
 
+.collapse-content .fa.fa-heart:hover {
+    color: #f44336 !important;
+}
+
+.collapse-content .fa.fa-share-alt:hover {
+    color: #0d47a1 !important;
+}
+
 
 /*imagem principal gatito*/
 
@@ -101,7 +109,7 @@ h3 {
     margin-left: 200px;
     font-family: 'Quicksand', sans-serif;
 }
-.espacamento{
-    margin-top: 100px;
 
+.espacamento {
+    margin-top: 100px;
 }

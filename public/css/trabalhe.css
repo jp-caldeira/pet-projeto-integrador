@@ -1,0 +1,64 @@
+body,
+html {
+    font-family: 'Quicksand', sans-serif;
+    width: 100%;
+    left: 90px;
+    right: 50px;
+}
+
+.meioesquerda {
+    width: 50%;
+    margin-top: 200px;
+    margin-left: 40px;
+    float: left;
+    height: 300px;
+    text-align: center;
+    border-radius: 10px;
+    font-family: 'Quicksand', sans-serif;
+    background-color: rgb(43, 169, 169);
+}
+
+.meioesquerda h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(254, 255, 255);
+    margin-top: 30px;
+}
+
+.meioesquerda p {
+    font-stretch: condensed;
+    font-size: 15px;
+    text-align: center;
+    color: rgb(219, 255, 255);
+    font-family: 'Quicksand', sans-serif;
+    margin-left: 100px;
+    width: 500px;
+    margin-top: 30px;
+}
+
+.meioesquerda h2 {
+    font-stretch: condensed;
+    font-size: 15px;
+    text-align: center;
+    color: rgb(130, 255, 255);
+    font-family: 'Quicksand', sans-serif;
+}
+
+.meiodireita {
+    width: 40%;
+    margin-top: 200px;
+    float: right;
+    margin-right: 20px;
+}
+
+.img {
+    width: 500px;
+    height: 300px;
+}
+
+.base {
+    float: left;
+    margin-left: 90px;
+    margin-top: 40px;
+    font-family: 'Quicksand', sans-serif;
+}

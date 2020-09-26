@@ -28,7 +28,7 @@
 
     <section>
         <!--Coluna imagens produtos-->
-        <div class="ranking">
+     <div class="ranking">
             <p>Os mimos que seu Pet Ama com os melhores Preços!</p>
                 <img src="/img/racoes.png" class="rounded float-left" style="width:165px" alt="imagens racao">
                 <img src="/img/camas.png" class="rounded float-left" style="width:165px" alt="imagens camas">
@@ -39,7 +39,9 @@
                 <button class="botao" style="margin-left:40px">Camas</button>
                 <button class="botao" style="margin-left:70px">Remédios</button>
                 <button class="botao" style="margin-left:70px">Brinquedos</button>
-    </div>
+    </div> 
+
+   
 
     </section>
 

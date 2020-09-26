@@ -25,24 +25,22 @@
         <img style="margin-right:310px;" class="img" src="/img/adminimg.png" alt="catiorro trabalhador">
         <p style="width:600px">Ola Administrador!</p>
         <p style="width:600px">Aqui geramos o acesso do nosso banco de produtos e moderamos as avaliações da nossa comunidade</p>
-        <button style="height:80px" class="tablinkb" onclick="openPage('Ranking', this, 'white')">Veja todos os nossos produtos Cadastrados</button>
+        <button style="height:80px" class="botao" onclick="openPage('Ranking', this, 'white')">Veja todos os nossos produtos Cadastrados</button>
     </div>
 </section>
 
         <!--Coluna imagens produtos-->
         @method('POST')
 
-
-        <div class="ranking" style="margin-top:10px;">
+    <section class="formulario" style="margin-top:10px;">
             <h3>Cadastre Novos Produtos</h3>
-            <div style="width:600px; margin-left:200px;">
             <form action="{{ route('criarUmProduto') }}" method="POST" enctype="multipart/form-data">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 
-                <label>Nome</label>
-                    <input class="form-control" type="text" name="nome" value="" placeholder="Ração Seca PremieR Pet Golden Special Cães Adultos Frango e Carne">
+                <label >Nome</label>
+                    <input style="margin-top:10px;" class="form-control" type="text" name="nome" value="" placeholder="Ração Seca PremieR Pet Golden Special Cães Adultos Frango e Carne">
                 <label>{{ __('Tipo de Produto') }}</label>
-                    <input class="form-control" type="text" name="tipo_produto" value="" placeholder="Ração"><br>
+                    <input style="margin-top:5px;" class="form-control" type="text" name="tipo_produto" value="" placeholder="Ração"><br>
 
                 <select name="categoria" class="form-control" style="width:200px; float:left;" >
                       <option selected disabled>{{ __('Categoria') }}</option>
@@ -131,7 +129,7 @@
                         </div>
                     </select>
     
-                <button type="submit" style="height:40px; width:200px; float:left;" class="tablinkb">Cadastrar</button> <br>
+                <button type="submit" style="height:40px; width:200px; float:left;" class="botao">Cadastrar</button> <br>
             </form>
         </div>
                 </div>

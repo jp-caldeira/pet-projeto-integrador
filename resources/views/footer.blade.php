@@ -59,8 +59,8 @@
 
        <section>     
         <div class="barrafinal">
-            <a href="{{ route('home') }}" style="color:white">Sobre Nós</a>
-            <a href="{{ route('ranking') }}" style="color:white">Trabalhe com a gente</a>
+            <a href="{{ route('sobre') }}" style="color:white">Sobre Nós</a>
+            <a href="{{ route('trabalhe') }}" style="color:white">Trabalhe com a gente</a>
             <a href="{{ route('cadastropet') }}"style="color:white">Dúvidas Frequentes</button></a>
             <a href="{{ route('adote') }}"style="color:white">Lojas Parceiras</button></a>
             <a href="{{ route('login') }}"style="color:white">Política de privacidade</button></a>

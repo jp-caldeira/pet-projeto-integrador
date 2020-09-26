@@ -13,6 +13,7 @@ header {
     padding: 10px 10px;
     background-color: #d3d3d3;
 }
+
 .tablinka {
     background-color: rgb(255, 255, 255);
     color: rgb(3, 152, 158);
@@ -55,12 +56,6 @@ header {
     margin-bottom: 500px;
     top: 50px;
 }
-
-
-/*  img:hover {
-    width: 410px;
-    height: 410px;
-}*/
 
 p {
     margin-left: 50px;

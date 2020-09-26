@@ -1,0 +1,129 @@
+body,
+html {
+    font-family: 'Quicksand', sans-serif;
+    width: 100%;
+    left: 90px;
+    right: 50px;
+}
+
+.meioesquerda {
+    width: 50%;
+    margin-top: 200px;
+    margin-left: 30px;
+    float: left;
+    height: 300px;
+    text-align: center;
+    border-radius: 10px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.meioesquerda h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(24, 110, 112);
+    margin-top: 10px;
+}
+
+.meiodireita h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(24, 110, 112);
+    font-family: 'Quicksand', sans-serif;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.meiodireita p {
+    font-stretch: condensed;
+    font-size: 15px;
+    text-align: center;
+    color: rgb(114, 124, 124);
+    font-family: 'Quicksand', sans-serif;
+    width: 400px;
+}
+
+.meioesquerda p {
+    font-stretch: condensed;
+    font-size: 15px;
+    text-align: center;
+    color: rgb(114, 124, 124);
+    font-family: 'Quicksand', sans-serif;
+    margin-left: 100px;
+    width: 500px;
+}
+
+.meioesquerda h2 {
+    font-stretch: condensed;
+    font-size: 15px;
+    text-align: center;
+    color: rgb(43, 169, 169);
+    font-family: 'Quicksand', sans-serif;
+}
+
+a {
+    font-stretch: condensed;
+    font-size: 15px;
+    text-align: center;
+    color: rgb(43, 169, 169);
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
+}
+
+.meiodireita {
+    width: 40%;
+    margin-top: 200px;
+    float: right;
+    margin-right: 20px;
+}
+
+.imgav {
+    width: 370px;
+    height: 370px;
+}
+
+.imgp {
+    height: 220px;
+}
+
+.container-superior {
+    width: 400px;
+    float: center;
+    margin-top: 200px;
+    margin-left: 100px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.container-inferior {
+    width: 70%;
+    float: center;
+    margin-left: 50px;
+    margin-top: 200px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.botao {
+    background-color: rgb(3, 152, 158);
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    border-radius: 3px;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+.terceiro {
+    width: 90%;
+    text-align: center;
+    margin-top: 100px;
+    background-color: yellow;
+}
+
+.base {
+    float: left;
+    margin-left: 90px;
+    margin-top: 40px;
+    font-family: 'Quicksand', sans-serif;
+}
