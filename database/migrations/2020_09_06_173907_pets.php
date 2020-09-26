@@ -20,6 +20,7 @@ class Pets extends Migration
            $table->string('genero',100);
            $table->date('nascimento',20);
            $table->string('comentarios',300);
+           $table->string('preferencias',300);
            $table->timestamps();
        });
     }

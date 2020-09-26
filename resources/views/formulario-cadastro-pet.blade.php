@@ -82,7 +82,7 @@
       <div class="container-pet-preferencias">
       <label for="preferencias">{{ __('Selecione os interesses principais do seu Pet:') }}</label>
     <br>
-    <label for="rações"><input type="checkbox" name="preferencias[]" id = "rações" value="rações"> Rações e comidinhas </label>
+    <label for="racoes"><input type="checkbox" name="preferencias[]" id = "racoes" value="racoes"> Rações e comidinhas </label>
     <br>
     <label for="petiscos"><input type="checkbox" name="preferencias[]" id = "petiscos" value="petiscos"checked> Petiscos</label>
     <br>

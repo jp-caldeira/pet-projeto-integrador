@@ -12,7 +12,7 @@ class Pets extends Model
   public $guarded = [];
 
   protected $fillable = [
-    'especie', 'nome', 'genero','nascimento', 'comentarios',
+    'especie', 'nome', 'genero','nascimento', 'comentarios', 'preferencias',
   ];
   
   
