@@ -15,16 +15,24 @@
 @include('header')
 </header>
 
-<div class= "espacamento"><div>
-    <!-- ESPAÇO PARA CADASTRO DO PET -->
+<div class= "espacamento">
+</div>
+
+  
+<div class = "titulo">
+
+<h1>{{ __('Cadastre o seu Pet') }}</h1>
+</div>
+<hr>
 
 <section class="container-pet-form">
-<h1>Cadastre o seu Pet </h1> <br>
 <div class="form-especie">
   <form method="post" action="{{ route('adicionarUmPet') }}">
      @csrf
 
-<label for="especie">{{ __('Olá, qual a espécie do seu Pet?') }} </label><br>
+{{-- //depois lembrar de colocar aqui o nome da pessoa logada// --}}
+
+<p>{{ __('Olá, qual a espécie do seu Pet?') }}</p> <br>
 
 <input type="radio" name="especie" id="cachorro" value="cachorro"><label for="cachorro"></label>
 <input type="radio" name="especie" id="gato" value="gato"><label for="gato"></label>
@@ -32,77 +40,67 @@
 <input type="radio" name="especie" id="roedor" value= "roedor"><label for="roedor"></label>
 <input type="radio" name="especie" id="reptil" value= "reptil"><label for="reptil"></label>
 <input type="radio" name="especie" id="peixe" value= "peixe"><label for="peixe"></label> 
+</div>
+</section>
 
-</div>
 <br>
-        <div class="form-nome">
-        <label for="nome">{{ __('Nome') }}</label> <br>
-        <input id="nome" type="text" class="form-control @error('nome') is-invalid @enderror" name="nome" value="{{ old('nome') }}" placeholder="Snoopy da Silva" required autocomplete="nome" autofocus>
-        <div>
-        
-        <div class="form-genero">
-      <label for="genero">{{ __('Genero') }}</label>
-            <select name="genero"class="form-control" value="{{ old('genero') }}"required autocomplete="genero">
-                      <option selected disabled>{{ __('Selecione') }}</option>
-                      <option value="femea">Femea</option>
-                      <option value="macho">Macho</option>
-                      <option value="n/a">N/A</option>
-            </select>
+<section class="container-pet-dados">
+<div class="form-nome">
+<br>
+  <label for="nome">{{ __('Nome') }}</label> <br>
+  <input id="nome" type="text" class="form-control @error('nome') is-invalid @enderror" name="nome" value="{{ old('nome') }}" placeholder="Snoopy da Silva" required autocomplete="nome" autofocus>
 </div>
         
-        <div class="form-aniversario">
-       <div class="nascimento"> 
-                <label for="nascimento">{{ __('Data de Nascimento') }}</label><br>
-                <input id="nascimento" type="date"class="form-control" name="nascimento" value="{{ old('nascimento') }}"required autocomplete="nascimento" >
-            </div>  
-</div>
+<div class="form-genero">
+  <label for="genero">{{ __('Genero') }}</label>
+    <select name="genero"class="form-control" value="{{ old('genero') }}"required autocomplete="genero">
+      <option selected disabled>{{ __('Selecione') }}</option>
+      <option value="femea">Femea</option>
+      <option value="macho">Macho</option>
+      <option value="n/a">N/A</option>
+    </select>
+</div>      
+
+<div class="nascimento"> 
+     <label for="nascimento">{{ __('Data de Nascimento') }}</label><br>
+    <input id="nascimento" type="date"class="form-control" name="nascimento" value="{{ old('nascimento') }}"required autocomplete="nascimento" >
+</div>  
+
         <div class = "comentarios">
-      <label for="comentarios"></label>
-        <br>
-        <textarea name="comentarios" class="form-control" rows="6" cols="5" value="{{ old('comentarios') }}"required autocomplete="comentarios" >{{ __('Conte nos um pouco mais sobre o seu Pet') }} </textarea>
+      <label for="comentarios">{{ __('Comentarios') }}</label>
+        
+        <textarea id="comentarios" name="comentarios" class="form-control" value="{{ old('comentarios') }}"required autocomplete="comentarios" >{{ __('Conte nos um pouco mais sobre o seu Pet') }} </textarea>
         <br>
         </div>
-</section>
+     
 <br>
 
-<section class="container-pet-foto">
-  <div class = "foto">
-<div class="row">
-      <a href="#" class="thumbnail">
-      <img src="img/pet2.png" alt="inserir uma foto do seu Pet" >
-    </a>
-    </div>
-</div>
-
-    {{-- <div class="caption" >
-      <input type="file" name="arquivo" value =  " " >
-      <br>
-</div> --}}
-</div>
 </section>
-      <div class="container-pet-preferencias">
-      <label for="preferencias">{{ __('Selecione os interesses principais do seu Pet:') }}</label>
-    <br>
-    <label for="racoes"><input type="checkbox" name="preferencias[]" id = "racoes" value="racoes"> Rações e comidinhas </label>
-    <br>
-    <label for="petiscos"><input type="checkbox" name="preferencias[]" id = "petiscos" value="petiscos"checked> Petiscos</label>
-    <br>
-    <label for="brinquedos"><input type="checkbox" name="preferencias[]" id = "brinquedos" value="brinquedos"> Brinquedos</label>
-    <br>
-    <label for="roupinhas"><input type="checkbox" name="preferencias[]" id = "roupinhas" value="roupinhas"> Roupinhas e acessórios</label>
-    <br>
-    <label for="indicações"><input type="checkbox" name="preferencias[]" id = "indicações" value="indicações"> Indicações Pet Service </label>
-    <br>
-    <label for="remedios"><input type="checkbox" name="preferencias[]" id = "remedios" value="remedios"> Remedios </label>
-    <br>
-<div class="row"> 
-    <div class="col-lg-12 col-xs-12">
 
+<section class="container-pet-preferencias">
+    <label for="preferencias">{{ __('Selecione os interesses principais do seu Pet:') }}</label>
+    <br>
+    <label class="checkbox-inline" for="racoes">
+    <input type="checkbox" name="preferencias[]" id = "racoes" value="racoes"> Rações e comidinhas </label>
+    <label class="checkbox-inline" for="petiscos">
+    <input type="checkbox" name="preferencias[]" id = "petiscos" value="petiscos"checked> Petiscos</label>
+    <label class="checkbox-inline" for="brinquedos">
+    <input type="checkbox" name="preferencias[]" id = "brinquedos" value="brinquedos"> Brinquedos</label><br>
+    <label class="checkbox-inline" for="roupinhas">
+    <input type="checkbox" name="preferencias[]" id = "roupinhas" value="roupinhas"> Roupinhas e acessórios</label>
+    <label class="checkbox-inline" for="indicações">
+    <input type="checkbox" name="preferencias[]" id = "indicações" value="indicações"> Indicações Pet Service </label><br>
+    <label class="checkbox-inline" for="remedios">
+    <input type="checkbox" name="preferencias[]" id = "remedios" value="remedios"> Remedios </label>
+    <br>
+
+    
+    </section>
+
+<section class="container-botao">
      <button type="submit"  class="btn btn-lg btn-block" style='color:white; background-color:rgb(3, 152, 158);'> {{ __('Cadastrar') }}</button>
      
-</div>   
-</div>
-</div>
+</section>
     </form>
     <section class="base">
           @include('footer')
