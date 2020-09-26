@@ -84,8 +84,8 @@ Route::get('/criarUmProduto','ProdutoController@criarUmProduto');
 Route::post('/criarUmProduto', 'ProdutoController@criarUmProduto')->name('criarUmProduto');
 
 //cadastro pet//
-Route::get('/criarUmPet','PetController@criarUmPet');
-Route::post('/criarUmPet','PetController@criarUmPet')->name('criarUmPet');
+Route::get('/adicionarUmPet','PetController@adicionarUmPet');
+Route::post('/adicionarUmPet','PetController@adicionarUmPet')->name('adicionarUmPet');
 
 //Sobre Nos
 Route::get('/sobre', function(){

@@ -21,7 +21,7 @@
 <section class="container-pet-form">
 <h1>Cadastre o seu Pet </h1> <br>
 <div class="form-especie">
-  <form method="post" action="{{ route('criarUmPet') }}">
+  <form method="post" action="{{ route('adicionarUmPet') }}">
      @csrf
 
         <select name="especie"class="form-control">

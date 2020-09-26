@@ -9,7 +9,7 @@ use App\Pets;
 class PetController extends Controller
 {
 
-    public function criarUmPet(Request $request)
+    public function adicionarUmPet(Request $request)
     {
       $pets = new Pets();
       $pets->especie= $request->especie;
