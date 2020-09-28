@@ -83,9 +83,25 @@ Route::get('/criarUmProduto', function(){
 Route::get('/criarUmProduto','ProdutoController@criarUmProduto');
 Route::post('/criarUmProduto', 'ProdutoController@criarUmProduto')->name('criarUmProduto');
 
-//cadastro pet//
+//-------------------------------CADASTRO PET----------------------//
+// Route::get('/pets','PetController@listarPet');
+
+// Route::get('/detalhesPet/{id}','PetController@detalharPet');
+
 Route::get('/adicionarUmPet','PetController@adicionarUmPet');
 Route::post('/adicionarUmPet','PetController@adicionarUmPet')->name('adicionarUmPet');
+
+// Route::get('/deletarPet/{id}','PetController@deletarPet');
+
+Route::get('/pets', function(){
+    return view('listarPet');
+});
+
+Route::get('/detalhesPet/{nome}',function($nome){
+    return view('detalhesPet', ['pets'=>$nome]);
+});
+//------------------------------------------------------------------//
+
 
 //Sobre Nos
 Route::get('/sobre', function(){

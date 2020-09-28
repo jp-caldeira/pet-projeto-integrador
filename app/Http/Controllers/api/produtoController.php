@@ -73,4 +73,67 @@ class produtoController extends Controller
     $produtos->delete();
     return response()->json(['Produto deletado!']);
   }
+
+public function filtrarCategoria(Request $request, $categoria, $filtro = "nota")
+{
+
+        if ($filtro == "precoBaixo"){
+        $produtos = ProdutoModel::where('categoria', '=', $categoria)
+                                  ->orderBy('preco')
+                                  ->get();
+        return response()->json($produtos);
+        } else if ($filtro == "precoAlto"){
+        $produtos = ProdutoModel::where('categoria', '=', $categoria)
+                                  ->orderByDesc('preco')
+                                  ->get();
+        return response()->json($produtos);
+        } else {
+        $produtos = ProdutoModel::where('categoria', '=', $categoria)
+                                  ->orderByDesc('nota')
+                                  ->get();
+        return response()->json($produtos);
+      }
+
+}
+
+public function filtrarTipo(Request $request, $tipo, $filtro = "nota")
+{
+
+        if ($filtro == "precoAsc"){
+        $produtos = ProdutoModel::where('tipo_produto', '=', $tipo)
+                                  ->orderBy('preco')
+                                  ->get();
+        return response()->json($produtos);
+      } else if ($filtro == "precoDesc"){
+        $produtos = ProdutoModel::where('tipo_produto', '=', $tipo)
+                                  ->orderByDesc('preco')
+                                  ->get();
+        return response()->json($produtos);
+        } else {
+        $produtos = ProdutoModel::where('tipo_produto', '=', $tipo)
+                                  ->orderByDesc('nota')
+                                  ->get();
+        return response()->json($produtos);
+      }
+
+  }
+
+  // public function buscaProduto(Request $request, $categoria, $tipo = "")
+  // {
+  //
+  //   if ($tipo == ""){
+  //   $produtos = ProdutoModel::where('categoria', '=', $categoria)
+  //                             ->orderBy('nota')
+  //                             ->get();
+  //   return response()->json($produtos);
+  // } else {
+  //   $produtos = ProdutoModel::where('categoria', '=', $categoria)
+  //                             ->orderBy('nota')
+  //                             ->get();
+  //   return response()->json($produtos);
+  //
+  // }
+
+  }
+
 }
