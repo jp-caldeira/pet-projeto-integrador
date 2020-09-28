@@ -13,16 +13,16 @@ body {
     font-size: 20px;
     font-family: 'Quicksand', sans-serif;
     color: rgb(125, 129, 136);
+    margin-left: 50px;
 }
 
 .formulario {
     padding: 60px 10px;
-    width: 100%;
+    width: 700px;
     font-size: 20px;
     font-family: 'Quicksand', sans-serif;
     color: rgb(125, 129, 136);
-    width: 800px;
-    margin-top: 0px;
+    margin-left: 50px;
 }
 
 
@@ -76,5 +76,15 @@ h3 {
     font-size: 40px;
     margin-top: 50px;
     margin-left: 200px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+a {
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.table {
+    font-size: 11px;
     font-family: 'Quicksand', sans-serif;
 }

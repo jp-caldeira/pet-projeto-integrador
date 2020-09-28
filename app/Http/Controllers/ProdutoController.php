@@ -11,7 +11,11 @@ class ProdutoController extends Controller
     public function exibirTodosProdutos() {
     $produto = ProdutoModel::all();
     return view('ranking-produtos', ["produtos" => $produto]);
+  }
 
+  public function exibirTodos() {
+    $produto = ProdutoModel::all();
+    return view('lista', ["produtos" => $produto]);
   }
 
 
@@ -100,5 +104,4 @@ class ProdutoController extends Controller
 
     //return view('uploads',['linkImg'=>$urlBase]);
   //}
-
-}
+    }
