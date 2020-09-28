@@ -61,7 +61,7 @@
                     <td>{{$produto->indicacao}}</td>
                     <td>{{$produto->porte}}</td>
                   <td><button style="width:50px">Editar</button></td>
-                  <td><button style="width:50px">Excluir</button></td>
+                  <td><a href="/deletarProduto/{{ $produto->id }}">Excluir</button></td>
 
 
                   </tr>
