@@ -1,0 +1,17 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    left: 90px;
+    right: 50px;
+}
+
+.formulario {
+    margin-top: 700px;
+}
+
+.base {
+    margin-left: 90px;
+}
+
+table {
+    background-color: rgb(207, 231, 240);
+}

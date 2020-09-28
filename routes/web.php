@@ -113,3 +113,5 @@ Route::get('/trabalhe', function(){
     return view ('trabalhe');
 })->name("trabalhe");
 
+//lista com todos os produtos para edição e exclusao
+Route::get('/lista', 'ProdutoController@exibirTodos')->name("lista");

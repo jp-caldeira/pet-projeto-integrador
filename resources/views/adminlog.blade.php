@@ -25,14 +25,14 @@
         <img style="margin-right:310px;" class="img" src="/img/adminimg.png" alt="catiorro trabalhador">
         <p style="width:600px">Ola Administrador!</p>
         <p style="width:600px">Aqui geramos o acesso do nosso banco de produtos e moderamos as avaliações da nossa comunidade</p>
-        <button style="height:80px" class="botao" onclick="openPage('Ranking', this, 'white')">Veja todos os nossos produtos Cadastrados</button>
+        <a  onclick="location.href='/lista'">Veja todos os nossos produtos Cadastrados</a>
     </div>
 </section>
 
         <!--Coluna imagens produtos-->
         @method('POST')
 
-    <section class="formulario" style="margin-top:10px;">
+    <div class="formulario">
             <h3>Cadastre Novos Produtos</h3>
             <form action="{{ route('criarUmProduto') }}" method="POST" enctype="multipart/form-data">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -64,6 +64,7 @@
                       <option value="natural">Natural</option>
                       <option value="highpremium">High Premium</option>
                     </select><br> 
+                    <br>
 
                 <label>{{ __('Marca') }}</label>
                     <input class="form-control" type="text" name="marca" value="" placeholder="Premier">
@@ -127,7 +128,8 @@
                                 <div class="file-path-wrapper">
                             </div>
                         </div>
-                    </select>
+                    </div>
+                    <br>
     
                 <button type="submit" style="height:40px; width:200px; float:left;" class="botao">Cadastrar</button> <br>
             </form>
@@ -143,7 +145,9 @@
                          @endif
                 </div>
 
+     
         <br>
+        </div>
         <section>
             @include('footer')
         </section>
