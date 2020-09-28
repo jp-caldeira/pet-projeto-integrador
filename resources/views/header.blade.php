@@ -76,10 +76,20 @@
                 .logo{
                    margin-left: 7%; 
                 }
+
+                #nome-login{
+                    font-family: 'Quicksand', sans-serif;
+                    font-size: 15px;
+                    color: rgb(7, 95, 98);
+                                       
+                }
+               
                 </style>
 </head>
 
 <body>
+
+@extends('layouts.app')
     <!-- Menu superior do site com logo -->
 
     <section class="container first-section">
@@ -103,7 +113,7 @@
         <a class="tablink" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
         
         <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre></a>
-            <p>Bem Vinda! {{ Auth::user()->name }}</p>
+            <p id= "nome-login">{{ Auth::user()->name }}</p>
             
         <form id="logout-form" action="{{ route('logout') }}" method="POST">
             @csrf
