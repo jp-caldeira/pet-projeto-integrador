@@ -21,11 +21,26 @@
      @csrf
 
 
-     <section class="container-cadastro">
+  <section class = "titulo">
+<nav class="navbar navbar-expand-lg navbar-dark teal lighten-2 mb-4">
+<h1>{{ __('Cadastre-se') }}</h1>
+</nav>
+</section>
+<hr>
+
+<section class = "imagem">
+<img class="img" src="/img/imagem1.png" alt="Gato"></img>
+<p id="texto">Os mimos que seu Pet Ama com os melhores Preços!</p>
+
+<br>
+<label for="receberPromoções"><input type="checkbox" name="receberPromoções" id="receberPromoções" value="receberPromoções" checked> Quero receber ofertas e promoções exclusivas para meu Pet</label>
+         
+</section>
+
+       <section class="container-cadastro">
           <div class="cadastro">
 
 
-          <h1>Cadastre-se </h1><br>
             <label for="nomeCompleto">{{ __('Nome Completo') }}</label> <br>
             <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
@@ -88,27 +103,18 @@
                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                     <br>
                 </div>
-                
-            
-            
-            {{-- <div class="promo">
-              <label for="receberPromocoes"></label>
-              <br>
-              <label for="receberPromocoes"><input type="checkbox" name="receberPromocoes" id="receberPromocoes" value="receberPromocoes" checked> Quero receber ofertas e promoções exclusivas para meu Pet</label>
-              <br>
-            </div>    --}}
-          
-              
+                </div>
+                            
+                        
             <div>
                 <button type="submit"  class="btn btn-lg btn-block" style='color:white; background-color:rgb(3, 152, 158);'> {{ __('Cadastrar') }}</button>
             </div>   
+        </div> 
+        </section>
+        </form>
 
-            </form>
-             </section>
-</div>
- </div> 
     
-    </section>
+   
         <section class="base">
             @include('footer')
         </section>
