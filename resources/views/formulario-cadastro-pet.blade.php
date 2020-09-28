@@ -18,11 +18,11 @@
 <div class= "espacamento">
 </div>
 
-  
-<div class = "titulo">
-
+  <section class = "titulo">
+<nav class="navbar navbar-expand-lg navbar-dark teal lighten-2 mb-4">
 <h1>{{ __('Cadastre o seu Pet') }}</h1>
-</div>
+</nav>
+</section>
 <hr>
 
 <section class="container-pet-form">
