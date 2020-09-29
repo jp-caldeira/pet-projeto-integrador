@@ -58,4 +58,5 @@ Route::get('/produto/categoria/{categoria}/{filtro?}', 'api\ProdutoController@fi
 //pesquisar por tipo
 Route::get('/produto/tipo/{tipo}/{filtro?}', 'api\ProdutoController@filtrarTipo');
 //outra
-// Route::get('busca-produto/{categoria}/{tipo?}/', 'api\ProdutoController@buscaProduto');
+Route::get('buscaproduto/', 'api\ProdutoController@buscaProduto');
+Route::get('pesquisa/','api\ProdutoController@pesquisar');

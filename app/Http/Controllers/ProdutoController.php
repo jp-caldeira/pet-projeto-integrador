@@ -9,7 +9,7 @@ use App\ProdutoModel;
 class ProdutoController extends Controller
 {
     public function exibirTodosProdutos() {
-    $produto = ProdutoModel::all();
+    $produto = ProdutoModel::orderBy('nota')->paginate(15);
     return view('ranking-produtos', ["produtos" => $produto]);
   }
 
@@ -104,4 +104,27 @@ class ProdutoController extends Controller
 
     //return view('uploads',['linkImg'=>$urlBase]);
   //}
+
+  public function filtrarCategoria(Request $request, $categoria, $filtro = "nota")
+  {
+
+          if ($filtro == "precoBaixo"){
+          $produtos = ProdutoModel::where('categoria', '=', $categoria)
+                                    ->orderBy('preco')
+                                    ->get();
+          return response()->json($produtos);
+          } else if ($filtro == "precoAlto"){
+          $produtos = ProdutoModel::where('categoria', '=', $categoria)
+                                    ->orderByDesc('preco')
+                                    ->get();
+          return response()->json($produtos);
+          } else {
+          $produtos = ProdutoModel::where('categoria', '=', $categoria)
+                                    ->orderByDesc('nota')
+                                    ->get();
+          return view('ranking-produtos', ["produtos" => $produtos]);
+        }
+
+  }
+
     }

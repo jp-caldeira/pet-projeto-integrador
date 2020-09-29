@@ -19,16 +19,16 @@
         <nav class="navbar navbar-expand-lg navbar-dark teal lighten-2 mb-4">
         <a class="navbar-brand" href="#" style="margin-left:150px;">Mundo Pet</a>
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                      <form class="form-inline ml-auto">
+                      <form class="form-inline ml-auto" method="get" action="{{url('api/pesquisa')}}">
                   <div class="md-form my-0">
-                <input class="form-control" style="width:500px; margin-left:120px;" type="search" placeholder="Digite aqui o que você quer encontrar (ex.: ração para gatos)">
+                <input class="form-control" style="width:500px; margin-left:120px;" type="search" name="pesquisa" placeholder="Digite aqui o que você quer encontrar (ex.: ração para gatos)"></input>
                <button class="btn btn-light" type="submit">Pesquisar</button>
             </div>
           </form>
       </div>
     </nav>
   </section>
-    
+
       <div class="produtos" style="margin-left:250px">
                 <div class="row">
                   <div class="col-lg-10 offset-lg-1">
@@ -45,8 +45,13 @@
                 <br>
               <br>
             @endforeach
-          </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-8 offset-lg-3">{{ $produtos->links() }}</div>
+            </div>
         </div>
+
+
 </div>
 </div>
 
