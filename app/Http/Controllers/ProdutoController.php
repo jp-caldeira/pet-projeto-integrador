@@ -70,7 +70,7 @@ class ProdutoController extends Controller
 
       $resultado = $novoproduto->save();
 
-      return redirect()->action("ProdutoController@exibirTodos");
+      return view('lista', ["novosprodutos"=> $novoproduto]);
 
     }
         /**

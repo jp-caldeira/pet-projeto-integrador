@@ -22,15 +22,15 @@
     <section class="container-login">
     <div class="login">
     <div class="card">
-     <div class="card-header">{{ __('Login') }}</div>
+     <div class="card-header"></div>
 
      <form method="POST" action="{{ route('login') }}">    
      @csrf
 
          
-        <h1>{{ __('Login') }} </h1><br>
+        <h1>{{ __('Entrar') }} </h1><br>
            
-        <label for="email">{{ __('E-Mail Address') }}</label>
+        <label for="email">{{ __('E-Mail') }}</label>
         <br>
         <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
         

@@ -118,22 +118,41 @@ public function filtrarTipo(Request $request, $tipo, $filtro = "nota")
 
   }
 
-  // public function buscaProduto(Request $request, $categoria, $tipo = "")
-  // {
-  //
-  //   if ($tipo == ""){
-  //   $produtos = ProdutoModel::where('categoria', '=', $categoria)
-  //                             ->orderBy('nota')
-  //                             ->get();
-  //   return response()->json($produtos);
-  // } else {
-  //   $produtos = ProdutoModel::where('categoria', '=', $categoria)
-  //                             ->orderBy('nota')
-  //                             ->get();
-  //   return response()->json($produtos);
-  //
-  // }
+  public function buscaProduto(Request $request)
+  {
+    $categoria = $request->categoria;
+    $tipo = $request->tipo;
+
+    if ($tipo == ""){
+     $produtos = ProdutoModel::where('categoria', '=', $categoria)
+                               ->orderBy('nota')
+                               ->get();
+     return response()->json($produtos);
+    } else {
+     $produtos = ProdutoModel::where('categoria', '=', $categoria)
+                              ->where('tipo_produto', '=', $tipo)
+                               ->orderBy('nota')
+                               ->get();
+     return response()->json($produtos);
+  }
+}
+
+  public function pesquisar(Request $request)
+  {
+      $request->validate([
+        'pesquisa' => 'required|min:3'
+      ]);
+
+      $pesquisa = $request->get('pesquisa');
+      // $resultado = ProdutoModel::where('nome', 'like', '%'.$pesquisa.'%')
+      //                         ->orWhere('tipo_produto', 'like', '%'.$pesquisa.'%')
+      //                         ->get();
+
+      $resultado = ProdutoModel::search($pesquisa)->get();
+
+      return response()->json($resultado);
 
   }
+
 
 }
