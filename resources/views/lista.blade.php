@@ -73,6 +73,8 @@
               <div class="voltar">
 
               <a onclick="location.href='/adminlog'">Adicionar mais produtos ao nosso Catalogo </a>
+              <a>Teste </a>
+
               </div>
               </div>
 
