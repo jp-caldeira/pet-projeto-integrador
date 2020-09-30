@@ -30,17 +30,22 @@
 </section>
 
         <!--Coluna imagens produtos-->
-        @method('POST')
+       
+        @if (session('mensagem'))
+            <p class="alert alert-success">{{ session('mensagem') }}</p>
+        @endif
+    <form action="/produto/atualizar/{{ $produto->id }}" method="POST">
+            @csrf
 
     <div class="formulario">
             <h3>Cadastre Novos Produtos</h3>
-            <form action="{{ route('criarUmProduto') }}" method="POST" enctype="multipart/form-data">
+            <form action="/produto/atualizar/{{ $produto->id }}" method="POST">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 
                 <label >Nome</label>
-                    <input style="margin-top:10px;" class="form-control" type="text" name="nome" value="" placeholder="Ração Seca PremieR Pet Golden Special Cães Adultos Frango e Carne">
+                    <input style="margin-top:10px;" class="form-control" type="text" name="nome" value="{{ $produto->nome }}" placeholder="Ração Seca PremieR Pet Golden Special Cães Adultos Frango e Carne">
                 <label>{{ __('Tipo de Produto') }}</label>
-                    <input style="margin-top:5px;" class="form-control" type="text" name="tipo_produto" value="" placeholder="Ração"><br>
+                    <input style="margin-top:5px;" class="form-control" type="text" name="tipo_produto" value="{{ $produto->tipo_produto }}" placeholder="Ração"><br>
 
                 <select name="categoria" class="form-control" style="width:200px; float:left;" >
                       <option selected disabled>{{ __('Categoria') }}</option>
@@ -73,25 +78,25 @@
                     <br>
 
                 <label>{{ __('Marca') }}</label>
-                    <input class="form-control" type="text" name="marca" value="" placeholder="Premier">
+                    <input class="form-control" type="text" name="marca" value="{{ $produto->marca }}" placeholder="Premier">
 
                 <label>{{ __('Raça') }}</label>
-                    <input class="form-control" type="text" name="raca" value="" placeholder="Labrador">
+                    <input class="form-control" type="text" name="raca" value="{{ $produto->raca }}" placeholder="Labrador">
 
                 <label>{{ __('Linha') }}</label>
-                    <input class="form-control" type="text" name="linha" value="" placeholder="Golden">                
+                    <input class="form-control" type="text" name="linha" value="{{ $produto->linha }}" placeholder="Golden">                
                 
                 <label>{{ __('Preço') }}</label>
-                <input class="form-control" type="number" min="0.00" max="10000.00" name="preco" placeholder="109.90">      
+                <input class="form-control" type="number" min="0.00" max="10000.00" name="preco" value="{{ $produto->preco }}" placeholder="109.90">      
                           
                 <label>{{ __('Peso') }}</label>
-                    <input class="form-control" type="text" name="peso" placeholder="15kl">
+                    <input class="form-control" type="text" name="peso" value="{{ $produto->peso }}" placeholder="15kl">
                 
                 <label>{{ __('Sabor') }}</label>
-                    <input class="form-control" type="text" name="sabor" placeholder="Frango">
+                    <input class="form-control" type="text" name="sabor" value="{{ $produto->sabor }}" placeholder="Frango">
 
                 <label>{{ __('Coloração') }}</label>
-                    <input class="form-control" type="text" name="cor" placeholder="marrom"><br>
+                    <input class="form-control" type="text" name="cor" value="{{ $produto->cor }}" placeholder="marrom"><br>
 
                     <select name="castrado" class="form-control" style="width:250px; float:left;">
                       <option selected disabled>{{ __('Castrado') }}</option>
@@ -138,19 +143,20 @@
                         </div>
                     </div>
                     <br>
+
+                    @if($errors->any())
+                    @foreach($errors->all() as $error)
+                        <div class="alert alert-danger"> {{ $error }} </div>
+                    @endforeach
+                @endif
+
     
                 <button type="submit" style="height:40px; width:200px; float:left;" class="botao">Cadastrar</button> <br>
             </form>
         </div>
                 </div>
 
-                    @if(isset($resultado))
-                        @if($resultado)
-                    <h1>Produto Cadastrado com Sucesso</h1>
-                        @else
-                    <h1>Erro em salvar o produto</h1>
-                        @endif
-                         @endif
+            
                 </div>
 
      

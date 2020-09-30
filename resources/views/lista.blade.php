@@ -17,11 +17,11 @@
             <div class="formulario">
 </div>
                 <table class="table">
-                <thead class="thead-dark">
+                <thead class="thead-light">
                
                   <tr>
                     <th scope="col">id</th>
-                    <th scope="col">Nome</th>
+                    <th style="font-size:9px" scope="col">Nome</th>
                     <th scope="col">Tipo Produto</th>
                     <th scope="col">preco</th>
                     <th scope="col">Categoria</th>
@@ -39,38 +39,44 @@
                     <th scope="col">Editar</th>
                     <th scope="col">Excluir</th>
 
+             
+
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                   @foreach ($produtos as $produto)
                     <th scope="row">{{$produto->id}}</th>
-                    <td>{{$produto->nome}}</td>
-                    <td>{{$produto->tipo_produto}}</td>
-                    <td>R$ {{$produto->preco}}</td>
-                    <td>{{$produto->categoria}}</td>
-                    <td>{{$produto->marca}}</td>
-                    <td>{{$produto->raca}}</td>
-                    <td>{{$produto->idade}}</td>
-                    <td>{{$produto->linha}}</td>
-                    <td>{{$produto->tipo_racao}}</td>
-                    <td>{{$produto->sabor}}</td>
-                    <td>{{$produto->cor}}</td>
-                    <td>{{$produto->castrado}}</td>
-                    <td>{{$produto->corante}}</td>
-                    <td>{{$produto->indicacao}}</td>
-                    <td>{{$produto->porte}}</td>
-                  <td><button style="width:50px">Editar</button></td>
-                  <td><a href="/deletarProduto/{{ $produto->id }}">Excluir</button></td>
-
-
+                    <td scope="row" style="font-size:9px">{{$produto->nome}}</td>
+                    <td scope="row">{{$produto->tipo_produto}}</td>
+                    <td scope="row">R$ {{$produto->preco}}</td>
+                    <td scope="row">{{$produto->categoria}}</td>
+                    <td scope="row">{{$produto->marca}}</td>
+                    <td scope="row">{{$produto->raca}}</td>
+                    <td scope="row">{{$produto->idade}}</td>
+                    <td scope="row">{{$produto->linha}}</td>
+                    <td scope="row">{{$produto->tipo_racao}}</td>
+                    <td scope="row">{{$produto->sabor}}</td>
+                    <td scope="row">{{$produto->cor}}</td>
+                    <td scope="row">{{$produto->castrado}}</td>
+                    <td scope="row">{{$produto->corante}}</td>
+                    <td scope="row">{{$produto->indicacao}}</td>
+                    <td scope="row">{{$produto->porte}}</td>
+                   <td scope="row"> <a  href="/atualizarUmProduto/{{ $produto->id }}">Editar</a> </td>
+                   <td scope="row"> <a  href="/deletarProduto/{{ $produto->id }}">Excluir</a></td> 
                   </tr>
                   @endforeach
 
                 </tbody>
               </table>
 
-             
+              <div class="voltar">
+
+              <a onclick="location.href='/adminlog'">Adicionar mais produtos ao nosso Catalogo </a>
+              </div>
+              </div>
+
+             <br>
 
 
 

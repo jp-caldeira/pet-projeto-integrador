@@ -115,3 +115,10 @@ Route::get('/trabalhe', function(){
 
 //lista com todos os produtos para edição e exclusao
 Route::get('/lista', 'ProdutoController@exibirTodos')->name("lista");
+
+Route::get('/deletarProduto/{id}', 'ProdutoController@deletarProduto')->name("lista");
+
+//atualizar um produtos//
+Route::get('/produto/{id}', 'api\ProdutoController@editar');
+Route::post('/produto/{id}', 'api\ProdutoController@atualizarUmProduto');
+

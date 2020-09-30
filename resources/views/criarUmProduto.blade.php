@@ -1,5 +1,4 @@
 <?php
-
 $produto = [
          "imagem" => "img/racao6.jpg",
          "nome" => "Ração Magnus para cachorro 2kg",
