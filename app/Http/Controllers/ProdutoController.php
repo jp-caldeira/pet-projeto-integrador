@@ -11,7 +11,7 @@ class ProdutoController extends Controller
      //ROTA PARA RANKING PRODUTO//
 
       public function exibirTodosProdutos() {
-      $produto = ProdutoModel::all();
+      $produto = ProdutoModel::orderBy('nota')->paginate(10);
       return view('ranking-produtos', ["produtos" => $produto]);
     }
 
@@ -52,7 +52,7 @@ class ProdutoController extends Controller
         $request->imagem->storeAs("public/img", $filename);
         $novoproduto->imagem = $filename;
       }else{
-        $novoproduto->imagem = "sem imagem";
+        $novoproduto->imagem = "sem-imagem.jpg";
 
       }
 
@@ -99,7 +99,7 @@ class ProdutoController extends Controller
                   'porte' => 'String|required'
               ]);
 
-          
+
 
               $produto->nome = $dataValidate['nome'];
               $produto->tipo_produto = $dataValidate['tipo_produto'];
@@ -117,7 +117,7 @@ class ProdutoController extends Controller
               $produto->indicacao = $dataValidate['indicacao'];
               $produto->porte = $dataValidate['porte'];
               $produto->save();
-              
+
               return redirect('produto/atualizarUmProduto/'.$produto->id)->with('mensagem', 'Produto salvo com sucesso!');
           }
 
