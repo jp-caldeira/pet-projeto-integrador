@@ -144,11 +144,11 @@ public function filtrarTipo(Request $request, $tipo, $filtro = "nota")
       ]);
 
       $pesquisa = $request->get('pesquisa');
-      // $resultado = ProdutoModel::where('nome', 'like', '%'.$pesquisa.'%')
-      //                         ->orWhere('tipo_produto', 'like', '%'.$pesquisa.'%')
-      //                         ->get();
+      //  $resultado = ProdutoModel::where('nome', 'like', '%'.$pesquisa.'%')
+      //                          ->orWhere('tipo_produto', 'like', '%'.$pesquisa.'%')
+      //                          ->get();
 
-      $resultado = ProdutoModel::search($pesquisa)->get();
+      $resultado = ProdutoModel::search($pesquisa, null, true)->get();
 
       return response()->json($resultado);
 

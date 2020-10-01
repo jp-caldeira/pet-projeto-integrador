@@ -141,4 +141,24 @@ class ProdutoController extends Controller
     //return view('uploads',['linkImg'=>$urlBase]);
   //}
 
+  //// PESQUISA PRODUTO ///
+
+  public function pesquisar(Request $request)
+  {
+      $request->validate([
+        'pesquisa' => 'required|min:3'
+      ]);
+
+      $pesquisa = $request->get('pesquisa');
+      //  $resultado = ProdutoModel::where('nome', 'like', '%'.$pesquisa.'%')
+      //                          ->orWhere('tipo_produto', 'like', '%'.$pesquisa.'%')
+      //                          ->get();
+
+      $resultado = ProdutoModel::search($pesquisa, null, true)->get();
+   
+      return view('resultado-busca', ["produtos" => $resultado, "pesquisa" => $pesquisa]);
+
+  }
+
+
 }

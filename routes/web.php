@@ -124,3 +124,5 @@ Route::get('/deletarProduto/{id}', 'ProdutoController@deletarProduto')->name("li
 Route::get('/produto/{id}', 'api\ProdutoController@editar');
 Route::post('/produto/{id}', 'api\ProdutoController@atualizarUmProduto');
 
+//pesquisa produtos
+Route::get('/pesquisa','ProdutoController@pesquisar');
