@@ -12,7 +12,7 @@ class ProdutoController extends Controller
 
       public function exibirTodosProdutos() {
       $produto = ProdutoModel::orderBy('nota')->paginate(10);
-      return view('ranking-produtos', ["produtos" => $produto]);
+      return view('ranking-produtos', ["produtos" => $produto, "titulo" => "Ranking de Produtos"]);
     }
 
     //ROTA PARA A LISTA ADM PRODUTO//
@@ -155,8 +155,32 @@ class ProdutoController extends Controller
       //                          ->get();
 
       $resultado = ProdutoModel::search($pesquisa, null, true)->get();
-   
+
       return view('resultado-busca', ["produtos" => $resultado, "pesquisa" => $pesquisa]);
+  }
+
+  public function filtrar(Request $request)
+  {
+    $categoria = $request->get('pet');
+    $tipo_produto = $request->get('produtos');
+
+    $pesquisa = $tipo_produto." ".$categoria;
+    $pesquisa = ucwords($pesquisa);
+
+    if($categoria === "Pet" && $tipo_produto === "Produtos"){
+      return redirect('/ranking-produtos');
+    }
+
+    if($categoria === "Pet"){
+      $resultado = ProdutoModel::where('tipo_produto', "=", $tipo_produto)->get();
+    } else if($tipo_produto === "Produtos"){
+      $resultado = ProdutoModel::where('categoria', "=", $categoria)->get();
+    } else {
+    $resultado = ProdutoModel::where('categoria', "=", $categoria)->
+                              where('tipo_produto', "=", $tipo_produto)->get();
+    }
+
+    return view('resultado-busca', ["produtos" => $resultado, "pesquisa" => $pesquisa]);
 
   }
 

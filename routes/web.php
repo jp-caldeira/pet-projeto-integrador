@@ -126,3 +126,5 @@ Route::post('/produto/{id}', 'api\ProdutoController@atualizarUmProduto');
 
 //pesquisa produtos
 Route::get('/pesquisa','ProdutoController@pesquisar');
+//filtro select
+Route::get('/filtrar', 'ProdutoController@filtrar');
