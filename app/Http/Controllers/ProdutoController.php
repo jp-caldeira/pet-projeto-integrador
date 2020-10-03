@@ -28,7 +28,7 @@ class ProdutoController extends Controller
 
     public function exibirUmProduto($id) {
       $produto = ProdutoModel::find($id);
-      return view('exibirprodutos', ["produtos"=> $produto]);
+      return view('exibirUmProduto', ["produtos"=> $produto]);
     }
 
     //CRIAR PRODUTO//
@@ -81,7 +81,7 @@ class ProdutoController extends Controller
               return view('atualizarUmProduto', ['produto' => $produto]);
           }
 
-          function atualizarUmProduto(Request $request, Produto $produto) {
+          function atualizarUmProduto(Request $request, ProdutoModel $produto) {
               $dataValidate = $request->validate([
                   'nome' => 'String|required',
                   'tipo_produto' => 'String|required',
@@ -105,7 +105,19 @@ class ProdutoController extends Controller
               $produto->tipo_produto = $dataValidate['tipo_produto'];
               $produto->categoria = $dataValidate['categoria'];
               $produto->marca = $dataValidate['marca'];
-              $produto->categoria = $dataValidate['duracao'];
+
+              if($request->hasfile('imagem')){
+                // $file = $request->file('imagem');
+                // $extension = $file->extension(); //getting image extension
+                $filename = date('YmdGisu'). $request->imagem->getClientOriginalName();
+                // $file->move("public/img" , $filename);
+                $request->imagem->storeAs("public/img", $filename);
+                $produto->imagem = $filename;
+              }else{
+                $produto->imagem = "sem-imagem.jpg";
+        
+              }
+
               $produto->raca = $dataValidate['raca'];
               $produto->idade = $dataValidate['idade'];
               $produto->linha = $dataValidate['linha'];
@@ -118,7 +130,7 @@ class ProdutoController extends Controller
               $produto->porte = $dataValidate['porte'];
               $produto->save();
 
-              return redirect('produto/atualizarUmProduto/'.$produto->id)->with('mensagem', 'Produto salvo com sucesso!');
+              return redirect('/lista');
           }
 
     public function deletarProduto($id){

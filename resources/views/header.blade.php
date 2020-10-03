@@ -80,8 +80,10 @@
                 #nome-login{
                     font-family: 'Quicksand', sans-serif;
                     font-size: 15px;
-                    color: rgb(7, 95, 98);
-                                       
+                    color: rgb(105, 112, 112);
+                    margin-top:40px;
+                    float:right;
+                                                           
                 }
                
                 </style>
@@ -113,7 +115,7 @@
         <a class="tablink" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
         
         <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre></a>
-            <p id= "nome-login">{{ Auth::user()->name }}</p>
+            <p id= "nome-login">Ola, {{ Auth::user()->name }}!</p>
             
         <form id="logout-form" action="{{ route('logout') }}" method="POST">
             @csrf

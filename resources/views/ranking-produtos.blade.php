@@ -36,11 +36,13 @@
             @foreach ($produtos as $produto)
                       <div class="col-lg-6">
                         <br>
-                    <img src="{{ asset('img/' . $produto->imagem) }}" class="img-fluid" alt="produto"><br>
-                      <h4 style="margin-left:70px">{{$produto->nome}}</h4>
-                      <p style="margin-left:70px">{{$produto->tipo_produto}}</p>
-                      <p style="margin-left:70px">R$ {{$produto->preco}}</p><br>
-                      <a class='btn btn-lg active' style="background-color:rgb(3, 152, 158); color:white; width:200px" href="/produto/{{$produto->id}}">Ver Avaliação</a><br>
+                    <img src="{{ asset('storage/img/' . $produto->imagem) }}" class="img-fluid" alt="produto">
+                    <br>
+                    <br>                      
+                    <p class="nome">{{$produto->nome}}</p>
+                      <p >{{$produto->tipo_produto}}</p>
+                      <p >Preço R$ {{$produto->preco}}</p><br>
+                      <a class='btn btn-lg active' style="background-color:rgb(3, 152, 158); color:white; width:200px" href="/exibirUmProduto/{{ $produto->id }}">Ver Avaliação</a><br>
                     </div>
                 <br>
               <br>

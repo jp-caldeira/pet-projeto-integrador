@@ -51,17 +51,23 @@ body {
 
 /*botao visite nosso ranking*/
 
-.tablinkb {
+.btn {
     background-color: rgb(3, 152, 158);
     color: rgb(255, 255, 255);
     font-size: 20px;
     border-radius: 3px;
-    margin-left: 200px;
+    margin-left: 180px;
     margin-top: 30px;
     border: none;
     outline: none;
     width: 280px;
     height: 50px;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: rgb(104, 104, 104);
+    color: rgb(255, 255, 255);
 }
 
 .botao {
@@ -112,4 +118,8 @@ h3 {
 
 .espacamento {
     margin-top: 100px;
+}
+
+a {
+    text-decoration: none;
 }

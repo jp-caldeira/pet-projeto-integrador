@@ -20,9 +20,10 @@
 <section>
     <div class="tabcontent">
         <img class="img" src="/img/imagem1.png" alt="Gato"></img>
-        <p style="width:600px">Ranking de produtos que fazem a felicidade do seu pet!</p>
+        <p style="width:600px">Produtos que fazem a felicidade do seu pet!</p>
+        
         <p style="width:600px">Aqui você encontra uma avaliação justa feita por outros usuários dos produtos para o seu melhor amigo.</p>
-        <button  class="tablinkb" onclick="location.href='/ranking-produtos'" >Visite nosso Ranking</button>
+        <a  class='btn btn-lg active'  href="{{ route('ranking') }}" >Visite nosso Ranking</a>
     </div>
 </section>
 

@@ -14,8 +14,7 @@
 @include('header')
 </header>
 
-            <div class="formulario">
-</div>
+            <div class="lista">
                 <table class="table">
                 <thead class="thead-light">
                
@@ -62,18 +61,17 @@
                     <td scope="row">{{$produto->corante}}</td>
                     <td scope="row">{{$produto->indicacao}}</td>
                     <td scope="row">{{$produto->porte}}</td>
-                   <td scope="row"> <a  href="/atualizarUmProduto/{{ $produto->id }}">Editar</a> </td>
-                   <td scope="row"> <a  href="/deletarProduto/{{ $produto->id }}">Excluir</a></td> 
+                   <td scope="row" style="width:10px"> <a  href="/produto/{{ $produto->id }}">Editar</a> </td>
+                   <td scope="row" style="width:10px"> <a  href="/deletarProduto/{{ $produto->id }}">Excluir</a></td> 
                   </tr>
                   @endforeach
 
                 </tbody>
               </table>
-
+              </div>
               <div class="voltar">
 
-              <a onclick="location.href='/adminlog'">Adicionar mais produtos ao nosso Catalogo </a>
-              <a>Teste </a>
+              <a onclick="location.href='/adminlog'"> Cadastrar mais Produtos </a>
 
               </div>
               </div>

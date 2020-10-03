@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Paginas Principais
+//-------------------------------PAGINAS PRINCIPAIS----------------------//
 
 Route::get('/homepage', function(){
     return view('homepage');
@@ -26,6 +26,7 @@ Route::get('/homepage', function(){
 Route::get('/ranking-produtos', 'ProdutoController@exibirTodosProdutos')->name("ranking");
 
 Route::get('/produtos/{id}', 'ProdutoController@exibirUmProduto')->name("produtos");
+
 
 //Route::get('/produto/categoria/{categoria}/{filtro?}', 'ProdutoController@filtrarCategoria');
 
@@ -46,11 +47,21 @@ Route::get('/cadastro-user', function(){
   return view('formulario-cadastro-usuario');
 })->name("login");
 
-//Route::get('/compara-pet', function(){
-    //return view('projeto');
-//});
+Route::get('/exibirUmProduto/{id}', 'ProdutoController@exibirUmProduto')->name("verproduto");
 
-//Paginas Header e Footer
+
+//PAGINAS SOBRE A EMPRESA
+Route::get('/sobre', function(){
+    return view ('sobre');
+})->name("sobre");
+
+
+Route::get('/trabalhe', function(){
+    return view ('trabalhe');
+})->name("trabalhe");
+
+
+//-------------------------------HEADER E FOOTER------------------------------//
 
 
 Route::get('/header', function(){
@@ -61,11 +72,13 @@ Route::get('/footer', function(){
     return view ('footer');
 })->name("footer");
 
+//-------------------------------LOGINS----------------------//
+
 Auth::routes();
 
 Route::get('/home','HomeController@index')->name('home');
 
-//Paginas Adm
+//-------------------------------PAGINA ADM----------------------//
 
 Route::get('/headeradm', function(){
     return view ('headeradm');
@@ -75,15 +88,25 @@ Route::get('/adminlog', function(){
     return view ('adminlog');
 })->middleware('checkAdmin');
 
-//Paginas Produto
+// Paginas Produto
 
-Route::get('/criarUmProduto', function(){
-    return view ('criarUmProduto');
-})->name("criar_produto");
+// Route::get('/criarUmProduto', function(){
+//     return view ('criarUmProduto');
+// })->name("criar_produto");
 
 
 Route::get('/criarUmProduto','ProdutoController@criarUmProduto');
 Route::post('/criarUmProduto', 'ProdutoController@criarUmProduto')->name('criarUmProduto');
+
+//lista com todos os produtos para edição e exclusao
+Route::get('/lista', 'ProdutoController@exibirTodos')->name("lista");
+
+Route::get('/deletarProduto/{id}', 'ProdutoController@deletarProduto')->name("lista");
+
+//atualizar um produtos//
+Route::get('/produto/{id}', 'ProdutoController@editar');
+Route::post('/produto/{id}', 'ProdutoController@atualizarUmProduto');
+
 
 //-------------------------------CADASTRO PET----------------------//
 // Route::get('/pets','PetController@listarPet');
@@ -105,22 +128,4 @@ Route::get('/detalhesPet/{nome}',function($nome){
 //------------------------------------------------------------------//
 
 
-//Sobre Nos
-Route::get('/sobre', function(){
-    return view ('sobre');
-})->name("sobre");
-
-
-Route::get('/trabalhe', function(){
-    return view ('trabalhe');
-})->name("trabalhe");
-
-//lista com todos os produtos para edição e exclusao
-Route::get('/lista', 'ProdutoController@exibirTodos')->name("lista");
-
-Route::get('/deletarProduto/{id}', 'ProdutoController@deletarProduto')->name("lista");
-
-//atualizar um produtos//
-Route::get('/produto/{id}', 'api\ProdutoController@editar');
-Route::post('/produto/{id}', 'api\ProdutoController@atualizarUmProduto');
 
