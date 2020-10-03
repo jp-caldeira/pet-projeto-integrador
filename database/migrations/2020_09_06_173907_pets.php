@@ -14,7 +14,7 @@ class Pets extends Migration
     public function up()
     {
        Schema::create('Pets', function(Blueprint $table){
-           $table->bigIncrements('id');
+           $table->bigIncrements('id_pet');
            $table->string('especie',100);
            $table->string('nome',100);
            $table->string('genero',100);
