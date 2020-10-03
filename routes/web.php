@@ -129,3 +129,7 @@ Route::get('/detalhesPet/{nome}',function($nome){
 
 
 
+//pesquisa produtos
+Route::get('/pesquisa','ProdutoController@pesquisar');
+//filtro select
+Route::get('/filtrar', 'ProdutoController@filtrar');

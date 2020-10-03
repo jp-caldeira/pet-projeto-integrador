@@ -24,7 +24,9 @@ class ProdutoModel extends Model
         * @var array
         */
        'columns' => [
-           'produtos.nome' => 10,           
+         'produtos.nome' => 3, 
+        'produtos.categoria' => 10,               
+           
        ]
    ];
     public $table = "produtos";
