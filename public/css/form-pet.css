@@ -197,3 +197,29 @@ input[type=radio] {
     border:3px solid #3F51B5;
     background-image: url("../img/memepeixe.jpg");
   }
+
+  
+  .container-listagem{
+    width: 40%;
+    float: left;
+    padding-left: 5%;  
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    list-style: none;
+  }
+  #inserir{
+    color:  rgb(3, 152, 158);
+    font-size: 25px;
+    float: right;
+    text-decoration:none;
+    
+    
+
+  }
+
+  #edicoes{
+    float: right;
+    color:  rgb(3, 152, 158);
+    text-decoration:none
+  }
+  

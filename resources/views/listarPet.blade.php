@@ -18,28 +18,24 @@
 
 <div class= "espacamento">
 </div>
+<section class="container-listagem">
+<h2> Seus Pets,  {{$names = collect(explode(' ', Auth::user()->name))->slice(0,1)->implode(' ')}} </h2>
+<br>
+<table class="lista">
+@foreach($pets as $pets)
+<li> Nome: {{$pets ['nome']}} <a id=edicoes href="/deletarPet/{{$pets->id}}">Deletar</a> <a id=edicoes href="/editarPet/{{$pets->id}}">Editar</a> </li>
+<li> Especie: {{$pets ['especie']}} </li>
+<hr> 
+</table>
+@endforeach
+ <a id="inserir" href="/cadastro-pet">Inserir outro Pet</a> 
 
-<h1> Listagem dos seus Pets </h1>
-
-
-{{-- <ul>
-@forelse($pets as $pets)
-<li>{{$pets->nome}} <a href="/detalhesPet/{{$pets->id}}">Ver detalhes</a>
-<a href="/deletarPet/{{$pets->id}}">Deletar Pet</a>
-</li>
-@empty
-<p>Não há Pets </p>
-@endforelse
-
-
-
-
- --}}
-
-
-
-
-
+<section class="container-botao-finalizar">
+    
+     <button type="submit"  class="btn btn-lg btn-block" style='color:white; background-color:rgb(3, 152, 158);'> {{ __('Finalizar') }}</button>
+     
+</section>
+</section>
     <section class="base">
           @include('footer')
     </section>

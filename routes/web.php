@@ -116,7 +116,9 @@ Route::post('/produto/{id}', 'ProdutoController@atualizarUmProduto');
 Route::get('/adicionarUmPet','PetController@adicionarUmPet');
 Route::post('/adicionarUmPet','PetController@adicionarUmPet')->name('adicionarUmPet');
 
-// Route::get('/deletarPet/{id}','PetController@deletarPet');
+Route:: get ('/listarPet','PetController@listarPet');
+
+Route::get('/deletarPet/{id}','PetController@deletarPet');
 
 Route::get('/pets', function(){
     return view('listarPet');

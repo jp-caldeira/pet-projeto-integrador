@@ -59,6 +59,10 @@ class RegisterController extends Controller
             'genero' => ['required', 'string'],
             'cpf' => ['required', 'string', 'max:15','unique:\App\User,cpf'],
             'nascimento' => ['required', 'date'],
+            
+            
+           
+            
         ]);
     }
 

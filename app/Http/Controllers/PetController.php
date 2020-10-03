@@ -20,28 +20,29 @@ class PetController extends Controller
       $pets->preferencias = implode(',',$request->preferencias);
       $pets->save();
 
-      return redirect('/pets');
+      return redirect('/listarPet');
 
        
       }
 
       public function listarPet(){
-      $pets = Pets::paginate();
-
-      return view('pets',['pets'=>$pets]);
+      $pets = Pets::all();
+      return view('/listarPet', ["pets" => $pets]);
     }
+      
+    
   //   public function detalhesPet($id){
   //     $pets= Pets:: find($id);
   //     return view('detalhesPet', ["pets"=> $pets]);
       
   // }
-  //   public function deletarPet($id){
-  //     $pets= Pets::find($id);
-  //     $pets->delete();
+    public function deletarPet($id){
+      $pets= Pets::find($id);
+      $pets->delete();
 
-  //     return redirect()->action("PetController@listarPet");
+      return redirect()->action("PetController@listarPet");
 
-  // }
+  }
     
 }
     

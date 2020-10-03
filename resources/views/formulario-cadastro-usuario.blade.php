@@ -101,9 +101,10 @@
           </div>
 
           <div class="promo">
-              <label for="receberPromoções"></label>
+              <label for="receberPromocoes"></label>
               <br>
-              <label for="receberPromoções"><input type="checkbox" name="receberPromoções" id="receberPromoções" value="receberPromoções" checked> Quero receber ofertas e promoções exclusivas para meu Pet</label>
+              {{-- <label for="receberPromoções"><input type="checkbox" name="receberPromoções" id="receberPromoções" value="receberPromoções" checked> Quero receber ofertas e promoções exclusivas para meu Pet</label> --}}
+              <input type="checkbox" name="receberPromocoes" class="switch-input" value="1" {{ old('Quero receber ofertas e promoções exclusivas para meu Pet') ? 'checked="checked"' : '' }}/>
               <br>
               </div>   
           <div>
