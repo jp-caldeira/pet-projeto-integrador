@@ -105,17 +105,20 @@
         <a href="{{ route('adote') }}" class="tablink" onclick="openPage('Adote', this, 'white')">Adote!</button></a>
         @guest
 
-        <a href="{{ route('login') }}" class="tablink" onclick="openPage('Adote', this, 'white')">Login</button></a>
+        <a href="{{ route('login') }}" class="tablink" onclick="openPage('Adote', this, 'white')">Entrar</button></a>
 
         @if (Route::has('register'))
         <a href="{{ route('register') }}" class="tablink" onclick="openPage('Adote', this, 'white')">Registrar-se</button></a>
         @endif
         @else
         </a>
-        <a class="tablink" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+        <a class="tablink" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Sair</a>
         
         <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre></a>
-            <p id= "nome-login">Ola, {{ Auth::user()->name }}!</p>
+        
+            {{-- <p id= "nome-login">Ola, {{ Auth::user()->name }}!</p> // solução anterior// --}}
+
+            <p id= "nome-login">Ola, {{$names = collect(explode(' ', Auth::user()->name))->slice(0,1)->implode(' ')}}!</p>
             
         <form id="logout-form" action="{{ route('logout') }}" method="POST">
             @csrf

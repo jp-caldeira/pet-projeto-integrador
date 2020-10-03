@@ -42,6 +42,8 @@
 <div class= "espacamento"><div>
     <!-- Setor direciona ranking -->
 <section>
+
+
     <div class="tabcontent">
         <img class="img" src="/img/imagem1.png" alt="Gato"></img>
         <p style="width:600px">Ranking de produtos que fazem a felicidade do seu pet!</p>
