@@ -44,7 +44,7 @@
                       <h4 style="">{{$produto->nome}}</h4>
                       <p style="">{{$produto->tipo_produto}}</p>
                       <p style="">R$ {{$produto->preco}}</p><br>
-                      <a class='btn btn-lg active' style="background-color:rgb(3, 152, 158); color:white; width:200px" href="/produto/{{$produto->id}}">Ver Avaliação</a><br>
+                      <a class='btn btn-lg active' style="background-color:rgb(3, 152, 158); color:white; width:200px" href="/exibirUmProduto/{{$produto->id}}">Ver Avaliação</a><br>
                     </div>
                 <br>
               @empty
