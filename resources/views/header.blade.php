@@ -118,7 +118,7 @@
         
             {{-- <p id= "nome-login">Ola, {{ Auth::user()->name }}!</p> // solução anterior// --}}
 
-            <p id= "nome-login">Ola, {{$names = collect(explode(' ', Auth::user()->name))->slice(0,1)->implode(' ')}}!</p>
+            <p id= "nome-login">Olá, {{$names = collect(explode(' ', Auth::user()->name))->slice(0,1)->implode(' ')}}!</p>
             
         <form id="logout-form" action="{{ route('logout') }}" method="POST">
             @csrf

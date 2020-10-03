@@ -209,14 +209,24 @@ input[type=radio] {
   }
   #inserir{
     color:  rgb(3, 152, 158);
-    font-size: 25px;
+    font-size: 20px;
     float: right;
     text-decoration:none;
     
     
+    
 
   }
+  #finalizar{
+    color:  rgb(3, 152, 158);
+    font-size: 20px;
+    float: right;
+    text-decoration:none;
+    
+    
+    
 
+  }
   #edicoes{
     float: right;
     color:  rgb(3, 152, 158);
