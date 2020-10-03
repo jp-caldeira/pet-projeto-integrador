@@ -40,7 +40,7 @@
                     <div class="row">
             @forelse ($produtos as $produto)
                       <div class="col-lg-6 text-center">
-                    <img src="{{ asset('img/' . $produto->imagem) }}" class="img-fluid" alt="produto">
+                    <img src="{{ asset('storage/img/' . $produto->imagem) }}" class="img-fluid" alt="produto">
                       <h4 style="">{{$produto->nome}}</h4>
                       <p style="">{{$produto->tipo_produto}}</p>
                       <p style="">R$ {{$produto->preco}}</p><br>

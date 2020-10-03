@@ -5,11 +5,9 @@ body {
 }
 
 .pesquisa {
-<<<<<<< HEAD
-    margin-top: 50px;
-=======
+
+    /* margin-top: 50px; */
     margin-top: 20px;
->>>>>>> c61d1785806d0c5caf21012184767f6217fb0594
     background-color: rgb(3, 152, 158);
     font-family: 'Quicksand', sans-serif;
 }
@@ -17,12 +15,12 @@ body {
 button,
 form {
     font-family: 'Quicksand', sans-serif;
-    
+
 }
 
 .produtos {
     font-family: 'Quicksand', sans-serif;
-    margin-left: 90px;    
+    margin-left: 90px;
 }
 
 .base {
