@@ -29,13 +29,10 @@
 <hr> 
 </table>
 @endforeach
- <a id="inserir" href="/cadastro-pet">Inserir outro Pet</a> 
+ <a id="finalizar" href="/ranking-produtos">Finalizar</a> <a id="inserir" href="/cadastro-pet">Inserir outro Pet</a> 
+ 
 
-<section class="container-botao-finalizar">
-    
-     <button type="submit" href="/ranking-produtos/" class="btn btn-lg btn-block" style='color:white; background-color:rgb(3, 152, 158);'> {{ __('Finalizar') }}</button>
-     
-</section>
+
 </section>
     <section class="base">
           @include('footer')
