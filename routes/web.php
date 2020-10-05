@@ -120,12 +120,11 @@ Route::get('/adicionarUmPet','PetController@adicionarUmPet');
 Route::post('/adicionarUmPet','PetController@adicionarUmPet')->name('adicionarUmPet');
 
 Route:: get ('/listarPet','PetController@listarPet');
+Route:: post ('/listarPet','PetController@listarPet');
 
 Route::get('/deletarPet/{id}','PetController@deletarPet');
 
-Route::get('/pets', function(){
-    return view('listarPet');
-});
+Route::get('/pets','PetController@listarPet' )->name("pets");
 
 Route::get('/detalhesPet/{nome}',function($nome){
     return view('detalhesPet', ['pets'=>$nome]);

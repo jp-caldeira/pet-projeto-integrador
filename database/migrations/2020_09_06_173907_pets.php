@@ -14,7 +14,7 @@ class Pets extends Migration
     public function up()
     {
        Schema::create('Pets', function(Blueprint $table){
-           $table->bigIncrements('id_pet');
+           $table->increments('id');
            $table->string('especie',100);
            $table->string('nome',100);
            $table->string('genero',100);
@@ -22,6 +22,10 @@ class Pets extends Migration
            $table->string('comentarios',300);
            $table->string('preferencias',300);
            $table->timestamps();
+           $table->unsignedInteger('users_id')->nullable();
+           $table->foreign('users_id')->references('id')->on('users')->onDelete('cascade');
+           $table->engine = 'InnoDB';
+        
        });
     }
 
