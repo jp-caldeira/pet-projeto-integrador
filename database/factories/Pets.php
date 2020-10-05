@@ -12,12 +12,12 @@ $factory->define(Pets::class, function (Faker $faker) {
     $especies = ['Cachorro', 'Gato', 'Cachorro', 'Gato', 'Cachorro', 'Gato', 'Papagaio', 'Cavalo', 'Calopsita', 'Iguana'];
 
     return [
+         "users_id"=> 1,
          "nome"=>Arr::random($petNomes),
          "especie"=>Arr::random($especies),
          "genero"=>$faker->randomElement(['Macho', 'Fêmea']),
          "nascimento"=>$faker->date('Y-m-d'),
          "comentarios"=>$faker->realText('10'),
          "preferencias"=>$faker->realText('20'),
-        //  "users_id"=> 1,
       ];
 });

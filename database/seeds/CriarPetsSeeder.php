@@ -19,6 +19,6 @@ class CriarPetsSeeder extends Seeder
     $pets->nascimento= "04/10/1950";
     $pets->save();
 
-    factory(Pets::class,20)->create();
+    factory(Pets::class,5)->create();
     }
 }
