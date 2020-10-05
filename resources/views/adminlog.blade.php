@@ -146,6 +146,12 @@
                       <option value="gigante">Gigante</option>
                       <option value="naoespecifico">Não Especifico</option>
                       </select><br>
+
+                      <label>{{ __('Nota') }}</label>
+                    <input  name="nota" class="form-control" type="text" value="" placeholder="Adicionar nota de 1 a 5">
+                    
+                    <label>{{ __('Comentário') }}</label>
+                    <textarea name="comentários" class="form-control" value="" cols="20" rows="5" placeholder="Gostei muito do produto" class="form-control"></textarea>
  
 
                     <section class="md-form" style="float:left;  margin-left:50px;">

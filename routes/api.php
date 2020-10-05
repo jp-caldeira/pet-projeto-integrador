@@ -55,6 +55,7 @@ Route::post('/produto/{id}', 'api\ProdutoController@atualizarUmProduto');
 //deletar um produtos//
 Route::delete('/produto/{id}','api\ProdutoController@deletarProduto');
 
+
 //pesquisar por categoria
 Route::get('/produto/categoria/{categoria}/{filtro?}', 'api\ProdutoController@filtrarCategoria');
 //pesquisar por tipo

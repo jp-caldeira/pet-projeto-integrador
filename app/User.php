@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Models\Comentarios;
 
 class User extends Authenticatable
 {
@@ -40,5 +41,10 @@ class User extends Authenticatable
 
     public function pets(){
         $this->hasMany("App\Pets","id_pet");
+    }
+
+    public function comentarios()
+    {
+        return $this->hasMany(Comentarios::class);
     }
 }

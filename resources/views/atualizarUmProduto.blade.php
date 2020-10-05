@@ -30,7 +30,7 @@
             <div class="col-sm-9" style="margin-top:150px;"><p>Atualize o Produtos</p></div>
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             
-            <div class="col-sm-9"><label >Nome</label></div>
+            <div class="col-sm-9"><label >{{ __('Nome') }}</label></div>
                         <input style="margin-top:10px;" class="form-control" type="text" name="nome" value="" placeholder="Ração Seca PremieR Pet Golden Special Cães Adultos Frango e Carne">
                     <label>{{ __('Tipo de Produto') }}</label>
                         <input style="margin-top:5px;" class="form-control" type="text" name="tipo_produto" value="" placeholder="Ração"><br>

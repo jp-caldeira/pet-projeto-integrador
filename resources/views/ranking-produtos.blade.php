@@ -56,13 +56,13 @@
                       <div class="col-lg-6 produto-box">
                         <br>
                     <img src="{{ asset('storage/img/' . $produto->imagem) }}" class="img-fluid" alt="produto">
-                    <br>
-                    <br>
+                  <br>
+                  <br>
                     <p class="nome">{{$produto->nome}}</p>
                       <p >{{$produto->tipo_produto}}</p>
                       <p >Preço R$ {{$produto->preco}}</p><br>
                       <a class='btn btn-lg active' style="background-color:rgb(3, 152, 158); color:white; width:200px" href="/exibirUmProduto/{{ $produto->id }}">Ver Avaliação</a><br>
-                    </div>
+                  </div>
                 <br>
               <br>
             @endforeach
