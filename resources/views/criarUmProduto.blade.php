@@ -48,7 +48,7 @@ $produto = [
               <div class="col-lg-10 offset-lg-1">
                 <div class="row">
                   <div class="col-lg-6">
-                        <h4>Foi??</a></h4>
+                        <h4>Produto cadastrado</a></h4>
                         
                   </div>
                   <br>

@@ -1,13 +1,10 @@
 body {
     font-family: 'Quicksand', sans-serif;
-    left: 90px;
-    right: 50px;
 }
 
 .pesquisa {
-
     /* margin-top: 50px; */
-    margin-top: 20px;
+    margin-top: 40px;
     background-color: rgb(3, 152, 158);
     font-family: 'Quicksand', sans-serif;
 }
@@ -15,7 +12,6 @@ body {
 button,
 form {
     font-family: 'Quicksand', sans-serif;
-
 }
 
 .produtos {
@@ -32,8 +28,7 @@ a {
 }
 
 .img-fluid {
-    width: 180px;
-    height: 180px;
+    width: 200px;
     border-radius: 10%;
 }
 

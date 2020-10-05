@@ -33,4 +33,13 @@ class ProdutoModel extends Model
    public $primaryKey = "id";
    public $timestamps = false;
     public $guarded = [];
+
+    public function comentarios()
+    {
+      return $this->hasMany(comentarios::class);
+    }
+    public function User()
+    {
+      return $this->hasMany(User::class);
+    }
 }

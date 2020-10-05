@@ -49,6 +49,12 @@ Route::get('/cadastro-user', function(){
 
 Route::get('/exibirUmProduto/{id}', 'ProdutoController@exibirUmProduto')->name("verproduto");
 
+Route::post('comentarios', 'ComentariosController@criarComentario')->name('criar.comentario');
+
+Route::get('/comentarios', function(){
+    return view ('comentarios');
+})->name("comentarios");
+
 
 //PAGINAS SOBRE A EMPRESA
 Route::get('/sobre', function(){
@@ -80,9 +86,6 @@ Route::get('/home','HomeController@index')->name('home');
 
 //-------------------------------PAGINA ADM----------------------//
 
-Route::get('/headeradm', function(){
-    return view ('headeradm');
-})->name("headeradm");
 
 Route::get('/adminlog', function(){
     return view ('adminlog');
