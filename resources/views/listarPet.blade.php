@@ -20,6 +20,7 @@
 </div>
 <section class="container-listagem">
 <h2> Seus Pets,  {{$names = collect(explode(' ', Auth::user()->name))->slice(0,1)->implode(' ')}} </h2>
+{{-- <h2> Seus Pets,</h2> --}}
 <br>
 <table class="lista">
 @foreach($pets as $pets)

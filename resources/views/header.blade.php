@@ -101,14 +101,28 @@
       <div class="botoes">
         <a href="{{ route('homepage') }}" class="tablink"  onclick="openPage('Cadastro', this, 'white')">Nosso site</a>
         <a href="{{ route('ranking') }}" class="tablink"  onclick="openPage('Cadastro', this, 'white')">Ranking</a>
-        <a href="{{ route('cadastropet') }}" class="tablink" onclick="openPage('Cadastro', this, 'white')">Cadastro Pet</button></a>
+        {{-- //FORMA ANTERIOR NAO APAGAR// --}}
+        {{-- <a href="{{ route('cadastropet') }}" class="tablink" onclick="openPage('Cadastro', this, 'white')">Cadastro Pet</button></a> --}}
+
+ @guest
+ @if (Route::has('cadastropet'))
+<a href="{{ route('cadastropet') }}" class="tablink" onclick="openPage('Cadastro', this, 'white')">Cadastro Pet</button></a>
+
+ @endif
+        @else
+        </a>
+<a class="tablink" href="{{ route('pets') }}">Seus Pets</a>
+  
+@endguest
+
+
         <a href="{{ route('adote') }}" class="tablink" onclick="openPage('Adote', this, 'white')">Adote!</button></a>
         @guest
 
         <a href="{{ route('login') }}" class="tablink" onclick="openPage('Adote', this, 'white')">Entrar</button></a>
 
         @if (Route::has('register'))
-        <a href="{{ route('register') }}" class="tablink" onclick="openPage('Adote', this, 'white')">Registrar-se</button></a>
+        <a href="{{ route('register') }}" class="tablink" onclick="openPage('Adote', this, 'white')">Cadastre-se</button></a>
         @endif
         @else
         </a>
@@ -121,9 +135,12 @@
             <p id= "nome-login">Olá, {{$names = collect(explode(' ', Auth::user()->name))->slice(0,1)->implode(' ')}}!</p>
             
         <form id="logout-form" action="{{ route('logout') }}" method="POST">
+        
             @csrf
             </div>
         </form>
+     
+        
             @endguest
 
 

@@ -17,6 +17,7 @@ class CriarPetsSeeder extends Seeder
     $pets->especie= "cachorro";
     $pets->genero= "masculino";
     $pets->nascimento= "04/10/1950";
+    $pets->users_id = 1;
     $pets->save();
 
     factory(Pets::class,5)->create();

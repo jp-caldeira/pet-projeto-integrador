@@ -10,7 +10,9 @@ class PetController extends Controller
 {
 
     public function adicionarUmPet(Request $request)
+  
     {
+      // dd($request);
       $pets = new Pets();
       $pets->especie= $request->especie;
       $pets->nome = $request->nome;
@@ -18,6 +20,7 @@ class PetController extends Controller
       $pets->nascimento= $request->nascimento;
       $pets->comentarios= $request->comentarios;
       $pets->preferencias = implode(',',$request->preferencias);
+      $pets->users_id= auth()->user()->id;
       $pets->save();
 
       return redirect('/listarPet');
@@ -44,6 +47,10 @@ class PetController extends Controller
 
   }
     
+  public function __construct()
+  {
+      $this->middleware('auth');
+  }
 }
     
 

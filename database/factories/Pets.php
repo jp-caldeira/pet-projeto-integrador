@@ -9,7 +9,7 @@ use Illuminate\Support\Arr;
 $factory->define(Pets::class, function (Faker $faker) {
 
     $petNomes = ["Floquinho", "Mingau", "Sansão", "Frederico", "Pikachu", "Penélope", "Asdrúbal", "Yoda", "Nemo", "Algodão", "Rilary", "Astolfo"];
-    $especies = ['Cachorro', 'Gato', 'Cachorro', 'Gato', 'Cachorro', 'Gato', 'Papagaio', 'Cavalo', 'Calopsita', 'Iguana'];
+    $especies = ['Cachorro', 'Gato', 'Passaro', 'Roedor', 'Reptil', 'Peixe'];
 
     return [
          "users_id"=> 1,
