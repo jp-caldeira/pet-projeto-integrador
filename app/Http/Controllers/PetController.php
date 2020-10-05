@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Pets;
 
 
+
 class PetController extends Controller
 {
 
@@ -29,7 +30,8 @@ class PetController extends Controller
       }
 
       public function listarPet(){
-      $pets = Pets::all();
+      $user= auth()->user();
+      $pets = $user->pets;
       return view('/listarPet', ["pets" => $pets]);
     }
       
