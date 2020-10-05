@@ -17,6 +17,7 @@ $factory->define(Pets::class, function (Faker $faker) {
          "genero"=>$faker->randomElement(['Macho', 'Fêmea']),
          "nascimento"=>$faker->date('Y-m-d'),
          "comentarios"=>$faker->realText('10'),
-         "preferencias"=>$faker->realText('20')
+         "preferencias"=>$faker->realText('20'),
+        //  "users_id"=> 1,
       ];
 });

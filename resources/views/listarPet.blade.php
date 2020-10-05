@@ -23,7 +23,7 @@
 <br>
 <table class="lista">
 @foreach($pets as $pets)
-<li> Nome: {{$pets ['nome']}} <a id=edicoes href="/deletarPet/{{$pets->id_pet}}">Deletar</a> <a id=edicoes href="/editarPet/{{$pets->id_pet}}">Editar</a> </li>
+<li> Nome: {{$pets ['nome']}} <a id=edicoes href="/deletarPet/{{$pets->id}}">Deletar</a> <a id=edicoes href="/editarPet/{{$pets->id}}">Editar</a> </li>
 <li> Especie: {{$pets ['especie']}} </li>
 {{-- <li> Cliente: {{$pets->user->name}} </li> --}}
 <hr> 
