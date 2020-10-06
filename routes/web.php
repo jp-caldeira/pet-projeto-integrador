@@ -49,7 +49,7 @@ Route::get('/cadastro-user', function(){
 
 Route::get('/exibirUmProduto/{id}', 'ProdutoController@exibirUmProduto')->name("verproduto");
 
-Route::post('comentarios', 'ComentariosController@criarComentario')->name('criar.comentario');
+Route::post('/comentarios/{id}', 'ComentariosController@criarComentario')->name('criar.comentario');
 
 Route::get('/comentarios', function(){
     return view ('comentarios');

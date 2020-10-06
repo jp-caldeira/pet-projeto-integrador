@@ -17,8 +17,12 @@
       </header>
 
       <div class="produtos">
-        <img src="{{ asset('storage/img/' . $produtos->imagem) }}" class="img-fluid" alt="produto">
-      </div>
+        <img src="{{ asset('storage/img/' . $produtos->imagem) }}" class="img-fluid" alt="produto"><br>
+        <br>  
+        <p class="avaliacao" style="width:400px;">Veja o que outros clientes ja disseram sobre esse produto e adicione sua opinião</p><br>
+              <p  class="avaliacao">Nota: {{$produtos->nota}}<p>
+          <p class="avaliacao">Comentário: {{$produtos->comentario}}</p><br>
+        </div><br>
                    
         <div class="descricao">
             <h1>{{$produtos->nome}}</h1>
@@ -48,11 +52,11 @@
         @include('comentarios')
       </div>
 
-        <div class="avaliacao" style="color:white">
+        <!-- <div class="avaliacao" style="color:white">
           <p style="text-align:center">Veja o que outros clientes ja disseram sobre esse produto e adicione sua opinião</p><br>
             <p>Nota: {{$produtos->nota}}<p>
               <p>Comentário: {{$produtos->comentario}}</p><br>
-          </div><br>
+          </div><br> -->
 
         <div class="botaofooter">
         <a class='btn btn-lg' style="color: rgb(3, 152, 158);" href="{{ route('ranking') }}">Voltar para o raking geral</a>

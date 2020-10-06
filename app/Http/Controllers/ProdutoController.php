@@ -28,7 +28,7 @@ class ProdutoController extends Controller
 
     public function exibirUmProduto($id) {
       $produto = ProdutoModel::find($id);
-      return view('exibirUmProduto', ["produtos"=> $produto]);
+      return view('exibirUmProduto', ["produtos"=> $produto, "id"=>$id ]);
     }
 
     //CRIAR PRODUTO//
@@ -98,8 +98,6 @@ class ProdutoController extends Controller
                   'indicacao' => 'String|required',
                   'porte' => 'String|required'
               ]);
-
-
 
               $produto->nome = $dataValidate['nome'];
               $produto->tipo_produto = $dataValidate['tipo_produto'];

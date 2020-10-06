@@ -13,7 +13,7 @@
 <br>
     <hr>
     @if(auth()->check())
-    <form action="{{ route('criar.comentario') }}" method="POST" class="form" enctype="multipart/form-data">
+    <form action="{{ route('criar.comentario',['id'=>$id]) }}" method="POST" class="form" enctype="multipart/form-data">
         <input type="hidden"  name="_token" value="{{ csrf_token() }}">     
             <div class="form-group">
                 <label>{{ __('Nota') }}</label>

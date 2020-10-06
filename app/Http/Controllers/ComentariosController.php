@@ -3,15 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Comentarios;
 
 class ComentariosController extends Controller
 {
-    public function criarComentario(Request $request)
+    public function criarComentario($id, Request $request)
     {
-        $comentario = $request->user()->comentarios()->create($request->all());
+        $comentario = new Comentarios();
+        $comentario->nota= $request->nota;
+        $comentario->body= $request->body;
+        $comentario->users_id= auth()->user()->id;
+        $comentario->produtos_id= intval($id); 
+        // dd($comentario);
+        $comentario->save();
+        
+    return redirect()->route('verproduto',['id'=>$id]);
 
-        return redirect()
-            ->route('verproduto', ['id'=> $comentario->produto_id])
-            ->withSucess('Comentário realizado com sucesso!');
     }
 }
