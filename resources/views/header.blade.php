@@ -9,7 +9,7 @@
     <!-- Fonte do google pra entrar no codigo -->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="/home.css">
 
     <!-- Styles -->
     <style>
@@ -21,10 +21,9 @@
                 z-index: 2;
                 background-color: white;
                 padding:10px;
-                
-                
+
             }
-         
+
 
             html, body{
                 font-family: 'Quicksand', sans-serif;
@@ -40,7 +39,7 @@
                     float: left;
                     margin-left: 50px;
                 }
-              
+
                 /*parte superior menu*/
 
                 .tablink {
@@ -59,7 +58,7 @@
                     text-align: center;
 
                 }
-                
+
                 /*parte superior menu apos mouse passar por cima*/
 
                 .tablink:hover {
@@ -72,9 +71,11 @@
 
                 .botoes{
                     float: right;
+                    overflow: hidden;
                 }
+
                 .logo{
-                   margin-left: 7%; 
+                   margin-left: 7%;
                 }
 
                 #nome-login{
@@ -83,9 +84,34 @@
                     color: rgb(105, 112, 112);
                     margin-top:40px;
                     float:right;
-                                                           
                 }
-               
+
+                /* dropdown */
+
+                .dropbtn {
+                  border: none;
+                  cursor: pointer;
+                }
+
+                .dropdown {
+                   position: relative;
+                   display: inline-block;
+                   float: left;
+                }
+                .dropdown-content {
+                  display: none;
+                  position: absolute;
+                }
+
+                a.dropdown-item {
+                  display:block;
+                  font-family: 'Quicksand', sans-serif;
+                  align-self: center;
+                }
+
+                .dropdown:hover .dropdown-content {display:block;
+                float:left;}
+
                 </style>
 </head>
 
@@ -100,7 +126,16 @@
     <div>
       <div class="botoes">
         <a href="{{ route('homepage') }}" class="tablink"  onclick="openPage('Cadastro', this, 'white')">Nosso site</a>
-        <a href="{{ route('ranking') }}" class="tablink"  onclick="openPage('Cadastro', this, 'white')">Ranking</a>
+        <div class="dropdown">
+          <a href="{{ route('ranking') }}" class="tablink dropbtn"  onclick="openPage('Cadastro', this, 'white')">Ranking</a>
+            <div class="dropdown-content">
+            <a class="dropdown-item droplink" href="/filtrar?pet=cachorro&produtos=Produtos">Cachorro</a>
+            <a class="dropdown-item droplink" href="/filtrar?pet=gato&produtos=Produtos">Gato</a>
+            <a class="dropdown-item droplink" href="/filtrar?pet=Pet&produtos=ração">Rações</a>
+            </div>
+        </div>
+
+
         {{-- //FORMA ANTERIOR NAO APAGAR// --}}
         {{-- <a href="{{ route('cadastropet') }}" class="tablink" onclick="openPage('Cadastro', this, 'white')">Cadastro Pet</button></a> --}}
 
@@ -112,7 +147,7 @@
         @else
         </a>
 <a class="tablink" href="{{ route('pets') }}">Seus Pets</a>
-  
+
 @endguest
 
 
@@ -127,20 +162,20 @@
         @else
         </a>
         <a class="tablink" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Sair</a>
-        
+
         <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre></a>
-        
+
             {{-- <p id= "nome-login">Ola, {{ Auth::user()->name }}!</p> // solução anterior// --}}
 
             <p id= "nome-login">Olá, {{$names = collect(explode(' ', Auth::user()->name))->slice(0,1)->implode(' ')}}!</p>
-            
+
         <form id="logout-form" action="{{ route('logout') }}" method="POST">
-        
+
             @csrf
             </div>
         </form>
-     
-        
+
+
             @endguest
 
 
