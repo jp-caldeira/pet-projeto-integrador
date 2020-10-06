@@ -23,14 +23,14 @@
 
   <section class = "titulo">
 <nav class="navbar navbar-expand-lg navbar-dark teal lighten-2 mb-4">
-<h1>{{ __('Cadastre-se') }}</h1>
+<h1 style="font-family: 'Quicksand', sans-serif">{{ __('Cadastre-se') }}</h1>
 </nav>
 </section>
 <hr>
 
 <section class = "imagem">
 <img class="img" src="/img/imagem1.png" alt="Gato"></img>
-<p id="texto">Os mimos que seu Pet Ama com os melhores Preços!</p>
+<p id="texto">Os mimos que seu Pet Ama com as melhores Avaliações!</p>
 
 <br>
 <label for="receberPromoções"><input type="checkbox" name="receberPromoções" id="receberPromoções" value="receberPromoções" checked> Quero receber ofertas e promoções exclusivas para meu Pet</label>

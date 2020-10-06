@@ -19,6 +19,10 @@ class CreateComentariosTable extends Migration
             $table->unsignedInteger('user_id');
             $table->string('nota');
             $table->text('body');
+            $table->timestamps();
+            $table->unsignedInteger('users_id')->nullable();
+            $table->foreign('users_id')->references('id')->on('users')->onDelete('cascade');
+            $table->engine = 'InnoDB';
 
             // $table->foreign('produtos_id')
             //         ->references('id')

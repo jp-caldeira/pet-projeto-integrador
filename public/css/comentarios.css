@@ -2,15 +2,7 @@
     font-size: 20px;
     font-family: 'Quicksand', sans-serif;
     color: rgb(43, 169, 169);
-    background-color: indigo;
     width: 40%;
-}
-
-a {
-    font-size: 20px;
-    font-family: 'Quicksand', sans-serif;
-    text-decoration: none;
-    color: rgb(125, 129, 136);
 }
 
 .avaliacao {
@@ -26,5 +18,11 @@ form {
     font-size: 20px;
     font-family: 'Quicksand', sans-serif;
     color: rgb(43, 169, 169);
-    width: 50%;
+    width: 40%;
 }
+
+
+/* 
+p {
+    text-align: center;
+} */

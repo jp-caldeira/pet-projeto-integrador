@@ -17,9 +17,9 @@
   <section class="pesquisa">
             <!--Barra de Pesquisa-->
         <nav class="navbar navbar-expand-lg navbar-dark teal lighten-2 mb-4">
-        <a class="navbar-brand" href="#" style="margin-left:150px;">Mundo Pet</a>
-                  <div class="collapse navbar-collapse" id="form-pesquisa">
-                      <form class="form-inline ml-auto" method="get" action="{{url('/pesquisa')}}">
+          <a class="navbar-brand" href="#" style="margin-left:150px;">Mundo Pet</a>
+            <div class="collapse navbar-collapse" id="form-pesquisa">
+                <form class="form-inline ml-auto" method="get" action="{{url('/pesquisa')}}">
                   <div class="md-form my-0">
                 <input class="form-control" style="width:500px; margin-left:120px;" type="search" name="pesquisa" placeholder="Digite aqui o que você quer encontrar (ex.: ração para gatos)"></input>
                <button class="btn btn-light" type="submit">Pesquisar</button>
