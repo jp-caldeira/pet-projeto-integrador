@@ -43,6 +43,7 @@
     <option value="ração">Ração</option>
     <option value="brinquedo">Brinquedos</option>
     <option value="higiene e bem-estar">Higiene e Bem-Estar</option>
+    <option value="remédio">Remédio</option>
   </select>
   <button class="btn active"  style="background-color:rgb(3, 152, 158); color:white;" type="submit">Filtrar</button>
     </div>
@@ -50,18 +51,20 @@
 
       <div class="produtos" style="margin-left:250px">
                 <div class="row">
-                  <div class="col-lg-10 offset-lg-1">
+                  <div class="col-lg-10">
+                    <div class="row">
+                      <div class="col-lg-8 offset-2" style="margin-top: 20px; margin-bottom: 60px">
+                    <h1 class='display-1'>{{$titulo}}</h1>
+                    </div>
+                    </div>
                     <div class="row">
             @foreach ($produtos as $produto)
-                      <div class="col-lg-6 produto-box">
-                        <br>
+                      <div class="col-lg-6 text-center">
                     <img src="{{ asset('storage/img/' . $produto->imagem) }}" class="img-fluid" alt="produto">
-                  <br>
-                  <br>
-                    <p class="nome">{{$produto->nome}}</p>
+                      <h4>{{$produto->nome}}</h4>
                       <p >{{$produto->tipo_produto}}</p>
-                      <p >Preço R$ {{$produto->preco}}</p><br>
-                      <a class='btn btn-lg active' style="background-color:rgb(3, 152, 158); color:white; width:200px" href="/exibirUmProduto/{{ $produto->id }}">Ver Avaliação</a><br>
+                      <p >Preço R$ {{$produto->preco}}</p>
+                      <a class='btn btn-lg active' style="background-color:rgb(3, 152, 158); color:white; width:200px; margin-bottom: 55px" href="/exibirUmProduto/{{ $produto->id }}">Ver Avaliação</a><br>
                   </div>
                 <br>
               <br>

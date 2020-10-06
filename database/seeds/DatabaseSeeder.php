@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
     //   $this->call(CriarPetsSeeder::class);
     //   $this->call(produtos_seeder::class);
 
-    // 
+    //
 
 
     public function run()
@@ -24,6 +24,6 @@ class DatabaseSeeder extends Seeder
       CriarPetsSeeder::class,
       produtos_seeder::class,
       ]);
-      
+
     }
 }

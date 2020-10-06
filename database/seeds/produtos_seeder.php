@@ -265,6 +265,64 @@ class produtos_seeder extends Seeder
       $produto->nota = 2.5;
       $produto->save();
 
+      ///remédios///
+
+      $produto = new ProdutoModel();
+      $produto->nome = "Remédio anti-inflamatório";
+      $produto->preco = 29.90;
+      $produto->tipo_produto = "remédio";
+      $produto->categoria = "cachorro";
+      $produto->marca = "MSD";
+      $produto->imagem = "remedio-cachorro-1.jpg";
+      $produto->comentários = "";
+      $produto->nota = 4.5;
+      $produto->save();
+
+      $produto = new ProdutoModel();
+      $produto->nome = "Remédio contra sarna e carrapatos";
+      $produto->preco = 29.90;
+      $produto->tipo_produto = "remédio";
+      $produto->categoria = "cachorro";
+      $produto->marca = "MSD";
+      $produto->imagem = "remedio-cachorro-2.jpg";
+      $produto->comentários = "";
+      $produto->nota = 4.5;
+      $produto->save();
+
+      $produto = new ProdutoModel();
+      $produto->nome = "Remédio Vermicida";
+      $produto->preco = 15.20;
+      $produto->tipo_produto = "remédio";
+      $produto->categoria = "gato";
+      $produto->marca = "Bayer";
+      $produto->imagem = "remedio-gato-1.jpg";
+      $produto->comentários = "";
+      $produto->nota = 3.7;
+      $produto->save();
+
+      $produto = new ProdutoModel();
+      $produto->nome = "Doxitrat antibiótico";
+      $produto->preco = 21.55;
+      $produto->tipo_produto = "remédio";
+      $produto->categoria = "gato";
+      $produto->marca = "Bayer";
+      $produto->imagem = "remedio-gato-2.jpg";
+      $produto->comentários = "";
+      $produto->nota = 3.7;
+      $produto->save();
+
+      $produto = new ProdutoModel();
+      $produto->nome = "Anti-inflamatório para gatos";
+      $produto->preco = 34.55;
+      $produto->tipo_produto = "remédio";
+      $produto->categoria = "gato";
+      $produto->marca = "Ouro Fino";
+      $produto->imagem = "remedio-gato-3.jpg";
+      $produto->comentários = "";
+      $produto->nota = 4.0;
+      $produto->save();
+
+
       //factory(ProdutoModel::class, 40)->create();
     }
 }

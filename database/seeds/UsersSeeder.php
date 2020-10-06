@@ -1,6 +1,8 @@
 <?php
+
 use App\User;
 use Illuminate\Database\Seeder;
+
 
 class UsersSeeder extends Seeder
 {
@@ -19,7 +21,7 @@ class UsersSeeder extends Seeder
         'genero'=> 'feminino',
         'cpf'=> '666666666666',
         'nascimento'=> '1990-08-25',
-        
-       ]);
+
+ ]);
     }
 }
