@@ -53,8 +53,8 @@
                 <div class="row">
                   <div class="col-lg-10">
                     <div class="row">
-                      <div class="col-lg-8 offset-2" style="margin-top: 20px; margin-bottom: 60px">
-                    <h1 class='display-1'>{{$titulo}}</h1>
+                      <div class="col-lg-8 offset-2" style="margin-top: 10px; margin-bottom: 30px;">
+                    <h1 class='display-1' style="font-size:35px; color:rgb(3, 152, 158); margin-left:100px;">{{$titulo}}</h1>
                     </div>
                     </div>
                     <div class="row">

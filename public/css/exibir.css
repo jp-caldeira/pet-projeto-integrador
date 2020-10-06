@@ -39,15 +39,14 @@ h1 {
 }
 
 .avaliacao {
-    width: 80%;
     font-family: 'Quicksand', sans-serif;
     font-size: 15px;
-    float: right;
-    margin-right: 200px;
     background-color: rgb(3, 152, 158);
-    border-radius: 5px;
-    height: 150px;
-    float: top;
+    float: left;
+    margin-right: 100px;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
 }
 
 .botaofooter {

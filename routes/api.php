@@ -63,3 +63,7 @@ Route::get('/produto/tipo/{tipo}/{filtro?}', 'api\ProdutoController@filtrarTipo'
 //outra
 Route::get('buscaproduto/', 'api\ProdutoController@buscaProduto');
 Route::get('pesquisa/','api\ProdutoController@pesquisar');
+
+
+//comentarios
+Route::post('/comentarios','api\ComentariosController@criarComentario');
