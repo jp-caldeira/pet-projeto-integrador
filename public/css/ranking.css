@@ -4,7 +4,7 @@ body {
 
 .pesquisa {
     /* margin-top: 50px; */
-    margin-top: 40px;
+    margin-top: 5%;
     background-color: rgb(3, 152, 158);
     font-family: 'Quicksand', sans-serif;
 }
@@ -31,6 +31,25 @@ a {
     width: 250px;
     border-radius: 10%;
 }
+
+.img-fluid.img-ranking {
+  height: 250px;
+  border-radius: 10%;
+
+}
+
+.ranking-title {
+  font-size: 55px;
+  color: rgb(3, 152, 158);
+  /* margin-left: 100px; */
+  text-align: center;
+}
+
+.title-div {
+  margin-top: 3%;
+  margin-bottom: 5%;
+}
+
 
 .nome {
     font-size: 17px;

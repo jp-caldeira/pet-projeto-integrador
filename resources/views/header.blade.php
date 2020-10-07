@@ -100,7 +100,7 @@
                 }
                 .dropdown-content {
                   display: none;
-                  position: absolute;
+                  position: relative;
                 }
 
                 a.dropdown-item {
@@ -110,7 +110,7 @@
                 }
 
                 .dropdown:hover .dropdown-content {display:block;
-                float:left;}
+                }
 
                 </style>
 </head>
@@ -126,14 +126,8 @@
     <div>
       <div class="botoes">
         <a href="{{ route('homepage') }}" class="tablink"  onclick="openPage('Cadastro', this, 'white')">Nosso site</a>
-        <div class="dropdown">
-          <a href="{{ route('ranking') }}" class="tablink dropbtn"  onclick="openPage('Cadastro', this, 'white')">Ranking</a>
-            <div class="dropdown-content">
-            <a class="dropdown-item droplink" href="/filtrar?pet=cachorro&produtos=Produtos">Cachorro</a>
-            <a class="dropdown-item droplink" href="/filtrar?pet=gato&produtos=Produtos">Gato</a>
-            <a class="dropdown-item droplink" href="/filtrar?pet=Pet&produtos=ração">Rações</a>
-            </div>
-        </div>
+        <a href="{{ route('ranking') }}" class="tablink dropbtn"  onclick="openPage('Cadastro', this, 'white')">Ranking</a>        
+
 
 
         {{-- //FORMA ANTERIOR NAO APAGAR// --}}

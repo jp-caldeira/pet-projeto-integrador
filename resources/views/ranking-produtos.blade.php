@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{$titulo}} - Mundo Pet</title>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="css/ranking.css">
   </head>
@@ -53,14 +53,14 @@
                 <div class="row">
                   <div class="col-lg-10">
                     <div class="row">
-                      <div class="col-lg-8 offset-2" style="margin-top: 10px; margin-bottom: 30px;">
-                    <h1 class='display-1' style="font-size:35px; color:rgb(3, 152, 158); margin-left:100px;">{{$titulo}}</h1>
+                      <div class="col-lg-8 offset-2 title-div">
+                    <h1 class="ranking-title">{{$titulo}}</h1>
                     </div>
                     </div>
                     <div class="row">
             @foreach ($produtos as $produto)
                       <div class="col-lg-6 text-center">
-                    <img src="{{ asset('storage/img/' . $produto->imagem) }}" class="img-fluid" alt="produto">
+                    <img src="{{ asset('storage/img/' . $produto->imagem) }}" class="img-fluid img-ranking" alt="produto">
                       <h4>{{$produto->nome}}</h4>
                       <p >{{$produto->tipo_produto}}</p>
                       <p >Preço R$ {{$produto->preco}}</p>
