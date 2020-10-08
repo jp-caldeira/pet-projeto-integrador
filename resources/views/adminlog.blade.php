@@ -166,10 +166,11 @@
                     </div>
                     <br>
                     <div class="col-sm-9">
-                <button type="submit" style="height:40px; width:200px; float:left;" class="botao">Cadastrar</button> 
+                <button type="submit" class="botao">Cadastrar</button> 
                 </div>
             </form>
         </div>
+        <br>
                 </div>
 
                     @if(isset($resultado))
@@ -182,7 +183,7 @@
                 </div>
 </div>
 </div>
-        <div class="col-lg">
+        <div class="base">
         <section>
             @include('footer')
         </section></div>

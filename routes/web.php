@@ -57,6 +57,10 @@ Route::get('/comentarios', function(){
     return view ('comentarios');
 })->name("comentarios");
 
+Route::get('/carousel', function(){
+    return view ('carousel');
+})->name("carousel");
+
 
 //PAGINAS SOBRE A EMPRESA
 Route::get('/sobre', function(){

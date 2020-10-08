@@ -85,32 +85,7 @@
                     margin-top:40px;
                     float:right;
                 }
-
-                /* dropdown */
-
-                .dropbtn {
-                  border: none;
-                  cursor: pointer;
-                }
-
-                .dropdown {
-                   position: relative;
-                   display: inline-block;
-                   float: left;
-                }
-                .dropdown-content {
-                  display: none;
-                  position: relative;
-                }
-
-                a.dropdown-item {
-                  display:block;
-                  font-family: 'Quicksand', sans-serif;
-                  align-self: center;
-                }
-
-                .dropdown:hover .dropdown-content {display:block;
-                }
+            
 
                 </style>
 </head>
@@ -126,7 +101,7 @@
     <div>
       <div class="botoes">
         <a href="{{ route('homepage') }}" class="tablink"  onclick="openPage('Cadastro', this, 'white')">Nosso site</a>
-        <a href="{{ route('ranking') }}" class="tablink dropbtn"  onclick="openPage('Cadastro', this, 'white')">Ranking</a>        
+        <a href="{{ route('ranking') }}" class="tablink dropbtn"  onclick="openPage('Cadastro', this, 'white')">Ranking</a>
 
 
 

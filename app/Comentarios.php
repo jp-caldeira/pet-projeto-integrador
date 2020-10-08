@@ -12,10 +12,10 @@ class Comentarios extends Model
     ];
 
     public $timestamps = false;
-    
+
     public function comentarios()
     {
-        return $this->belongsTo(ProdutoModel::class, "produtos_id");        
+        return $this->belongsTo(ProdutoModel::class, "produtos_id");
 
     }
     public function user()

@@ -27,12 +27,6 @@ body {
     width: 60%;
 }
 
-.form-control {
-    font-size: 15px;
-    font-family: 'Quicksand', sans-serif;
-    color: rgb(125, 129, 136);
-}
-
 .primeirobloco {
     float: left;
     box-sizing: content-box;
@@ -47,14 +41,6 @@ body {
 .lista {
     margin-top: 50px;
     font-family: 'Quicksand', sans-serif;
-}
-
-.editform {
-    color: rgb(83, 118, 124);
-    font-size: 15px;
-    font-family: 'Quicksand', sans-serif;
-    margin-left: 200px;
-    text-align: center;
 }
 
 
@@ -80,7 +66,6 @@ body {
     color: rgb(255, 255, 255);
     font-size: 20px;
     border-radius: 3px;
-    margin-left: 200px;
     margin-top: 30px;
     border: none;
     outline: none;
@@ -121,15 +106,25 @@ p {
 }
 
 .voltar {
-    margin-left: 400px;
     background-color: rgb(3, 152, 158);
     color: white;
-    width: 400px;
+    width: 100%;
     font-size: 20px;
+    text-align: center;
     border-radius: 5px;
 }
 
 .table {
     font-size: 10px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.base {
+    margin-left: 90px;
+    margin-top: 20px;
+}
+
+.label {
+    color: rgb(0, 0, 0);
     font-family: 'Quicksand', sans-serif;
 }
