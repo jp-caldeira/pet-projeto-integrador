@@ -13,15 +13,27 @@
 <body>
     
       <header>
-        @include('header')
-      </header>
+        @include('header')        
+      </header>    
 
       <div class="produtos">
         <img src="{{ asset('storage/img/' . $produtos->imagem) }}" class="img-fluid" alt="produto"><br>
         <br>  
         <p class="avaliacao" style="width:400px;">Veja o que outros clientes ja disseram sobre esse produto e adicione sua opinião</p><br>
               <p  class="avaliacao">Nota: {{$produtos->nota}}<p>
-          <p class="avaliacao">Comentário: {{$produtos->comentario}}</p><br>
+          <p class="avaliacao">
+          @foreach($produtos->comentarios as $comentario)
+             <p>  Comentário: {{$comentario->body}}</p>
+             <p>  Nota: {{$comentario->nota}}</p>
+             <p>Usuário: {{$comentario->user->name}}</p>
+          @endforeach
+
+          
+          
+            
+            
+            
+            </p><br>
         </div><br>
                    
         <div class="descricao">

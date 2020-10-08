@@ -13,15 +13,17 @@ class UsersSeeder extends Seeder
      */
     public function run()
     {
-       User::create([
-        'name'=>'Rafaelle Cristiane Bonifacio',
-        'email'=>'rafaelle.bonifacio@gmail.com',
-        'password'=>bcrypt('123456789'),
-        'phone' => '11987534165',
-        'genero'=> 'feminino',
-        'cpf'=> '666666666666',
-        'nascimento'=> '1990-08-25',
-
- ]);
+    //    User::create([
+    //     'name'=>'Rafaelle Cristiane Bonifacio',
+    //     'email'=>'rafaelle.bonifacio@gmail.com',
+    //     'password'=>bcrypt('123456789'),
+    //     'phone' => '11987534165',
+    //     'genero'=> 'feminino',
+    //     'cpf'=> '666666666666',
+    //     'nascimento'=> '1990-08-25',
+    //]);
+        
+        factory(User::class, 15)->create();
+ 
     }
 }

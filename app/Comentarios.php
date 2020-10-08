@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -15,10 +15,11 @@ class Comentarios extends Model
     
     public function comentarios()
     {
-        return $this->belongsTo(Comentarios::class);
+        return $this->belongsTo(ProdutoModel::class, "produtos_id");        
+
     }
     public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, "users_id");
     }
 }

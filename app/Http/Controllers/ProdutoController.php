@@ -27,8 +27,8 @@ class ProdutoController extends Controller
 
 
     public function exibirUmProduto($id) {
-      $produto = ProdutoModel::find($id);
-      return view('exibirUmProduto', ["produtos"=> $produto, "id"=>$id ]);
+      $produto = ProdutoModel::find($id);      
+      return view('exibirUmProduto', ["produtos"=> $produto, "id"=>$id]);
     }
 
     //CRIAR PRODUTO//
