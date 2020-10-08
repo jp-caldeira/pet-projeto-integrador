@@ -19,27 +19,9 @@
       <div class="produtos">
         <img src="{{ asset('storage/img/' . $produtos->imagem) }}" class="img-fluid" alt="produto"><br>
         <br>  
-<<<<<<< HEAD
         <p class="tituloavaliacao" style="width:500px;">Outros clientes ja opinaram sobre: </p><br>
               <p  class="avaliacao" style="width:400px;">Nota: {{$produtos->nota}}<p>
           <p class="avaliacao" style="width:400px;">Comentário: {{$produtos->comentários}}</p><br>
-=======
-        <p class="avaliacao" style="width:400px;">Veja o que outros clientes ja disseram sobre esse produto e adicione sua opinião</p><br>
-              <p  class="avaliacao">Nota: {{$produtos->nota}}<p>
-          <p class="avaliacao">
-          @foreach($produtos->comentarios as $comentario)
-             <p>  Comentário: {{$comentario->body}}</p>
-             <p>  Nota: {{$comentario->nota}}</p>
-             <p>Usuário: {{$comentario->user->name}}</p>
-          @endforeach
-
-          
-          
-            
-            
-            
-            </p><br>
->>>>>>> 59f28a2c41018b8808ee5d0a8847a7e81364aed3
         </div><br>
                    
         <div class="descricao">

@@ -121,15 +121,23 @@ p {
 }
 
 .voltar {
-    margin-left: 400px;
     background-color: rgb(3, 152, 158);
     color: white;
-    width: 400px;
+    width: 100%;
     font-size: 20px;
+    text-align: center;
     border-radius: 5px;
 }
 
 .table {
     font-size: 10px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.base {
+    margin-left: 90px;
+}
+
+label {
     font-family: 'Quicksand', sans-serif;
 }

@@ -90,23 +90,23 @@
                 <label for="cor">{{ __('Coloração') }}</label>
                     <input class="form-control" type="text" name="cor"  value="{{$produto->cor}}" placeholder="marrom"><br>
 
-                    <label> Castrado 
-                    <select  name="castrado" class="form-control" style="width:200px; float:left;">
+                    <label> Castrado
+                    <select  name="castrado" class="form-control" style="width:200px;">
                       <option selected disabled value="{{$produto->castrado}}">{{ __('Castrado') }}</option>
                       <option value="simcastrado">Sim</option>
                       <option value="naocastrado ">Não</option>
                       <option value="n/a ">N/a</option>
                       </select></label>
 
-                    <label> Corante
-                      <select name="corante" class="form-control" style="width:200px; float:left;">
+                    <label>Corante
+                      <select name="corante" class="form-control" style="width:200px;">
                       <option selected disabled value="{{$produto->corante}}">{{ __('Corante') }}</option>
                       <option value="comcorante">Com Corante</option>
                       <option value="semcorante ">Sem Corante</option>
-                      </select></label>
+                      </select></label><br>
 
                     <label> Indicação Veterinaria
-                      <select name="indicacao" class="form-control" style="width:200px; float:left;">
+                      <select name="indicacao" class="form-control" style="width:200px;">
                       <option selected disabled value="{{$produto->indicacao}}">{{ __('Indicaçao Veterinaria') }}</option>
                       <option value="alergico">Alérgico</option>
                       <option value="doencaintestinal ">Doenças Intestinais</option>
@@ -117,7 +117,7 @@
                       </select></label>
 
                       <label> Porte
-                      <select name="porte" class="form-control" style="width:200px; margin-left:200px; ">
+                      <select name="porte" class="form-control" style="width:200px;">
                       <option selected disabled value="{{$produto->porte}}">{{ __('Porte') }}</option>
                       <option value="pequeno">Pequeno</option>
                       <option value="medio">Médio</option>
@@ -125,7 +125,13 @@
                       <option value="mini">Mini</option>
                       <option value="gigante">Gigante</option>
                       <option value="naoespecifico">Não Especifico</option>
-                      </select></label>
+                      </select></label><br>
+ 
+                      <label for="nota">{{ __('Nota') }}</label>
+                    <input  name="nota" class="form-control" type="text" value="{{$produto->nota}}" placeholder="Adicionar nota de 1 a 5">
+                    
+                    <label for="comentários">{{ __('Comentário') }}</label>
+                    <textarea name="comentários" class="form-control" value="{{$produto->comentários}}" cols="20" rows="5" placeholder="Gostei muito do produto" class="form-control"></textarea>
  
 
                     <section class="md-form" style="float:left;  margin-left:50px;">
