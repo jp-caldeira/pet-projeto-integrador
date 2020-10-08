@@ -45,7 +45,7 @@
                     <img src="{{ asset('storage/img/' . $produto->imagem) }}" class="img-fluid imagem" alt="produto">
                       <h4 style="">{{$produto->nome}}</h4>
                       <p style="">{{$produto->tipo_produto}}</p>
-                      <p style="">R$ {{$produto->preco}}</p>
+                      <h4>R$ {{$produto->preco}}</h4>
                       <a class='btn btn-lg active' style="background-color:rgb(3, 152, 158); color:white; width:200px; margin-bottom: 55px" href="/exibirUmProduto/{{$produto->id}}">Ver Avaliação</a><br>
                     </div>
                 <br>
