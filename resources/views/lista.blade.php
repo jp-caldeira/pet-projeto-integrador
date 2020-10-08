@@ -35,6 +35,8 @@
                     <th scope="col">Corante</th>
                     <th scope="col">Indicação</th>
                     <th scope="col">Porte</th>
+                    <th scope="col">Nota</th>
+                    <th scope="col">Comentário</th>
                     <th scope="col">Editar</th>
                     <th scope="col">Excluir</th>
 
@@ -61,6 +63,9 @@
                     <td scope="row">{{$produto->corante}}</td>
                     <td scope="row">{{$produto->indicacao}}</td>
                     <td scope="row">{{$produto->porte}}</td>
+                    <td scope="row">{{$produto->nota}}</td>
+                    <td scope="row">{{$produto->comentários}}</td>
+
                    <td scope="row" style="width:10px"> <a  href="/produto/{{ $produto->id }}">Editar</a> </td>
                    <td scope="row" style="width:10px"> <a  href="/deletarProduto/{{ $produto->id }}">Excluir</a></td> 
                   </tr>
@@ -69,20 +74,13 @@
                 </tbody>
               </table>
               </div>
-              <div class="voltar">
-
-              <a onclick="location.href='/adminlog'"> Cadastrar mais Produtos </a>
-
-              </div>
-              </div>
-
+                  <div class="voltar">
+                    <a  onclick="location.href='/adminlog'"> Cadastrar mais Produtos </a>
+                  </div>
              <br>
 
-
-
-
-<section class="base">
-          @include('footer')
-    </section>
+        <section class="base">
+              @include('footer')
+        </section>
   </body>
 </html>

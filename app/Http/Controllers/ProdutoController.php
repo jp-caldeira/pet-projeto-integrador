@@ -30,7 +30,7 @@ class ProdutoController extends Controller
     public function exibirUmProduto($id) {
       $produto = ProdutoModel::find($id);
       $comentarios = $produto->comentarios;
-      // dd($comentarios[0]->user->name);
+
       return view('exibirUmProduto', ["produtos"=> $produto, "id"=>$id, "comentarios" => $comentarios]);
     }
 
@@ -70,6 +70,8 @@ class ProdutoController extends Controller
       $novoproduto->corante = $request->corante;
       $novoproduto->indicacao = $request->indicacao;
       $novoproduto->porte = $request->porte;
+      $novoproduto->nota = $request->porte;
+      $novoproduto->comentários = $request->comentários;
 
       $resultado = $novoproduto->save();
 
@@ -129,7 +131,9 @@ class ProdutoController extends Controller
               $produto->corante = $request->corante;
               $produto->indicacao = $request->indicacao;
               $produto->porte = $request->porte;
-              // $produto->save();
+              $produto->nota = $request->nota;
+              $produto->comentários = $request->comentários;
+
               $produto->update();
 
               return redirect()->action("ProdutoController@exibirTodos");
