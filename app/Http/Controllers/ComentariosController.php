@@ -13,10 +13,10 @@ class ComentariosController extends Controller
         $comentario->nota= $request->nota;
         $comentario->body= $request->body;
         $comentario->users_id= auth()->user()->id;
-        $comentario->produtos_id= intval($id); 
+        $comentario->produtos_id= intval($id);
         // dd($comentario);
         $comentario->save();
-        
+
     return redirect()->route('verproduto',['id'=>$id]);
 
     }
