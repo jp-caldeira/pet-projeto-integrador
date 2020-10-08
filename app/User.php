@@ -18,7 +18,7 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name', 'email', 'password','phone','genero','cpf','nascimento', 'receberPromocoes',
-      
+
     ];
 
     /**
@@ -46,6 +46,6 @@ class User extends Authenticatable
 
     public function comentarios()
     {
-        return $this->hasMany(Comentarios::class, "users_id");
+        return $this->hasMany(Comentarios::class, "user_id");
     }
 }

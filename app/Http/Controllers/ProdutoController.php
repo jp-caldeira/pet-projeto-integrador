@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\ProdutoModel;
+use App\Comentarios;
 
 
 class ProdutoController extends Controller
@@ -27,8 +28,10 @@ class ProdutoController extends Controller
 
 
     public function exibirUmProduto($id) {
-      $produto = ProdutoModel::find($id);      
-      return view('exibirUmProduto', ["produtos"=> $produto, "id"=>$id]);
+      $produto = ProdutoModel::find($id);
+      $comentarios = $produto->comentarios;
+
+      return view('exibirUmProduto', ["produtos"=> $produto, "id"=>$id, "comentarios" => $comentarios]);
     }
 
     //CRIAR PRODUTO//
