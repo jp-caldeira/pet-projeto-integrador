@@ -19,9 +19,9 @@
       <div class="produtos">
         <img src="{{ asset('storage/img/' . $produtos->imagem) }}" class="img-fluid" alt="produto"><br>
         <br>  
-        <p class="avaliacao" style="width:400px;">Veja o que outros clientes ja disseram sobre esse produto e adicione sua opinião</p><br>
-              <p  class="avaliacao">Nota: {{$produtos->nota}}<p>
-          <p class="avaliacao">Comentário: {{$produtos->comentario}}</p><br>
+        <p class="tituloavaliacao" style="width:500px;">Outros clientes ja opinaram sobre: </p><br>
+              <p  class="avaliacao" style="width:400px;">Nota: {{$produtos->nota}}<p>
+          <p class="avaliacao" style="width:400px;">Comentário: {{$produtos->comentários}}</p><br>
         </div><br>
                    
         <div class="descricao">

@@ -21,102 +21,111 @@
 
 <div class="form" style="width:80%; margin-left:100px;">
 
-        @if (session('mensagem'))
-            <p class="alert alert-success">{{ session('mensagem') }}</p>
-        @endif
-    <form action="/produto/{{ $produto->id }}" method="POST">
-            @csrf
+            @if (session('mensagem'))
+                <p class="alert alert-success">{{ session('mensagem') }}</p>
+            @endif
 
-            <div class="col-sm-9" style="margin-top:150px;"><p>Atualize o Produtos</p></div>
-            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+       
+                <form action="/produto/{{ $produto->id }}" method="POST">
+                     @csrf
+
+                     <div class="col-sm-9" style="margin-top:150px;"><p>Atualize o Produtos</p></div>
+                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
             
-            <div class="col-sm-9"><label >{{ __('Nome') }}</label></div>
-                        <input style="margin-top:10px;" class="form-control" type="text" name="nome" value="" placeholder="Ração Seca PremieR Pet Golden Special Cães Adultos Frango e Carne">
-                    <label>{{ __('Tipo de Produto') }}</label>
-                        <input style="margin-top:5px;" class="form-control" type="text" name="tipo_produto" value="" placeholder="Ração"><br>
-
-                    <select name="categoria" class="form-control" >
-                        <option selected disabled>{{ __('Categoria') }}</option>
-                        <option value="standard">Standard</option>
-                        <option value="premium ">Premium</option>
-                        <option value="superpremium ">Super Premium</option>
+                <div class="col-sm-9">
+                    <label for="nome" >{{ __('Nome') }}</label></div>
+                            <input style="margin-top:10px;" class="form-control" type="text" id="nome" name="nome" value="{{$produto->nome}}" placeholder="Ração Seca PremieR Pet Golden Special Cães Adultos Frango e Carne">
+                        <label>{{ __('Tipo de Produto') }}</label>
+                    <input style="margin-top:5px;" class="form-control" type="text" name="tipo_produto" value="{{$produto->tipo_produto}}" placeholder="Ração"><br>
+               
+                <label> Categoria 
+                    <select  name="categoria" class="form-control" >
+                        <option selected disabled   value="{{$produto->categoria}}" >{{ __('Categoria') }}</option>
+                            <option value="standard">Standard</option>
+                                <option value="premium ">Premium</option>
+                            <option value="superpremium ">Super Premium</option>
                         <option value="semcategoria">Sem Categoria</option>
                     </select>
-
-                <select name="idade" class="form-control">
-                      <option selected disabled>{{ __('Idade') }}</option>
-                      <option value="standard">Adultos</option>
-                      <option value="premium ">Filhote</option>
-                      <option value="superpremium ">Idoso</option>
+                    </label> 
+                    
+                    <label> Idade 
+                <select  name="idade" class="form-control">
+                      <option selected disabled  value="{{$produto->idade}}">{{ __('Idade') }}</option>
+                        <option value="adultos">Adultos</option>
+                            <option value="filhote ">Filhote</option>
+                        <option value="idoso ">Idoso</option>
                       <option value="naoespecifico">Não Especifico</option>
+                </select></label>
 
-                    </select>
-
-                    <select name="tipo_racao" class="form-control" >
-                      <option selected disabled>{{ __('Tipo Racao') }}</option>
+                <label> Tipo Racao 
+                    <select  name="tipo_racao" class="form-control" >
+                      <option selected disabled  value="{{$produto->tipo_racao}}">{{ __('Tipo Racao') }}</option>
                       <option value="superpremium">Super Premium</option>
                       <option value="premium ">Premium</option>
                       <option value="premiumespecial">Premium Especial</option>
                       <option value="natural">Natural</option>
                       <option value="highpremium">High Premium</option>
                       <option value="naoespecifico">Não Especifico</option>
-
-                    </select>
+                    </select></label>
                     <br>
 
-                <label>{{ __('Marca') }}</label>
-                    <input class="form-control" type="text" name="marca" value="" placeholder="Premier">
+                <label  for="marca">{{ __('Marca') }}</label>
+                    <input class="form-control" type="text" name="marca" value="{{$produto->marca}}" placeholder="Premier">
 
-                <label>{{ __('Raça') }}</label>
-                    <input class="form-control" type="text" name="raca" value="" placeholder="Labrador">
+                <label  for="raca">{{ __('Raça') }}</label>
+                    <input class="form-control" type="text" name="raca" value="{{$produto->raca}}" placeholder="Labrador">
 
-                <label>{{ __('Linha') }}</label>
-                    <input class="form-control" type="text" name="linha" value="" placeholder="Golden">                
+                <label for="linha">{{ __('Linha') }}</label>
+                    <input class="form-control" type="text" name="linha" value="{{$produto->linha}}" placeholder="Golden">                
                 
-                <label>{{ __('Preço') }}</label>
-                <input class="form-control" type="number" min="0.00" max="10000.00" name="preco" placeholder="109.90">      
+                <label for="preco">{{ __('Preço') }}</label>
+                <input class="form-control" type="number" min="0.00" max="10000.00" name="preco" value="{{$produto->preco}}" placeholder="109.90">      
                           
-                <label>{{ __('Peso') }}</label>
-                    <input class="form-control" type="text" name="peso" placeholder="15kl">
+                <label for="peso">{{ __('Peso') }}</label>
+                    <input class="form-control" type="text" name="peso" value="{{$produto->peso}}" placeholder="15kl">
                 
-                <label>{{ __('Sabor') }}</label>
-                    <input class="form-control" type="text" name="sabor" placeholder="Frango">
+                <label for="sabor">{{ __('Sabor') }}</label>
+                    <input class="form-control" type="text" name="sabor" value="{{$produto->sabor}}" placeholder="Frango">
 
-                <label>{{ __('Coloração') }}</label>
-                    <input class="form-control" type="text" name="cor" placeholder="marrom"><br>
+                <label for="cor">{{ __('Coloração') }}</label>
+                    <input class="form-control" type="text" name="cor"  value="{{$produto->cor}}" placeholder="marrom"><br>
 
-                    <select name="castrado" class="form-control" style="width:200px; float:left;">
-                      <option selected disabled>{{ __('Castrado') }}</option>
+                    <label> Castrado 
+                    <select  name="castrado" class="form-control" style="width:200px; float:left;">
+                      <option selected disabled value="{{$produto->castrado}}">{{ __('Castrado') }}</option>
                       <option value="simcastrado">Sim</option>
                       <option value="naocastrado ">Não</option>
                       <option value="n/a ">N/a</option>
-                      </select>
+                      </select></label>
 
+                    <label> Corante
                       <select name="corante" class="form-control" style="width:200px; float:left;">
-                      <option selected disabled>{{ __('Corante') }}</option>
+                      <option selected disabled value="{{$produto->corante}}">{{ __('Corante') }}</option>
                       <option value="comcorante">Com Corante</option>
                       <option value="semcorante ">Sem Corante</option>
-                      </select>
+                      </select></label>
 
+                    <label> Indicação Veterinaria
                       <select name="indicacao" class="form-control" style="width:200px; float:left;">
-                      <option selected disabled>{{ __('Indicaçao Veterinaria') }}</option>
+                      <option selected disabled value="{{$produto->indicacao}}">{{ __('Indicaçao Veterinaria') }}</option>
                       <option value="alergico">Alérgico</option>
                       <option value="doencaintestinal ">Doenças Intestinais</option>
                       <option value="obesidade ">Obesidade</option>
                       <option value="renal ">Renal</option>
                       <option value="sobrepeso ">Soprepeso</option>
                       <option value="naoespecifico">Não Especifico</option>
-                      </select>
+                      </select></label>
 
+                      <label> Porte
                       <select name="porte" class="form-control" style="width:200px; margin-left:200px; ">
-                      <option selected disabled>{{ __('Porte') }}</option>
+                      <option selected disabled value="{{$produto->porte}}">{{ __('Porte') }}</option>
                       <option value="pequeno">Pequeno</option>
                       <option value="medio">Médio</option>
                       <option value="grande ">Grande</option>
                       <option value="mini">Mini</option>
                       <option value="gigante">Gigante</option>
                       <option value="naoespecifico">Não Especifico</option>
-                      </select><br>
+                      </select></label>
  
 
                     <section class="md-form" style="float:left;  margin-left:50px;">
@@ -138,13 +147,15 @@
                 </div>
             </form>
         </div>
-                    @if(isset($resultado))
-                        @if($resultado)
-                    <h1>Produto Cadastrado com Sucesso</h1>
-                        @else
-                    <h1>Erro em salvar o produto</h1>
-                        @endif
-                         @endif
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
                 </div>
 </div>
 </div>     

@@ -69,7 +69,7 @@
         <div class = "comentarios">
       <label for="comentarios">{{ __('Comentarios') }}</label>
         
-        <textarea id="comentarios" name="comentarios" class="form-control" value="{{ old('comentarios') }}"required autocomplete="comentarios" >{{ __('Conte nos um pouco mais sobre o seu Pet') }} </textarea>
+        <textarea id="comentarios" name="comentarios" class="form-control" value="{{ old('comentarios') }}"placeholder="Conte nos um pouco mais sobre o seu Pet" ></textarea>
         <br>
         </div>
      

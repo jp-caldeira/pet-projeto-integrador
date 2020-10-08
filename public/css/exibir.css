@@ -38,6 +38,17 @@ h1 {
     width: 100%;
 }
 
+.tituloavaliacao {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+    background-color: rgb(240, 255, 255);
+    float: left;
+    margin-right: 100px;
+    color: rgb(3, 152, 158);
+    border-radius: 10px;
+    text-align: center;
+}
+
 .avaliacao {
     font-family: 'Quicksand', sans-serif;
     font-size: 15px;

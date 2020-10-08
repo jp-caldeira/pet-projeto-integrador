@@ -70,7 +70,7 @@ class ProdutoController extends Controller
 
       $resultado = $novoproduto->save();
 
-      return view('lista', ["novosprodutos"=> $novoproduto]);
+      return redirect()->action("ProdutoController@exibirTodos");
 
     }
         /**
@@ -81,8 +81,8 @@ class ProdutoController extends Controller
               return view('atualizarUmProduto', ['produto' => $produto]);
           }
 
-          function atualizarUmProduto(Request $request, ProdutoModel $produto) {
-              $dataValidate = $request->validate([
+          function atualizarUmProduto(Request $request, $id) {
+            $dataValidate = $request->validate([
                   'nome' => 'String|required',
                   'tipo_produto' => 'String|required',
                   'categoria' => 'String|required',
@@ -98,11 +98,11 @@ class ProdutoController extends Controller
                   'indicacao' => 'String|required',
                   'porte' => 'String|required'
               ]);
-
-              $produto->nome = $dataValidate['nome'];
-              $produto->tipo_produto = $dataValidate['tipo_produto'];
-              $produto->categoria = $dataValidate['categoria'];
-              $produto->marca = $dataValidate['marca'];
+              $produto = ProdutoModel::find($id);
+              $produto->nome = $request->nome;
+              $produto->tipo_produto = $request->tipo_produto;
+              $produto->categoria = $request->categoria;
+              $produto->marca = $request->marca;
 
               if($request->hasfile('imagem')){
                 // $file = $request->file('imagem');
@@ -113,23 +113,24 @@ class ProdutoController extends Controller
                 $produto->imagem = $filename;
               }else{
                 $produto->imagem = "sem-imagem.jpg";
-        
+
               }
+              $produto->raca = $request->raca;
+              $produto->idade = $request->idade;
+              $produto->linha = $request->linha;
+              $produto->tipo_racao = $request->tipo_racao;
+              $produto->preco = $request->preco;
+              $produto->sabor = $request->sabor;
+              $produto->cor = $request->cor;
+              $produto->castrado = $request->castrado;
+              $produto->corante = $request->corante;
+              $produto->indicacao = $request->indicacao;
+              $produto->porte = $request->porte;
+              // $produto->save();
+              $produto->update();
 
-              $produto->raca = $dataValidate['raca'];
-              $produto->idade = $dataValidate['idade'];
-              $produto->linha = $dataValidate['linha'];
-              $produto->tipo_racao = $dataValidate['tipo_racao'];
-              $produto->preco = $dataValidate['preco'];
-              $produto->sabor = $dataValidate['sabor'];
-              $produto->cor = $dataValidate['cor'];
-              $produto->castrado = $dataValidate['castrado'];
-              $produto->indicacao = $dataValidate['indicacao'];
-              $produto->porte = $dataValidate['porte'];
-              $produto->save();
-
-              return redirect('/lista');
-          }
+              return redirect()->action("ProdutoController@exibirTodos");
+            }
 
     public function deletarProduto($id){
 

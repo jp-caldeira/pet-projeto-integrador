@@ -19,8 +19,8 @@ class produtos_seeder extends Seeder
       $produto->categoria = "cachorro";
       $produto->marca = "Magnus";
       $produto->imagem = "racao1.jpg";
-      $produto->comentários = "Ok";
-      $produto->nota = 4.5;
+      $produto->comentários = "- Prós: Melhora o aspecto do pêlo, as fezes e urina. - Contras: Nenhum";
+      $produto->nota = 2;
       $produto->save();
 
       $produto = new ProdutoModel();
@@ -30,8 +30,8 @@ class produtos_seeder extends Seeder
       $produto->categoria = "cachorro";
       $produto->marca = "Magnus";
       $produto->imagem = "racao2.jpg";
-      $produto->comentários = "Legal";
-      $produto->nota = 4.5;
+      $produto->comentários = "- Prós: Embalagem de 25kg. - Contras: Não é atrativa";
+      $produto->nota = 2;
       $produto->save();
 
       $produto = new ProdutoModel();
@@ -50,9 +50,9 @@ class produtos_seeder extends Seeder
       $produto->preco = 25.49;
       $produto->tipo_produto = "ração";
       $produto->categoria = "cachorro";
-      $produto->marca = "Lorem Ipsum";
+      $produto->marca = "Champ";
       $produto->imagem = "racao4.jpg";
-      $produto->comentários = "Ótimo";
+      $produto->comentários = "Melhor custo benefício da ração standard, minha cadela não e enjooa";
       $produto->nota = 4.5;
       $produto->save();
 
