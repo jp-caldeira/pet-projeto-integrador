@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/form_adocao.css">
+    @csrf
 </head>
 <body>
 
@@ -19,8 +20,8 @@
     <!-- ESPAÇO PARA CADASTRO DE PET PARA ADOÇÃO -->
           <section class="container-cadastro">
           <div class="cadastro">
-          <form action="" method="post" enctype = "multipart/form-data">
-
+          <form action="/formulario_adocao" method="post" enctype = "multipart/form-data">
+    @csrf
                 <h1>Cadastre o Pet para adoção</h1>
                   <label class="nome1" for="nomeCompleto">Nome do Pet</label> <br>
                   <input type="text" name="nome_pet" id="nome_pet"placeholder="Ex Pingo" class="form-control" > 
