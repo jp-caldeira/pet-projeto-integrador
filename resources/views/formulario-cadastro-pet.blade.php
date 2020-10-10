@@ -108,7 +108,7 @@
 
 <section class="container-botao">
      <button type="submit"  class="btn btn-lg btn-block" style='color:white; background-color:rgb(3, 152, 158);'> {{ __('Cadastrar') }}</button>
-    {{-- <button type="submit"  class="btn btn-lg btn-block" style='color:white; background-color:rgb(3, 152, 158);'> @if(isset($pets)) Atualizar @else Cadastrar @endif</button> --}}
+   
      
 </section>
     </form>

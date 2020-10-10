@@ -9,85 +9,8 @@
     <!-- Fonte do google pra entrar no codigo -->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="/home.css">
+    <link rel="stylesheet" href="/css/header.css">
 
-    <!-- Styles -->
-    <style>
-            .container{
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                z-index: 2;
-                background-color: white;
-                padding:10px;
-
-            }
-
-
-            html, body{
-                font-family: 'Quicksand', sans-serif;
-
-
-            }
-                /*--INICIO PARTE SUPERIOR DO SITE --*/
-                /*logo site*/
-
-                .img1 {
-                    width: 100px;
-                    height: 100px;
-                    float: left;
-                    margin-left: 50px;
-                }
-
-                /*parte superior menu*/
-
-                .tablink {
-                    color: rgb(7, 95, 98);
-                    float: left;
-                    border: none;
-                    outline: none;
-                    cursor: pointer;
-                    padding: 10px 10px;
-                    font-size: 15px;
-                    border-radius: 2px;
-                    width: 140px;
-                    margin-top: 30px;
-                    background-color: rgb(255, 255, 255);
-                    font-family: 'Quicksand', sans-serif;
-                    text-align: center;
-
-                }
-
-                /*parte superior menu apos mouse passar por cima*/
-
-                .tablink:hover {
-                    background-color: rgb(3, 152, 158);
-                    color: rgb(255, 255, 255);
-                    text-decoration:none;
-                    cursor:pointer;
-                }
-
-
-                .botoes{
-                    float: right;
-                    overflow: hidden;
-                }
-
-                .logo{
-                   margin-left: 7%;
-                }
-
-                #nome-login{
-                    font-family: 'Quicksand', sans-serif;
-                    font-size: 15px;
-                    color: rgb(105, 112, 112);
-                    margin-top:40px;
-                    float:right;
-                }
-
-
-                </style>
 </head>
 
 <body>
@@ -95,7 +18,8 @@
 @extends('layouts.app')
     <!-- Menu superior do site com logo -->
 
-    <section class="container first-section">
+    {{-- <section class="container first-section"> --}}
+    <section class="container-fluid">
     <div class = "logo">
     <a href="{{ route('homepage') }}"><img  class=img1 src="/img/logo1.png" alt="logo"></a>
     <div>
@@ -149,5 +73,6 @@
 
 
     </section>
+    
 </body>
 </html>
