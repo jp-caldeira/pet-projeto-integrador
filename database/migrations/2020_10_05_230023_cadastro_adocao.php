@@ -15,18 +15,18 @@ class CadastroAdocao extends Migration
     {
         Schema::create('cadastro_adocao', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name_pet');
+            $table->string('nome_pet');
             $table->string('especie');
-            $table->string('raça');
+            $table->string('raca');
             $table->string('porte');
-            $table->string('name_responsavel');
+            $table->string('nome_responsavel');
             $table->string('email')->unique();
             $table->char('cpf')->unique();
             $table->string('phone');
-            $table->string('genero');
-            $table->date('nascimento');
+            //$table->string('genero');
+            //$table->date('nascimento');
             // $table->tinyInteger('receberPromocoes')->default(0);
-            $table->timestamp('email_verified_at')->nullable();
+            //$table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();

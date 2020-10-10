@@ -20,7 +20,7 @@
     <!-- ESPAÇO PARA CADASTRO DE PET PARA ADOÇÃO -->
           <section class="container-cadastro">
           <div class="cadastro">
-          <form action="/formulario_adocao" method="post" enctype = "multipart/form-data">
+          <form action="/formulario_adocao" method="POST" enctype = "multipart/form-data">
     @csrf
                 <h1>Cadastre o Pet para adoção</h1>
                   <label class="nome1" for="nomeCompleto">Nome do Pet</label> <br>
@@ -106,11 +106,17 @@
           <div>
               <button type="submit"  class="btn btn-lg btn-block" style='color:white; background-color:rgb(3, 152, 158);'>Cadastrar</button>
           </div>   
-
       </form>
         <br> 
       </div>
       </div>
+      @if(isset($resultado))
+        @if ($resultado)
+         <H1>PET CADASTRADO COM SUCESSO!</H1>
+        @else
+         <h1>ERRO AO CADASTRAR O PET!</h1>
+        @endif
+      @endif    
       </section>
     <section class="base">
           @include('footer')
