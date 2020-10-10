@@ -1,6 +1,6 @@
 @csrf
     @method('POST')
-<br>
+
 
     @if(auth()->check())
     <form action="{{ route('criar.comentario',['id'=>$id]) }}" method="POST" class="form" enctype="multipart/form-data">
