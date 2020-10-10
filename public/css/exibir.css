@@ -56,15 +56,54 @@ h1 {
 
 }
 
+.box-avaliacao {
+      font-family: 'Quicksand', sans-serif;
+      border-radius: 10px;
+      width: 70%;
+      height: 40%;
+      margin-left: 15%;
+      margin-right: 5%;
+      margin-top: 2%;
+      box-shadow: inset 1px 1px 2px rgba(3, 152, 158, 0.2), 1px 1px 2px rgba(3, 152, 158, 0.2);
+}
+
+.box-body-comment {
+      font-family: 'Quicksand', sans-serif;
+      width: 100%;
+      height: 40%;
+      margin-left: 2%;
+}
+
+
+.box-comment-title {
+  font-family: 'Quicksand', sans-serif;
+  background-color: rgb(3, 152, 158);
+  color: rgb(240, 255, 255);
+  /* margin-right: 100px; */
+  border-radius: 10px;
+  text-align: center;
+}
+
+.box-comment-title h2 {
+  padding: 1%;
+}
+
 .box-comment {
       font-family: 'Quicksand', sans-serif;
       font-size: 15px;
-      background-color: rgb(3, 152, 158);
       float: left;
-      margin-right: 100px;
-      color: white;
       border-radius: 10px;
       text-align: center;
+      width: 70%;
+      height: 40%;
+      margin-left: 15%;
+      margin-right: 5%;
+      margin-top: 2%;
+      box-shadow: inset 1px 1px 10px rgba(3, 152, 158, 0.2), 1px 1px 10px rgba(3, 152, 158, 0.2);
+}
+
+.comment-texto {
+    font-size: 1.5vw;
 }
 
 .botaofooter {
@@ -74,40 +113,37 @@ h1 {
     margin-bottom: 4%;
     font-size: 3.5vw;
     font-family: 'Quicksand', sans-serif;
-    text-decoration: none;
-}
+    }
 
 .botaofooter a{
   color: rgb(3, 152, 158);
   margin-left: 20%;
+  text-decoration: none;
+}
 
-
+.botaofooter a:hover{
+  text-decoration: none;
 }
 
 
 .parceiros {
     background-color: rgb(3, 152, 158);
     border-radius: 5px;
-    width: 75%;    
+    width: 75%;
 }
 
 .caixa {
     width: 70%;
     height: 40%;
+    border-radius: 10px;
     margin-left: 15%;
     margin-right: 5%;
     margin-top: 2%;
+    padding-top: 2%;
     box-shadow: inset 1px 1px 2px rgba(3, 152, 158, 0.2), 1px 1px 2px rgba(3, 152, 158, 0.2);
 }
 
-.box-comment {
-  width: 70%;
-  height: 40%;
-  margin-left: 15%;
-  margin-right: 5%;
-  margin-top: 2%;
-  box-shadow: inset 1px 1px 2px rgba(3, 152, 158, 0.2), 1px 1px 2px rgba(3, 152, 158, 0.2);
-}
+
 
 .pesquisa {
     margin-top: 5%;
@@ -117,9 +153,11 @@ h1 {
 
 .mensagem {
     font-size: 20px;
+    text-align: center;
     font-family: 'Quicksand', sans-serif;
     color: rgb(43, 169, 169);
-    /* width: 40%; */
+    padding: 5%;
+
 }
 
 .avaliacao {

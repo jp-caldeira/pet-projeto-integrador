@@ -1,12 +1,18 @@
-<div class="box-comment" style="width:70%;">
-  <h2>Avaliações</h2>
+  <div class="box-comment-title">
+    <h2>Avaliações</h2>
+  </div>
+
 @forelse($comentarios as $comentario)
 
-    <p>{{$comentario->body}}</p>
-     <p>{{$comentario->nota}}</p>
-     <p>{{$comentario->user->name}}</p>
+  <div class="box-body-comment">
+      <p>{{$comentario->user->name}}</p>
+      <p><strong> Nota: </strong>{{$comentario->nota}}</p>
+      <p class="comment-texto">{{$comentario->body}}</p>
+    </div>
+  <hr></hr>
+
+
 @empty
   <p>Este produto ainda não tem avaliações!</p>
   <p>Seja o primeiro a opinar sobre este produto</p>
 @endforelse
-</div>
