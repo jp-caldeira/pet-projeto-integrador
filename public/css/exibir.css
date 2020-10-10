@@ -6,7 +6,7 @@ body {
     float: left;
     margin-top: 100px;
     width: 40%;
-    margin-left: 50px;
+    margin-left: 200px;
 }
 
 .descricao {
@@ -26,6 +26,7 @@ body {
 
 img {
     width: 400px;
+    border-radius: 5px;
 }
 
 h1 {
@@ -37,9 +38,45 @@ h1 {
     width: 100%;
 }
 
-.avaliacao {
-    width: 60%;
+.tituloavaliacao {
     font-family: 'Quicksand', sans-serif;
     font-size: 15px;
-    float: right;
+    background-color: rgb(240, 255, 255);
+    float: left;
+    margin-right: 100px;
+    color: rgb(3, 152, 158);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.avaliacao {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+    background-color: rgb(3, 152, 158);
+    float: left;
+    margin-right: 100px;
+    color: white;
+    border-radius: 10px;
+    text-align: center;        
+}
+
+.botaofooter {
+    color: rgb(3, 152, 158);
+    margin-left: 500px;
+    margin-top: 40px;
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
+}
+
+.parceiros {
+    background-color: rgb(3, 152, 158);
+    border-radius: 5px;
+    width: 400px;
+}
+
+.pesquisa {
+    margin-top: 5%;
+    background-color: rgb(3, 152, 158);
+    font-family: 'Quicksand', sans-serif;
 }

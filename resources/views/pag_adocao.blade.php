@@ -63,7 +63,7 @@ $pets = [
             <li>
             <div class="text-cachorro">
               <br>
-              <a href='#'><b>Cadastre-se aqui</b></a><br>
+              <a href='/formulario_adocao'><b>Cadastre-se aqui</b></a><br>
                   <b>E Divulgue um Pet para adoção! <br> Divulgue de forma responsável!</b></div>
                   <div class="foto-cachorro">
                     <img src="img/cachorro.jpg" alt="cachorro" width="190px" height="200px"/>
@@ -77,7 +77,7 @@ $pets = [
               
                 <div class="text-gato">
                 <br>
-                <a href='#'><b>Cadastre-se aqui</b> 
+                <a href='/formulario_adocao'><b>Cadastre-se aqui</b> 
                 <br>
                  <b> Para adotar seu novo amigo! <br> A gente te ajuda!</b>
                 </div>

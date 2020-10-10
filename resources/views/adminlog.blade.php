@@ -7,7 +7,7 @@
     <!-- Fonte do google pra entrar no codigo -->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/homeadm.css">     
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/homeadm.css') }}">
     <meta name="csrf-token" content="{{ csrf_token() }}" />       
 </head>
 
@@ -165,27 +165,26 @@
                         </div>
                     </div>
                     <br>
-                    <div class="col-sm-9">
-                <button type="submit" style="height:40px; width:200px; float:left;" class="botao">Cadastrar</button> 
-                </div>
-            </form>
-        </div>
-                </div>
+                        <button type="submit" class="botao">Cadastrar</button> <br>
 
+                </form>
+            </div>
+                </div>
                     @if(isset($resultado))
                         @if($resultado)
-                    <h1>Produto Cadastrado com Sucesso</h1>
-                        @else
-                    <h1>Erro em salvar o produto</h1>
+                            <h1>Produto Cadastrado com Sucesso</h1>
+                                @else
+                            <h1>Erro em salvar o produto</h1>
                         @endif
-                         @endif
+                     @endif
                 </div>
-</div>
-</div>
-        <div class="col-lg">
-        <section>
-            @include('footer')
-        </section></div>
+        </div>
+
+                <div class="base">
+                    <section>
+                         @include('footer')
+                 </section>
+            </div>
 
     </body>
   </html>

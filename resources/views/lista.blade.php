@@ -15,74 +15,65 @@
 </header>
 
             <div class="lista">
-                <table class="table">
-                <thead class="thead-light">
-               
-                  <tr>
-                    <th scope="col">id</th>
-                    <th style="font-size:9px" scope="col">Nome</th>
-                    <th scope="col">Tipo Produto</th>
-                    <th scope="col">preco</th>
-                    <th scope="col">Categoria</th>
-                    <th scope="col">Marca</th>
-                    <th scope="col">Raca</th>
-                    <th scope="col">Idade</th>
-                    <th scope="col">Linha</th>
-                    <th scope="col">Tipo Racao</th>
-                    <th scope="col">Sabor</th>
-                    <th scope="col">Cor</th>
-                    <th scope="col">Castrado</th>
-                    <th scope="col">Corante</th>
-                    <th scope="col">Indicação</th>
-                    <th scope="col">Porte</th>
-                    <th scope="col">Editar</th>
-                    <th scope="col">Excluir</th>
-
-             
-
-                  </tr>
+                <table class="table table-hover">
+                  <thead class="thead-light">
+                    <tr>
+                      <th scope="col" >id</th>
+                      <th scope="col">Nome</th>
+                      <th scope="col">Tipo Produto</th>
+                      <th scope="col">preco</th>
+                      <th scope="col">Categoria</th>
+                      <th scope="col">Marca</th>
+                      <th scope="col">Raca</th>
+                      <th scope="col">Idade</th>
+                      <th scope="col">Linha</th>
+                      <th scope="col">Tipo Racao</th>
+                      <th scope="col">Sabor</th>
+                      <th scope="col">Cor</th>
+                      <th scope="col">Castrado</th>
+                      <th scope="col">Corante</th>
+                      <th scope="col">Indicação</th>
+                      <th scope="col">Porte</th>
+                      <th scope="col">Nota</th>
+                      <th scope="col" style="width:20px">Comentário</th>
+                      <th scope="col"><a>Editar</a></th>
+                      <th scope="col"><a>Excluir</a></th>
+                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                  @foreach ($produtos as $produto)
-                    <th scope="row">{{$produto->id}}</th>
-                    <td scope="row" style="font-size:9px">{{$produto->nome}}</td>
-                    <td scope="row">{{$produto->tipo_produto}}</td>
-                    <td scope="row">R$ {{$produto->preco}}</td>
-                    <td scope="row">{{$produto->categoria}}</td>
-                    <td scope="row">{{$produto->marca}}</td>
-                    <td scope="row">{{$produto->raca}}</td>
-                    <td scope="row">{{$produto->idade}}</td>
-                    <td scope="row">{{$produto->linha}}</td>
-                    <td scope="row">{{$produto->tipo_racao}}</td>
-                    <td scope="row">{{$produto->sabor}}</td>
-                    <td scope="row">{{$produto->cor}}</td>
-                    <td scope="row">{{$produto->castrado}}</td>
-                    <td scope="row">{{$produto->corante}}</td>
-                    <td scope="row">{{$produto->indicacao}}</td>
-                    <td scope="row">{{$produto->porte}}</td>
-                   <td scope="row" style="width:10px"> <a  href="/produto/{{ $produto->id }}">Editar</a> </td>
-                   <td scope="row" style="width:10px"> <a  href="/deletarProduto/{{ $produto->id }}">Excluir</a></td> 
+                    <tbody>
+                      <tr>
+                      @foreach ($produtos as $produto)
+                          <th scope="row">{{$produto->id}}</th>
+                          <td scope="row">{{$produto->nome}}</td>
+                          <td scope="row">{{$produto->tipo_produto}}</td>
+                          <td scope="row">R$ {{$produto->preco}}</td>
+                          <td scope="row">{{$produto->categoria}}</td>
+                          <td scope="row">{{$produto->marca}}</td>
+                          <td scope="row">{{$produto->raca}}</td>
+                          <td scope="row">{{$produto->idade}}</td>
+                          <td scope="row">{{$produto->linha}}</td>
+                          <td scope="row">{{$produto->tipo_racao}}</td>
+                          <td scope="row">{{$produto->sabor}}</td>
+                          <td scope="row">{{$produto->cor}}</td>
+                          <td scope="row">{{$produto->castrado}}</td>
+                          <td scope="row">{{$produto->corante}}</td>
+                          <td scope="row">{{$produto->indicacao}}</td>
+                          <td scope="row">{{$produto->porte}}</td>
+                          <td scope="row">{{$produto->nota}}</td>
+                          <td scope="row" style="font-size:7px;">{{$produto->comentários}}</td>
+                        <td scope="row"> <a style="width:5px" href="/produto/{{ $produto->id }}">Editar</a> </td>
+                      <td scope="row"> <a  style="width:5px" href="/deletarProduto/{{ $produto->id }}">Excluir</a></td> 
                   </tr>
                   @endforeach
-
                 </tbody>
               </table>
-              </div>
-              <div class="voltar">
-
-              <a onclick="location.href='/adminlog'"> Cadastrar mais Produtos </a>
-
-              </div>
-              </div>
-
-             <br>
-
-
-
-
-<section class="base">
-          @include('footer')
-    </section>
-  </body>
-</html>
+                </div>
+                <div class="file-path-wrapper">
+                     <button class="botao" style="margin-left:500px; font-size:13px;"> <a onclick="location.href='/adminlog'"> <br>Cadastrar mais Produtos </a></button>
+</div>
+               <br>
+            <section class="base">
+                  @include('footer')
+            </section>
+      </body>
+  </html>

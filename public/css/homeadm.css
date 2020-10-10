@@ -27,12 +27,6 @@ body {
     width: 60%;
 }
 
-.form-control {
-    font-size: 15px;
-    font-family: 'Quicksand', sans-serif;
-    color: rgb(125, 129, 136);
-}
-
 .primeirobloco {
     float: left;
     box-sizing: content-box;
@@ -44,21 +38,29 @@ body {
     border-radius: 3px;
 }
 
+
+/*lista todos produtos */
+
 .lista {
     margin-top: 50px;
     font-family: 'Quicksand', sans-serif;
 }
 
-.editform {
-    color: rgb(83, 118, 124);
-    font-size: 15px;
+.table {
+    font-size: 10px;
     font-family: 'Quicksand', sans-serif;
-    margin-left: 200px;
-    text-align: center;
+    margin-right: 10px;
+}
+
+tr {
+    width: 900px;
 }
 
 
-/*imagem principal gatito*/
+/*PAGINA ADM*/
+
+
+/*IMAGENS*/
 
 .primeiraimg {
     margin-left: 20px;
@@ -72,15 +74,42 @@ body {
     font-size: 15px;
 }
 
+.adm {
+    color: rgb(83, 118, 124);
+    font-size: 15px;
+    font-family: 'Quicksand', sans-serif;
+    margin-left: 200px;
+    text-align: center;
+}
 
-/*botao visite nosso ranking*/
+
+/*BOTOES*/
+
+.botaovoltar {
+    background-color: rgb(209, 216, 232);
+    color: rgb(255, 255, 255);
+    font-size: 13px;
+    font-family: 'Quicksand', sans-serif;
+    border-radius: 3px;
+    margin-top: 30px;
+    margin-left: 590px;
+    border: none;
+    outline: none;
+    width: 280px;
+    height: 40px;
+    text-align: center;
+}
+
+.botao:hover {
+    background-color: rgb(104, 104, 104);
+    color: rgb(255, 255, 255);
+}
 
 .botao {
     background-color: rgb(3, 152, 158);
     color: rgb(255, 255, 255);
-    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
     border-radius: 3px;
-    margin-left: 200px;
     margin-top: 30px;
     border: none;
     outline: none;
@@ -106,30 +135,14 @@ p {
     margin-left: 50px;
 }
 
-.adm {
-    color: rgb(83, 118, 124);
-    font-size: 15px;
-    font-family: 'Quicksand', sans-serif;
-    margin-left: 200px;
-    text-align: center;
+
+/*--TODAS AS PAGINAS FOOTER--*/
+
+.base {
+    margin-left: 90px;
+    margin-top: 20px;
 }
 
-.col {
-    color: rgb(83, 118, 124);
-    font-size: 15px;
-    font-family: 'Quicksand', sans-serif;
-}
-
-.voltar {
-    margin-left: 400px;
-    background-color: rgb(3, 152, 158);
-    color: white;
-    width: 400px;
-    font-size: 20px;
-    border-radius: 5px;
-}
-
-.table {
-    font-size: 10px;
-    font-family: 'Quicksand', sans-serif;
+a {
+    text-decoration: none;
 }

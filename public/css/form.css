@@ -28,21 +28,17 @@ html {
 }
 
 p {
-   
     font-stretch: condensed;
     font-size: 20px;
     text-align: center;
     color: rgb(192, 192, 192);
     font-family: 'Quicksand', sans-serif;
-    
 }
 
 h1 {
     font-size: 27px;
-    padding-left: 10%; 
-       
-    
-    
+    padding-left: 10%;
+    font-family: 'Quicksand', sans-serif;
 }
 
 label {
@@ -59,43 +55,49 @@ label {
     float: left;
     margin-left: 50px;
 }
-.senha{
+
+.senha {
     width: 50%;
     float: left;
     padding-right: 2%;
 }
-.senhaConfirma{
+
+.senhaConfirma {
     width: 50%;
     float: left;
     padding-left: 2%;
 }
 
-.data{
+.data {
     width: 50%;
     float: left;
     padding-left: 2%;
 }
-.cpf{
+
+.cpf {
     width: 50%;
     float: left;
     padding-right: 2%;
 }
-.espacamento{
+
+.espacamento {
     margin-top: 120px;
-
 }
 
 .img {
     height: 280px;
     float: left;
     margin-left: 90px;
-    margin-right:90px;
+    margin-right: 90px;
 }
-.imagem{
+
+.imagem {
     width: 45%;
     float: left;
     padding-left: 10%;
 }
+
+
 /* .imagem#texto{
     margin-left: 200px;
     margin-right: 50px;

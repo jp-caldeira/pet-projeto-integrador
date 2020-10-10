@@ -15,20 +15,16 @@ class CreateComentariosTable extends Migration
     {
         Schema::create('comentarios', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('produtos_id');
-            $table->unsignedInteger('user_id');
+            // $table->unsignedInteger('produtos_id');
+            // $table->unsignedInteger('user_id');
             $table->string('nota');
             $table->text('body');
-
-            // $table->foreign('produtos_id')
-            //         ->references('id')
-            //         ->on('produtos')
-            //         ->onDelete('cascade');
-
-            // $table->foreign('user_id')
-            //         ->references('id')
-            //         ->on('users')
-            //         ->onDelete('cascade');
+            $table->timestamps();
+            $table->unsignedInteger('produtos_id')->nullable();
+            $table->foreign('produtos_id')->references('id')->on('produtos')->onDelete('cascade');
+            $table->unsignedInteger('users_id')->nullable();
+            $table->foreign('users_id')->references('id')->on('users')->onDelete('cascade');
+            $table->engine = 'InnoDB';
 
 
         });

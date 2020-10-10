@@ -43,6 +43,8 @@ Route::get('/formulario_adocao', function (){
     return view('formulario_adocao');
 })->name("cadasto_adocao");
 
+Route::post('/formulario_adocao', 'AdocaoController@cadastrar'); 
+
 Route::get('/cadastro-pet', function(){
     return view('formulario-cadastro-pet');
 })->name("cadastropet");
@@ -53,11 +55,15 @@ Route::get('/cadastro-user', function(){
 
 Route::get('/exibirUmProduto/{id}', 'ProdutoController@exibirUmProduto')->name("verproduto");
 
-Route::post('comentarios', 'ComentariosController@criarComentario')->name('criar.comentario');
+Route::post('/comentarios/{id}', 'ComentariosController@criarComentario')->name('criar.comentario');
 
 Route::get('/comentarios', function(){
     return view ('comentarios');
 })->name("comentarios");
+
+Route::get('/carousel', function(){
+    return view ('carousel');
+})->name("carousel");
 
 
 //PAGINAS SOBRE A EMPRESA

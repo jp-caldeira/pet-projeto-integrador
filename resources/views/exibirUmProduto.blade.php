@@ -11,54 +11,80 @@
   </head>
 
 <body>
-    
-<header>
-@include('header')
-</header>
+
+      <header>
+        @include('header')
+      </header>
+
+      <div class="produtos">
+        <img src="{{ asset('storage/img/' . $produtos->imagem) }}" class="img-fluid" alt="produto"><br>
+        <br>
+
+        <p class="tituloavaliacao" style="width:500px;">Outros clientes ja opinaram sobre: </p><br>
+              <p  class="avaliacao" style="width:400px;">Nota: {{$produtos->nota}}<p>
+          <p class="avaliacao" style="width:400px;">Comentário: {{$produtos->comentários}}</p><br>
+
+        <p class="avaliacao" style="width:400px;">Veja o que outros clientes ja disseram sobre esse produto e adicione sua opinião</p><br>
 
 
-        <div class="produtos">
-            <img src="{{ asset('storage/img/' . $produtos->imagem) }}" class="img-fluid" alt="produto">
-        </div>
-                   
+                <div class="avaliacao" style="width:400px;">
+          @forelse($comentarios as $comentario)
+              <p>Comentário: {{$comentario->body}}</p>
+               <p> Nota: {{$comentario->nota}}</p>
+               <p> Usuário: {{$comentario->user->name}}</p>
+          @empty
+            <p>Este produto ainda não tem avaliações!</p>
+            <p>Seja o primeiro a opinar sobre este produto</p>
+          @endforelse
+          </div>
+
+          <br>
+
+        </div><br>
+
         <div class="descricao">
             <h1>{{$produtos->nome}}</h1>
-            <p>Preço em nossos parceiros: {{$produtos->preco}}</p>
-                <p> Tipo de Produto: {{$produtos->tipo_produto}}</p>
-                <p> Categoria: {{$produtos->categoria}}</p>
-                <p> Marca: {{$produtos->marca}}</p>
-                <p> Especifico para qual raça:{{$produtos->raca}}</p>
-                <p> Indicado para qual idade: {{$produtos->idade}}</p>
-                <p> Linha: {{$produtos->linha}}</p>
-                <p> Sabor: {{$produtos->sabor}}</p>
-                <p> Tipo de Ração: {{$produtos->tipo_racao}}</p>
-                <p> Indicado para animais castrados: {{$produtos->castrado}}</p>
-                <p> Corante: {{$produtos->corante}}</p>
-                <p> Indicação: {{$produtos->indicacao}}</p>
-                <p> Porte: {{$produtos->porte}}</p>
-              <a href="https://www.petlove.com.br" >Disponivel na Petlove</a><br>
-              <a href="https://www.royalpets.com.br/" >Disponivel na Royal Pets</a>
-<br>
-            <a class='btn btn-lg active' style="background-color:rgb(3, 152, 158); color:white; width:200px" href="{{ route('ranking') }}">Ver Avaliação</a>
+                    <p> Tipo de Produto: {{$produtos->tipo_produto}}</p>
+                    <p> Categoria: {{$produtos->categoria}}</p>
+                    <p>Preço em nossos parceiros: {{$produtos->preco}}</p>
+                    <p> Marca: {{$produtos->marca}}</p>
+                    <p> Especifico para qual raça:{{$produtos->raca}}</p>
+                    <p> Indicado para qual idade: {{$produtos->idade}}</p>
+                    <p> Linha: {{$produtos->linha}}</p>
+                    <p> Sabor: {{$produtos->sabor}}</p>
+                    <p> Tipo de Ração: {{$produtos->tipo_racao}}</p>
+                    <p> Indicado para animais castrados: {{$produtos->castrado}}</p>
+                    <p> Corante: {{$produtos->corante}}</p>
+                    <p> Indicação: {{$produtos->indicacao}}</p>
+                    <p> Porte: {{$produtos->porte}}</p>
+                    <div class="parceiros">
+                    <a href="https://www.petlove.com.br" style="color:white" >Disponivel na Petlove</a><br>
+                    <a href="https://www.royalpets.com.br/" style="color:white" >Disponivel na Royal Pets</a><br>
+                    </div>
+                </div>
+              </div><br>
             </div>
-          </div><br>
-          </div>
-          <br>
-        <div class="caixa">
-      @include('comentarios')
-        </div>
-        <div class="avaliacao">
-          <p>Veja o que outros clientes ja disseram sobre esse produto</p>
-          <p>Nota: {{$produtos->nota}}<p>
-            <p>Comentário: {{$produtos->comentario}}</p>  <br>
-        </div>
-        </div>
-</div>
-           <br>
 
-<section class="base">
- @include('footer')
- </section>
 
-    </body>
-  </html>
+      <div class="caixa">
+        @include('comentarios')
+      </div>
+
+        <!-- <div class="avaliacao" style="color:white">
+          <p style="text-align:center">Veja o que outros clientes ja disseram sobre esse produto e adicione sua opinião</p><br>
+            <p>Nota: {{$produtos->nota}}<p>
+              <p>Comentário: {{$produtos->comentario}}</p><br>
+          </div><br> -->
+
+        <div class="botaofooter">
+        <a class='btn btn-lg' style="color: rgb(3, 152, 158);" href="{{ route('ranking') }}">Voltar para o raking geral</a>
+        </div>
+
+
+    <section class="base">
+      @include('footer')
+    </section>
+    <br>
+
+  </body>
+</html>
