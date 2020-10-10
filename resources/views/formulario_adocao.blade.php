@@ -74,7 +74,7 @@
           </div>
 
           <div>
-          <select name="genero"class="form-control">
+          <!--<select name="genero"class="form-control">
                       <option selected disabled>Genero</option>
                       <option value="feminino">Feminino</option>
                       <option value="masculino">Masculino</option>
@@ -82,7 +82,7 @@
                 </select>
               <br>
             </div>
-
+          -->
           <div class="row">
             <div class="col-lg-6  col-xs-12">
                   <label for="senha">Crie uma Senha</label>
@@ -94,7 +94,7 @@
             <div class="col-lg-6  col-xs-12">
                   <label for="senhacripto">Confirme sua senha</label>
                   <br>
-                  <input type="password" name="senhacripto" class="form-control">
+                  <input type="password" name="senhacripto" id="senhacripto" class="form-control">
                   <br>
             </div>   
           </div>
