@@ -115,7 +115,7 @@
  @endif
         @else
         </a>
-<a class="tablink" href="{{ route('pets') }}">Seus Pets</a>
+<a class="tablink" href="{{ route('pets') }}">Meus Pets</a>
 
 @endguest
 
