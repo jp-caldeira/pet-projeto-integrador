@@ -40,6 +40,11 @@ h1 {
     padding-left: 10%;
     font-family: 'Quicksand', sans-serif;
 }
+h2 {
+   
+    font-size: 27px;
+    font-family: 'Quicksand', sans-serif;
+}
 
 label {
     font-family: 'Quicksand', sans-serif;

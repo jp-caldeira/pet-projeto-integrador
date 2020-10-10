@@ -28,7 +28,7 @@
      @csrf
 
          
-        <h1>{{ __('Entrar') }} </h1><br>
+        <h2>{{ __('Entrar') }} </h2><br>
            
         <label for="email">{{ __('E-Mail') }}</label>
         <br>
