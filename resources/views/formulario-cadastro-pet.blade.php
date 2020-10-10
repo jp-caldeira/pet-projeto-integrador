@@ -25,6 +25,15 @@
 </section>
 <hr>
 
+@if(isset($errors)&& count($errors)>0)
+<div class= "text-center mt-4 mb-4 p-2" alert-danger>
+@foreach ($errors->all() as $erro)
+{{$erro}}>
+@endforeach
+</div>
+@endif
+    
+
 <section class="container-pet-form">
 <div class="form-especie">
   <form method="post" action="{{ route('adicionarUmPet') }}">
@@ -33,8 +42,8 @@
 {{-- //depois lembrar de colocar aqui o nome da pessoa logada// --}}
 
 <p>{{ __('Olá, qual a espécie do seu Pet?') }}</p> <br>
-
-<input type="radio" name="especie" id="cachorro" value="cachorro"><label for="cachorro"></label>
+<label for="especie" required autocomplete></label>
+<input type="radio" name="especie" id="cachorro" value="cachorro" required autocomplete><label for="cachorro"></label>
 <input type="radio" name="especie" id="gato" value="gato"><label for="gato"></label>
 <input type="radio" name="especie" id="passaro" value= "passaro"><label for="passaro"></label>
 <input type="radio" name="especie" id="roedor" value= "roedor"><label for="roedor"></label>
@@ -99,6 +108,7 @@
 
 <section class="container-botao">
      <button type="submit"  class="btn btn-lg btn-block" style='color:white; background-color:rgb(3, 152, 158);'> {{ __('Cadastrar') }}</button>
+    {{-- <button type="submit"  class="btn btn-lg btn-block" style='color:white; background-color:rgb(3, 152, 158);'> @if(isset($pets)) Atualizar @else Cadastrar @endif</button> --}}
      
 </section>
     </form>
