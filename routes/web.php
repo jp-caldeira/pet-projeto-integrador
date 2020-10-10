@@ -13,8 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('/homepage');
 });
 
 //-------------------------------PAGINAS PRINCIPAIS----------------------//
@@ -118,7 +122,6 @@ Route::post('/produto/{id}', 'ProdutoController@atualizarUmProduto');
 
 
 //-------------------------------CADASTRO PET----------------------//
-// Route::get('/pets','PetController@listarPet');
 
 // Route::get('/detalhesPet/{id}','PetController@detalharPet');
 
@@ -131,6 +134,9 @@ Route:: post ('/listarPet','PetController@listarPet');
 Route::get('/deletarPet/{id}','PetController@deletarPet');
 
 Route::get('/pets','PetController@listarPet' )->name("pets");
+
+Route::get('/editarPet/{id}', 'PetController@editarPet');
+Route::post('/editarPet/{id}', 'PetController@atualizarUmPet')->name('atualizar');
 
 Route::get('/detalhesPet/{nome}',function($nome){
     return view('detalhesPet', ['pets'=>$nome]);
