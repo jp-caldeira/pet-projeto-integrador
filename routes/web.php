@@ -49,6 +49,10 @@ Route::get('/cadastro-pet', function(){
     return view('formulario-cadastro-pet');
 })->name("cadastropet");
 
+
+
+
+
 Route::get('/cadastro-user', function(){
   return view('formulario-cadastro-usuario');
 })->name("login");
@@ -141,6 +145,12 @@ Route::post('/editarPet/{id}', 'PetController@atualizarUmPet')->name('atualizar'
 Route::get('/detalhesPet/{nome}',function($nome){
     return view('detalhesPet', ['pets'=>$nome]);
 });
+
+// Route::post('/atualizarUmPet', function(){
+//     return view('atualizarUmPet');
+// })->name("atualizarPet");
+
+Route::post('/atualizarUmPet','PetController@atualizarUmPet' )->name("atualizarPet");
 //------------------------------------------------------------------//
 
 
