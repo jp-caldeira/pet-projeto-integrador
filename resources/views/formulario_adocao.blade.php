@@ -20,7 +20,7 @@
     <!-- ESPAÇO PARA CADASTRO DE PET PARA ADOÇÃO -->
           <section class="container-cadastro">
           <div class="cadastro">
-          <form action="/formulario_adocao" method="post" enctype = "multipart/form-data">
+          <form action="/formulario_adocao" method="POST" enctype = "multipart/form-data">
     @csrf
                 <h1>Cadastre o Pet para adoção</h1>
                   <label class="nome1" for="nomeCompleto">Nome do Pet</label> <br>
@@ -74,7 +74,7 @@
           </div>
 
           <div>
-          <select name="genero"class="form-control">
+          <!--<select name="genero"class="form-control">
                       <option selected disabled>Genero</option>
                       <option value="feminino">Feminino</option>
                       <option value="masculino">Masculino</option>
@@ -82,7 +82,7 @@
                 </select>
               <br>
             </div>
-
+          -->
           <div class="row">
             <div class="col-lg-6  col-xs-12">
                   <label for="senha">Crie uma Senha</label>
@@ -94,7 +94,7 @@
             <div class="col-lg-6  col-xs-12">
                   <label for="senhacripto">Confirme sua senha</label>
                   <br>
-                  <input type="password" name="senhacripto" class="form-control">
+                  <input type="password" name="senhacripto" id="senhacripto" class="form-control">
                   <br>
             </div>   
           </div>
@@ -106,11 +106,17 @@
           <div>
               <button type="submit"  class="btn btn-lg btn-block" style='color:white; background-color:rgb(3, 152, 158);'>Cadastrar</button>
           </div>   
-
       </form>
         <br> 
       </div>
       </div>
+      @if(isset($resultado))
+        @if ($resultado)
+         <H1>PET CADASTRADO COM SUCESSO!</H1>
+        @else
+         <h1>ERRO AO CADASTRAR O PET!</h1>
+        @endif
+      @endif    
       </section>
     <section class="base">
           @include('footer')

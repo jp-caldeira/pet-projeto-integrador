@@ -4,25 +4,20 @@ body {
 
 .produtos {
     float: left;
-    margin-top: 100px;
+    margin-top: 7%;
     width: 40%;
-    margin-left: 200px;
+    margin-left: 15%;
 }
 
 .descricao {
     float: right;
-    margin-top: 80px;
+    margin-top: 4%;
     font-family: 'Quicksand', sans-serif;
     width: 40%;
-    margin-right: 50px;
+    margin-right: 5%;
 }
 
-.caixa {
-    width: 70%;
-    margin-left: 100px;
-    margin-right: 50px;
-    margin-top: 650px;
-}
+
 
 img {
     width: 400px;
@@ -57,26 +52,98 @@ h1 {
     margin-right: 100px;
     color: white;
     border-radius: 10px;
-    text-align: center;        
+    text-align: center;
+
+}
+
+.box-comment {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 15px;
+      background-color: rgb(3, 152, 158);
+      float: left;
+      margin-right: 100px;
+      color: white;
+      border-radius: 10px;
+      text-align: center;
 }
 
 .botaofooter {
     color: rgb(3, 152, 158);
-    margin-left: 500px;
-    margin-top: 40px;
-    font-size: 20px;
+    width: 100%;
+    margin-top: 1%;
+    margin-bottom: 4%;
+    font-size: 3.5vw;
     font-family: 'Quicksand', sans-serif;
     text-decoration: none;
 }
 
+.botaofooter a{
+  color: rgb(3, 152, 158);
+  margin-left: 20%;
+
+
+}
+
+
 .parceiros {
     background-color: rgb(3, 152, 158);
     border-radius: 5px;
-    width: 400px;
+    width: 75%;    
+}
+
+.caixa {
+    width: 70%;
+    height: 40%;
+    margin-left: 15%;
+    margin-right: 5%;
+    margin-top: 2%;
+    box-shadow: inset 1px 1px 2px rgba(3, 152, 158, 0.2), 1px 1px 2px rgba(3, 152, 158, 0.2);
+}
+
+.box-comment {
+  width: 70%;
+  height: 40%;
+  margin-left: 15%;
+  margin-right: 5%;
+  margin-top: 2%;
+  box-shadow: inset 1px 1px 2px rgba(3, 152, 158, 0.2), 1px 1px 2px rgba(3, 152, 158, 0.2);
 }
 
 .pesquisa {
     margin-top: 5%;
     background-color: rgb(3, 152, 158);
     font-family: 'Quicksand', sans-serif;
+}
+
+.mensagem {
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+    color: rgb(43, 169, 169);
+    /* width: 40%; */
+}
+
+.avaliacao {
+    width: 30%;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+    margin-left: 900px;
+    float: right;
+    float: top;
+}
+
+form {
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+    color: rgb(43, 169, 169);
+    width: 95%;
+    margin-left: 2%;
+    margin-bottom: 2%;
+}
+
+.nota-area {
+    width: 20%;
+}
+
+.coment-area {
+    width: 90%;
 }
