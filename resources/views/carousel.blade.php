@@ -1,80 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Carousel</title>
+    <!-- Fonte do google pra entrar no codigo -->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/carousel.css') }}">
-    <title>Document</title>
-</head>
+  </head>
 
-<script>
-var slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
-
-</script>
-
-
+  
 <body>
-<!-- Slideshow container -->
-<div class="slideshow-container">
+<div style="margin-top:20px;">
 
-  <!-- Full-width images with number and caption text -->
-  <div class="mySlides fade">
-    <div class="numbertext">1 / 3</div>
-    <img src="/img/racoes.png" style="width:50%">
-    <div class="text">Caption Text</div>
+<div style="float:right">
+<div class="hero-image" style="width:300px"><img style="width:250px; margin-left:40px;" src="/img/racoes.png" alt="Rações"> 
+  <div class="hero-text" style="margin-left:300px;">
+    <h1 style="font-size:30px">Rações</h1>
+    <p class="texto">Enchendo o buchinho com qualidade</p>
+    <button>Veja qual é a melhor</button>
   </div>
-
-  <div class="mySlides fade">
-    <div class="numbertext">2 / 3</div>
-    <img src="/img/camas.png" style="width:50%">
-    <div class="text">Caption Two</div>
-  </div>
-
-  <div class="mySlides fade">
-    <div class="numbertext">3 / 3</div>
-    <img  src="/img/remedios.png" style="width:50%">
-    <div class="text">Caption Three</div>
-  </div>
-
-  <!-- Next and previous buttons -->
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
 </div>
-<br>
-
-<!-- The dots/circles -->
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
 </div>
+
+
+<div class="hero-image" style="width:300px"><img style="width:250px; margin-left:300px" src="/img/brinquedos.png" alt="brinquedos"> 
+  <div class="hero-text">
+    <h1 style="font-size:30px">Brinquedos</h1>
+    <p class="texto">Varinhas, bolinhas e diversão!</p>
+    <button>Fogo no parquinho</button>
+  </div>
+</div>
+
+
+
+<div style="float:right">
+<div class="hero-image" style="width:300px"><img style="width:250px; margin-left:40px;" src="/img/remedios.png" alt="Rações"> 
+  <div class="hero-text" style="margin-left:300px;">
+    <h1 style="font-size:30px">Remedios</h1>
+    <p class="texto">Bom saber o que é o melhor pra quem a gente ama ne?</p>
+    <button>Os mais recomendados</button>
+  </div>
+</div>
+</div>
+
+
+<div class="hero-image" style="width:300px"><img  style="width:250px; margin-left:300px" src="/img/camas.png" alt="brinquedos"> 
+  <div class="hero-text">
+    <h1 style="font-size:30px">Camas</h1>
+    <p class="texto">Conforto, Praticidade e Pelúcias</p>
+    <button>Temos!</button>
+  </div>
+</div>
+</div>
+
+
+
+  <br>
+  <br>
+
+</div>
+
+  
+  
+
+
+
 </body>
+</html>
+
+

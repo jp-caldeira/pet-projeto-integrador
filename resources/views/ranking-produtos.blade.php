@@ -54,7 +54,7 @@
                   <div class="col-lg-10">
                     <div class="row">
                       <div class="col-lg-8 offset-2 title-div">
-                    <h1 class="ranking-title">{{$titulo}}</h1>
+                    <h1 class="ranking-title" style="font-size:40px">{{$titulo}}</h1>
                     </div>
                     </div>
                     <div class="row">

@@ -126,24 +126,21 @@
                         <input  name="nota" class="form-control" type="text" value="{{$produto->nota}}" placeholder="Adicionar nota de 1 a 5">
                     
                     <label for="comentários">{{ __('Comentário') }}</label>
-                        <textarea name="comentários" class="form-control" value="{{$produto->comentários}}" cols="20" rows="5" placeholder="Gostei muito do produto" class="form-control"></textarea>
+                        <textarea name="comentários" class="form-control" value="{{$produto->comentários}}" cols="20" rows="5" placeholder="Gostei muito do produto" class="form-control"></textarea><br>
  
 
                     <section class="md-form" style="float:left;  margin-left:50px;">
                         <div class="file-field">
-                            <a class="btn-floating blue-gradient mt-0 float-right">
-                                <i class="far fa-heart" aria-hidden="true"></i>
+                            <a class="btn-floating blue-gradient mt-0 float-right"><i class="far fa-heart" aria-hidden="true"></i>
                                 <input type="file" name="imagem" value=""></a>
-                                <div class="file-path-wrapper">
-                            </div>
+                                <div class="file-path-wrapper"></div>
                         </div><br>
                         </div>
                     
-                        
-                    <button class="botao" type="submit">Atualize</button><br>
-                            <a style="margin-left:400px;" onclick="location.href='/lista'">Voltar e não atualizar</a>
-                    <br>
-                 </form>
+                            <button class="botao" type="submit">Atualize</button><br>
+                            <div class="botaovoltar"> <a onclick="location.href='/lista'"><br>Voltar e não atualizar</a></div>
+                        <br>
+        </form>
                             @if ($errors->any())
                                 <div class="alert alert-danger">
                                     <ul>
