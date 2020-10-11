@@ -99,7 +99,7 @@
             </div>   
           </div>
           <div class="caption"> <p>Envie uma foto do Pet</p>
-              <input type="file" name="arquivo" value =  " " >
+              <input type="file" name="imagem" id="imagem" value =  " " >
               <br>
           </div>
             

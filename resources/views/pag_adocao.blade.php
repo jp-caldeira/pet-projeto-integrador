@@ -80,7 +80,7 @@ $pets = [
                 <div class="text-gato">
                 <br>
                     <div class="link1">
-                    <a href='/formulario_adocao' style="color:rgb(3, 152, 158)"> 
+                    <a href='register' style="color:rgb(3, 152, 158)"> 
                     Cadastre-se aqui <br></a>
                     </div>
                  Para adotar seu novo amigo! <br> A gente te ajuda!
