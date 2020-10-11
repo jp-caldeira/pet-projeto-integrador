@@ -15,12 +15,12 @@
       <header>
         @include('header')
       </header>
-<div class="container-fluid">
+<div class="container">
       <div class="produtos">
         <img src="{{ asset('storage/img/' . $produtos->imagem) }}" class="img-fluid" alt="produto"><br>
         <br>
         <p class="tituloavaliacao" style="width:90%;">Outros clientes já opinaram sobre: </p><br>
-              <p  class="avaliacao" style="width:80%;">Nota: {{$produtos->nota}}<p>
+              <p class="avaliacao" style="width:80%;">Nota: {{$produtos->nota}}<p>
           <p class="avaliacao" style="width:80%;">Comentário: {{$produtos->comentários}}</p><br>
 
         <p class="avaliacao" style="width:80%;">Veja o que outros clientes já disseram sobre esse produto e adicione sua opinião</p><br>
@@ -51,8 +51,6 @@
 <div class="box-avaliacao">
   @include('box-comments')
 </div>
-
-
 
 
     <div class="caixa">
