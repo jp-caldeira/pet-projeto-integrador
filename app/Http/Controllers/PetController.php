@@ -82,45 +82,32 @@ class PetController extends Controller
 
     function editarPet($id) {
     $pets = Pets::find($id);
-    return view('atualizar', ["pets" => $pets]);
+    return view('atualizarUmPet', ["pets" => $pets]);
    
 }
 
-// function atualizarUmPet(Request $request, Pets $pets) {
-//   $dataValidate = $request->validate([
-//       'especie' => 'String|required',
-//       'nome' => 'String|required',
-//       'genero' => 'String|required',
-//       'nascimento' => 'date|required',
-//       'comentarios' => 'String|required',
-//       'preferencias' => 'String|required',
-//       ]);
+function atualizarUmPet(Request $request, $id) {
+       $dataValidate = $request->validate([
+      'especie' => 'String|required',
+      'nome' => 'String|required',
+      'genero' => 'String|required',
+      'nascimento' => 'date|required',
+      'comentarios' => 'String|required',
+      'preferencias' => 'required',
+      ]);
       
-//       $pets->especie= $dataValidate['especie'];
-//       $pets->nome = $dataValidate['nome'];
-//       $pets->genero= $dataValidate['genero'];
-//       $pets->nascimento= $dataValidate['nascimento'];
-//       $pets->comentarios= $dataValidate['comentarios'];
-//       $pets->preferencias = implode(',',$dataValidate['preferencias']);
-//       $produto->save();
+      $pets = Pets::find($id);
+      $pets->especie= $request->especie;
+      $pets->nome = $request->nome;
+      $pets->genero= $request->genero;
+      $pets->nascimento= $request->nascimento;
+      $pets->comentarios= $request->comentarios;
+      $pets->preferencias = implode(',',$request->preferencias);
+      $pets->update();
 
-//       return view('/pets');
-//   }
+      return redirect('/listarPet');
+  }
 
-
-
-public function atualizarUmPet(Request $request,$id)
-{
-  $pets = Pets::find($id);
-  $pets->especie= $request->especie;
-  $pets->nome = $request->nome;
-  $pets->genero= $request->genero;
-  $pets->nascimento= $request->nascimento;
-  $pets->comentarios= $request->comentarios;
-  $pets->preferencias = implode(',',$request->preferencias);
-  $pets->save();
-  return view('/listarPet', ["pets" => $pets]);
-}
     
   public function __construct()
   {

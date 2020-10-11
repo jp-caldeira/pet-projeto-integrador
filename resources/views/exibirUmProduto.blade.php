@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Exibir</title>
+    <title>{{$produtos->nome}} - Mundo Pet</title>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/exibir.css') }}">
@@ -15,32 +15,16 @@
       <header>
         @include('header')
       </header>
-
+<div class="container">
       <div class="produtos">
         <img src="{{ asset('storage/img/' . $produtos->imagem) }}" class="img-fluid" alt="produto"><br>
         <br>
+        <p class="tituloavaliacao" style="width:90%;">Outros clientes já opinaram sobre: </p><br>
+              <p class="avaliacao" style="width:80%;">Nota: {{$produtos->nota}}<p>
+          <p class="avaliacao" style="width:80%;">Comentário: {{$produtos->comentários}}</p><br>
 
-        <p class="tituloavaliacao" style="width:500px;">Outros clientes ja opinaram sobre: </p><br>
-              <p  class="avaliacao" style="width:400px;">Nota: {{$produtos->nota}}<p>
-          <p class="avaliacao" style="width:400px;">Comentário: {{$produtos->comentários}}</p><br>
-
-        <p class="avaliacao" style="width:400px;">Veja o que outros clientes ja disseram sobre esse produto e adicione sua opinião</p><br>
-
-
-                <div class="avaliacao" style="width:400px;">
-          @forelse($comentarios as $comentario)
-              <p>Comentário: {{$comentario->body}}</p>
-               <p> Nota: {{$comentario->nota}}</p>
-               <p> Usuário: {{$comentario->user->name}}</p>
-          @empty
-            <p>Este produto ainda não tem avaliações!</p>
-            <p>Seja o primeiro a opinar sobre este produto</p>
-          @endforelse
-          </div>
-
-          <br>
-
-        </div><br>
+        <p class="avaliacao" style="width:80%;">Veja o que outros clientes já disseram sobre esse produto e adicione sua opinião</p><br>
+    </div>
 
         <div class="descricao">
             <h1>{{$produtos->nome}}</h1>
@@ -62,24 +46,20 @@
                     <a href="https://www.royalpets.com.br/" style="color:white" >Disponivel na Royal Pets</a><br>
                     </div>
                 </div>
-              </div><br>
-            </div>
+    </div>
+
+<div class="box-avaliacao">
+  @include('box-comments')
+</div>
 
 
-      <div class="caixa">
-        @include('comentarios')
-      </div>
-
-        <!-- <div class="avaliacao" style="color:white">
-          <p style="text-align:center">Veja o que outros clientes ja disseram sobre esse produto e adicione sua opinião</p><br>
-            <p>Nota: {{$produtos->nota}}<p>
-              <p>Comentário: {{$produtos->comentario}}</p><br>
-          </div><br> -->
-
-        <div class="botaofooter">
-        <a class='btn btn-lg' style="color: rgb(3, 152, 158);" href="{{ route('ranking') }}">Voltar para o raking geral</a>
+    <div class="caixa">
+          @include('comentarios')
         </div>
 
+        <div class="botaofooter">
+          <a href="{{ route('ranking') }}">Voltar para o ranking geral</a>
+        </div>
 
     <section class="base">
       @include('footer')

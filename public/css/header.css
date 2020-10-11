@@ -1,0 +1,82 @@
+
+html,
+body {
+   
+    font-family: 'Quicksand', sans-serif;
+}
+.container-fluid{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    background-color: white;
+    padding:10px;
+    padding-left: 50px;
+
+}
+
+html, body{
+    font-family: 'Quicksand', sans-serif;
+
+
+}
+    /*--INICIO PARTE SUPERIOR DO SITE --*/
+    /*logo site*/
+
+    .img1 {
+        width: 100px;
+        height: 100px;
+        float: left;
+        margin-left: 50px;
+    }
+
+    /*parte superior menu*/
+
+    .tablink {
+        color: rgb(7, 95, 98);
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 10px 10px;
+        font-size: 15px;
+        border-radius: 2px;
+        width: 140px;
+        margin-top: 30px;
+        background-color: rgb(255, 255, 255);
+        font-family: 'Quicksand', sans-serif;
+        text-align: center;
+
+    }
+
+    /*parte superior menu apos mouse passar por cima*/
+
+    .tablink:hover {
+        background-color: rgb(3, 152, 158);
+        color: rgb(255, 255, 255);
+        text-decoration:none;
+        cursor:pointer;
+    }
+
+
+    .botoes{
+        float: right;
+        overflow: hidden;
+        margin-right: 10%;
+    }
+
+    .logo{
+       margin-left: 7%;
+    }
+
+    #nome-login{
+        font-family: 'Quicksand', sans-serif;
+        font-size: 15px;
+        color: rgb(105, 112, 112);
+        margin-top:40px;
+        float:right;
+    }
+
+
+   

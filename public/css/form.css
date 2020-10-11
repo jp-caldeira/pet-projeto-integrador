@@ -1,9 +1,9 @@
 body,
 html {
     font-family: 'Quicksand', sans-serif;
-    width: 100%;
-    left: 90px;
-    right: 50px;
+    /* width: 100%; */
+    /* left: 90px;
+    right: 50px; */
 }
 
 .container-pet-form {
@@ -38,6 +38,11 @@ p {
 h1 {
     font-size: 27px;
     padding-left: 10%;
+    font-family: 'Quicksand', sans-serif;
+}
+h2 {
+   
+    font-size: 27px;
     font-family: 'Quicksand', sans-serif;
 }
 
