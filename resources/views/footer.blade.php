@@ -9,10 +9,10 @@
     <!-- Fonte do google pra entrar no codigo -->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="/css/footer.css">
 
     <!-- Styles -->
-    <style>
+    {{-- <style>
             .barrafinal {     
                     float: left;
                     padding: 10px 10px 10px 10px;
@@ -43,7 +43,7 @@
 
             }
 
-        </style>
+        </style> --}}
               
 </head>
 
@@ -59,13 +59,13 @@
 
        <section>     
         <div class="barrafinal">
+        {{-- <div class="container-fluid"> --}}
             <a href="{{ route('sobre') }}" style="color:white">Sobre Nós</a>
             <a href="{{ route('trabalhe') }}" style="color:white">Trabalhe Conosco</a>
             <a href="{{ route('cadastropet') }}"style="color:white">Dúvidas Frequentes</button></a>
             <a href="{{ route('adote') }}"style="color:white">Lojas Parceiras</button></a>
             <a href="{{ route('login') }}"style="color:white">Política de privacidade</button></a>
         </div>
-
         
         </section> 
         

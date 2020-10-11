@@ -13,7 +13,9 @@ body {
     background-color: white;
     padding:10px;
     padding-left: 50px;
-
+    
+    border-bottom: 2px solid rgba(209, 206, 206, 0.3);
+    
 }
 
 html, body{
@@ -25,8 +27,8 @@ html, body{
     /*logo site*/
 
     .img1 {
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
         float: left;
         margin-left: 50px;
     }

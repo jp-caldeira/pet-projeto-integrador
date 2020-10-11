@@ -72,7 +72,7 @@
             @endguest
 
 
-    </section>
+    
     
 </body>
 </html>

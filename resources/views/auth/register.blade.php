@@ -21,12 +21,12 @@
      @csrf
 
 
-  <section class = "titulo">
-<nav class="navbar navbar-expand-lg navbar-dark teal lighten-2 mb-4">
+  {{-- <section class = "titulo">
+
 <h1 style="font-family: 'Quicksand', sans-serif">{{ __('Cadastre-se') }}</h1>
-</nav>
+
 </section>
-<hr>
+<hr> --}}
 
 <section class = "imagem">
 <img class="img" src="/img/imagem1.png" alt="Gato"></img>
@@ -39,7 +39,7 @@
 
        <section class="container-cadastro">
           <div class="cadastro">
-
+          <h1 style="font-family: 'Quicksand', sans-serif">{{ __('Cadastre-se') }}</h1>
 
             <label for="nomeCompleto">{{ __('Nome Completo') }}</label> <br>
             <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
@@ -112,9 +112,7 @@
         </div> 
         </section>
         </form>
-
-    
-   
+      
         <section class="base">
             @include('footer')
         </section>
