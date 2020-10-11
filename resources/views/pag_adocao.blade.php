@@ -1,37 +1,37 @@
 <?php
 
-$pets = [
-              ["imagem"=> "img/adocao1.jpg",
-               "nome" => "Cesar",
-               "descrição" => "Tem 1 aninho, é muito sapeca e feliz",
-            ],
-
-            ["imagem" => "img/adocao2.jpg",
-             "nome" => "Julinho",
-             "descrição" => "Tem 5 meses, é muito carente e brincalhão",
-            ],
-
-            ["imagem" => "img/adocao3.jpg",
-             "nome" => "Estella",
-             "descrição" => "Muito educada e obediente",
-            ],
-
-            ["imagem" => "img/adocao4.jpg",
-             "nome" => "Damares",
-             "descrição" => "Linda e muito sapeca",
-          ],
-
-          ["imagem" => "img/adocao5.jpg",
-           "nome" => "Didi",
-           "descrição" => "Muito esperto e brincalhão",
-        ],
-
-        ["imagem" => "img/adocao6.jpg",
-         "nome" => "Bob",
-         "descrição" => "Muito atrapalhado e adora brincar",
-      ],
-];
-
+//$pets = [
+//              ["imagem"=> "img/adocao1.jpg",
+//               "nome" => "Cesar",
+//               "descrição" => "Tem 1 aninho, é muito sapeca e feliz",
+//            ],
+//
+//            ["imagem" => "img/adocao2.jpg",
+//             "nome" => "Julinho",
+//             "descrição" => "Tem 5 meses, é muito carente e brincalhão",
+//            ],
+//
+//            ["imagem" => "img/adocao3.jpg",
+//             "nome" => "Estella",
+//             "descrição" => "Muito educada e obediente",
+//            ],
+//
+//            ["imagem" => "img/adocao4.jpg",
+//             "nome" => "Damares",
+//             "descrição" => "Linda e muito sapeca",
+//          ],
+//
+//          ["imagem" => "img/adocao5.jpg",
+//           "nome" => "Didi",
+//           "descrição" => "Muito esperto e brincalhão",
+//        ],
+//
+//        ["imagem" => "img/adocao6.jpg",
+//         "nome" => "Bob",
+//         "descrição" => "Muito atrapalhado e adora brincar",
+//      ],
+//];
+//
  ?>
 
 
@@ -144,5 +144,3 @@ $pets = [
 
 </body>
 </html>
-
-

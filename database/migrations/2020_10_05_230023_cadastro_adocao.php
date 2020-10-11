@@ -28,6 +28,7 @@ class CadastroAdocao extends Migration
             // $table->tinyInteger('receberPromocoes')->default(0);
             //$table->timestamp('email_verified_at')->nullable();
             $table->string('senha');
+            $table->string('comentario', 120)->nullable();
             $table->string('imagem', 90);
             $table->rememberToken();
             $table->timestamps();

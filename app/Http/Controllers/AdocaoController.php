@@ -31,6 +31,8 @@ class AdocaoController extends Controller
     $adocao->cpf = $request->cpf;
     $adocao->fone = $request->fone;
     $adocao->senha = $request->senha;
+    $adocao->senha = $request->senha;
+    $adocao->comentario = $request->comentario;
     //$adocao->senhacripto = $request->senhacripto;
 
     if($request->hasfile('imagem')){
