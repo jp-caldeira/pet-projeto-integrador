@@ -7,6 +7,65 @@ html {
 }
    
 
+/* ---------------Listagem--------------- */
+
+.container-listagem{
+  width: 45%;
+  float: right;
+  padding-right: 10%; 
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  list-style: none;
+  margin-top: 20px;
+}
+.base-listagem {
+  float: left;
+  
+}
+.img {
+  height: 280px;
+  float: left;
+  margin-left: 90px;
+  margin-right: 90px;
+}
+
+.imagem {
+  width: 45%;
+  float: left;
+  padding-left: 10%;
+  margin-top: 40px;
+}
+.base-listagem {
+  float: left;
+  margin-top: 40px;
+}
+
+#inserir{
+  color:  rgb(3, 152, 158);
+  font-size: 25px;
+  float: right;
+  text-decoration:none;
+  
+}
+#finalizar{
+  color:  rgb(3, 152, 158);
+  font-size: 25px;
+  float: right;
+  text-decoration:none;
+  
+  
+
+
+}
+#edicoes{
+  float: right;
+  color:  rgb(3, 152, 158);
+  text-decoration:none
+}
+/* ---------------Listagem--------------- */
+
+
+
 .espacamento{
     margin-top: 120px;
 
@@ -84,6 +143,7 @@ h1 {
 
 p {
     font-size: 20px;
+    text-align: center;
 }
 
 
@@ -206,37 +266,7 @@ input[type=radio] {
   }
 
   
-  .container-listagem{
-    width: 40%;
-    float: left;
-    padding-left: 5%;  
-    font-family: 'Quicksand', sans-serif;
-    font-size: 16px;
-    list-style: none;
-  }
-  #inserir{
-    color:  rgb(3, 152, 158);
-    font-size: 20px;
-    float: right;
-    text-decoration:none;
-    
-    
-    
-
-  }
-  #finalizar{
-    color:  rgb(3, 152, 158);
-    font-size: 20px;
-    float: right;
-    text-decoration:none;
-    
-    
-    
-
-  }
-  #edicoes{
-    float: right;
-    color:  rgb(3, 152, 158);
-    text-decoration:none
-  }
   
+ 
+  
+

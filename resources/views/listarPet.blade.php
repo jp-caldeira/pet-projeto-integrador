@@ -16,6 +16,14 @@
 @include('header')
 </header>
 
+<section class = "imagem">
+<img class="img" src="/img/pet2.png" alt="Gato"></img>
+<p id="texto">Os mimos que seu Pet Ama com as melhores Avaliações!</p>
+
+<br>
+        
+</section>
+
 <div class= "espacamento">
 </div>
 <section class="container-listagem">
@@ -35,7 +43,8 @@
 
 
 </section>
-    <section class="base">
+
+    <section class="base-listagem">
           @include('footer')
     </section>
 </body>
