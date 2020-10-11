@@ -47,7 +47,7 @@ class AdocaoController extends Controller
     
       $resultado = $adocao->save();
     
-      return redirect()->action("pag_adocao");
+      return view('pag_adocao');
     
 }
 }
