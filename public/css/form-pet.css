@@ -17,6 +17,7 @@ html {
   font-size: 16px;
   list-style: none;
   margin-top: 20px;
+  
 }
 .base-listagem {
   float: left;
@@ -38,6 +39,9 @@ html {
 .base-listagem {
   float: left;
   margin-top: 40px;
+  /* position: relative;
+  bottom: 0;
+  width: 100%; */
 }
 
 #inserir{
@@ -52,11 +56,15 @@ html {
   font-size: 25px;
   float: right;
   text-decoration:none;
-  
-  
-
-
+} 
+ 
+h4{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  margin-top:5%;
 }
+
+
 #edicoes{
   float: right;
   color:  rgb(3, 152, 158);

@@ -13,7 +13,7 @@ $factory->define(Comentarios::class, function (Faker $faker) {
     return [
         "nota" => $faker->randomElement($notas),
         "body" => $faker->randomElement($textos),
-        "users_id" => $faker->numberBetween(1, 16),
-        "produtos_id" => $faker->numberBetween(1, 25)
+        "users_id" => $faker->numberBetween(1, 8),
+        "produtos_id" => $faker->numberBetween(1, 10)
     ];
 });
