@@ -45,11 +45,13 @@ class AdocaoController extends Controller
       }else{
         $adocao->imagem = "sem-imagem.jpg";
       }
-    
-    
-      $resultado = $adocao->save();
-    
-      return view('pag_adocao');
-    
+
+        $resultado = $adocao->save();
+        return view('pag_adocao');
 }
+
+    public function listar(){
+        $listarAdocao = Adocao::all();
+        return view('pag_adocao', ["listarAdocao" => $listarAdocao]);
+    }
 }
