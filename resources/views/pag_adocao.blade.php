@@ -123,12 +123,12 @@
             <div class="row">
               <div class="col-lg-10 offset-lg-1">
                 <div class="row">
-            @foreach($pets as $petsAdocao)
+            @foreach ($listarAdocao as $petsAdocao)
                   <div class="col-lg-6">
                     <br>
-                        <img src=<?=$petsAdocao['imagem']?> class="img-fluid" alt="produto">
-                        <h4><a style="color:rgb(104, 104, 104); margin-right:70px;" href="#"><?=$petsAdocao['nome']?></a></h4>
-                        <p><?=$petsAdocao['descrição']?></p>
+                    <img src="{{ asset('storage/img/' . $petsAdocao->imagem) }}" 
+                    class="img-fluid img-adocao" alt="adocao">
+                        <p >{{$petsAdocao->descricao}}</p>
                         <br>
                         <a class='btn btn-lg' style='color:white; background-color: rgb(3, 152, 158);' href='#'>Adotar</a>
                   </div>
