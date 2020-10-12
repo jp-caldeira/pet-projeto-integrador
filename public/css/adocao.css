@@ -1,8 +1,8 @@
 body,
 html {
     font-family: 'Quicksand', sans-serif;
-    left: 90px;
-    right: 50px;
+    /* left: 90px;
+    right: 50px; */
 }
 
 
@@ -123,7 +123,9 @@ li {
 /* configuração footer */
 
 .base {
+    margin-top: 5%;
     float: left;
-    margin-left: 90px;
-    margin-top: 20px;
+    font-family: 'Quicksand', sans-serif;
+    /* margin-left: 90px;
+    margin-top: 20px; */
 }
