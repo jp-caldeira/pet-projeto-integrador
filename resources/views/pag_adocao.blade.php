@@ -126,9 +126,9 @@
           @foreach ($listarAdocao as $petsAdocao)  
                   <div class="col-lg-6">
                     <br>
-                    <img src="{{ asset('storage/img/' . $petsAdocao->imagem) }}" 
-                    class="img-fluid img-adocao" alt="adocao">
-                        <p >{{$petsAdocao->comentario}}</p>
+                    <img src="{{ asset('storage/img/' . $petsAdocao->imagem) }}" class="img-fluid img-adocao" alt="adocao">
+                        <p><b>{{$petsAdocao->nome_pet}}</b></p>
+                        <p>{{$petsAdocao->comentario}}</p>
                         <br>
                         <a class='btn btn-lg' style='color:white; background-color: rgb(3, 152, 158);' href='#'>Adotar</a>
                   </div>
