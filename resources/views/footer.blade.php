@@ -63,7 +63,7 @@
             <a href="{{ route('sobre') }}" style="color:white">Sobre Nós</a>
             <a href="{{ route('trabalhe') }}" style="color:white">Trabalhe Conosco</a>
             <a href="{{ route('cadastropet') }}"style="color:white">Dúvidas Frequentes</button></a>
-            <a href="{{ route('adote') }}"style="color:white">Lojas Parceiras</button></a>
+            <a href="{{ route('cadastropet') }}"style="color:white">Lojas Parceiras</button></a>
             <a href="{{ route('login') }}"style="color:white">Política de privacidade</button></a>
         </div>
         
