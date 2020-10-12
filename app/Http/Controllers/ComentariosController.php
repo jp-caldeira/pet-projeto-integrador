@@ -20,4 +20,18 @@ class ComentariosController extends Controller
     return redirect()->route('verproduto',['id'=>$id]);
 
     }
+
+    public function exibirComentarios()
+    {
+      $comentarios = Comentarios::all();
+      return view('lista-comentarios', ["comentarios" => $comentarios]);
+    }
+
+    public function deletarComentario($id)
+    {
+      $comentario = Comentarios::find($id);
+      $comentario->delete();
+
+      return redirect()->action("ComentariosController@exibirComentarios");
+    }
 }
