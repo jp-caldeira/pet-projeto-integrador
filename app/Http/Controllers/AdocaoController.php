@@ -47,7 +47,7 @@ class AdocaoController extends Controller
       }
 
         $resultado = $adocao->save();
-        return view('pag_adocao');
+        return redirect () -> route('adote');
 }
 
     public function listar() {
