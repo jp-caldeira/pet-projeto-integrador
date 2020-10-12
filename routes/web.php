@@ -35,9 +35,7 @@ Route::get('/produtos/{id}', 'ProdutoController@exibirUmProduto')->name("produto
 //Route::get('/produto/categoria/{categoria}/{filtro?}', 'ProdutoController@filtrarCategoria');
 
 //---------------------------------Pagina--adoção----------------------------------------
-Route::get('/adocao', function (){
-    return view('pag_adocao');
-})->name("adote");
+Route::get('/adocao', 'AdocaoController@listar')->name("adote"); 
 
 Route::get('/formulario_adocao', function (){
     return view('formulario_adocao');
@@ -49,8 +47,7 @@ Route::get('/cadastro-pet', function(){
     return view('formulario-cadastro-pet');
 })->name("cadastropet");
 
-Route:: get ('/listar_adocao','AdocaoController@listar');
-
+//Route::get('/listar', 'AdocaoController@listar')->name("listar");
 
 
 Route::get('/cadastro-user', function(){

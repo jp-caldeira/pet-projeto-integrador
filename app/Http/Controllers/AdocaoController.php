@@ -50,8 +50,9 @@ class AdocaoController extends Controller
         return view('pag_adocao');
 }
 
-    public function listar(){
+    public function listar() {
         $listarAdocao = Adocao::all();
+        //dd($listarAdocao);
         return view('pag_adocao', ["listarAdocao" => $listarAdocao]);
     }
 }
