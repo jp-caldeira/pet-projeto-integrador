@@ -8,18 +8,18 @@ use App\Adocao;
 class AdocaoController extends Controller
 {
     //public function cadastrar(Request $request){
-        
+
         //$adocao = new Adocao();
         //dd($request);
     //}
 //}
 
     public function cadastrar(Request $request){
-    
+
         if ($request->isMethod('GET')){
         return view ('pag_adocao');
         }
-        
+
     $adocao = new Adocao();
     //dd($request);
     $adocao->nome_pet = $request->nome_pet;
@@ -51,8 +51,7 @@ class AdocaoController extends Controller
 }
 
     public function listar() {
-        $listarAdocao = Adocao::all();
-        //dd($listarAdocao);
+        $listarAdocao = Adocao::all();        
         return view('pag_adocao', ["listarAdocao" => $listarAdocao]);
     }
 }

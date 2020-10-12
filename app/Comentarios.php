@@ -13,7 +13,7 @@ class Comentarios extends Model
 
     public $timestamps = false;
 
-    public function comentarios()
+    public function produto()
     {
         return $this->belongsTo(ProdutoModel::class, "produtos_id");
 

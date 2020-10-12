@@ -35,13 +35,13 @@ Route::get('/produtos/{id}', 'ProdutoController@exibirUmProduto')->name("produto
 //Route::get('/produto/categoria/{categoria}/{filtro?}', 'ProdutoController@filtrarCategoria');
 
 //---------------------------------Pagina--adoção----------------------------------------
-Route::get('/adocao', 'AdocaoController@listar')->name("adote"); 
+Route::get('/adocao', 'AdocaoController@listar')->name("adote");
 
 Route::get('/formulario_adocao', function (){
     return view('formulario_adocao');
 })->name("cadasto_adocao");
 
-Route::post('/formulario_adocao', 'AdocaoController@cadastrar'); 
+Route::post('/formulario_adocao', 'AdocaoController@cadastrar');
 
 Route::get('/cadastro-pet', function(){
     return view('formulario-cadastro-pet');
@@ -120,6 +120,10 @@ Route::get('/deletarProduto/{id}', 'ProdutoController@deletarProduto')->name("li
 //atualizar um produtos//
 Route::get('/produto/{id}', 'ProdutoController@editar');
 Route::post('/produto/{id}', 'ProdutoController@atualizarUmProduto');
+
+//Comentarios
+Route::get('/lista-comentarios', 'ComentariosController@exibirComentarios')->name("lista-comentarios");
+Route::get('/deletar-comentario/{id}', 'ComentariosController@deletarComentario');
 
 
 //-------------------------------CADASTRO PET----------------------//
