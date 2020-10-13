@@ -47,6 +47,10 @@ Route::get('/cadastro-pet', function(){
     return view('formulario-cadastro-pet');
 })->name("cadastropet");
 
+Route::get('/exibirPetAdocao/{id}', 'AdocaoController@exibirPetAdocao')->name("exibiAdocao");
+
+Route::get('/filtrar_adocao', 'AdocaoController@filtrar');
+
 //Route::get('/listar', 'AdocaoController@listar')->name("listar");
 
 
