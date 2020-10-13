@@ -19,12 +19,6 @@
 <div class= "espacamento">
 </div>
 
-  {{-- <section class = "titulo">
-<nav class="navbar navbar-expand-lg navbar-dark teal lighten-2 mb-4">
-<h1>{{ __('Ops, atualize os dados do seu Pet') }}</h1>
-</nav>
-</section>
-<hr> --}}
 
 @if(isset($errors)&& count($errors)>0)
 <div class= "text-center mt-4 mb-4 p-2" alert-danger>
@@ -37,7 +31,7 @@
 
 <section class="container-pet-form">
 <div class="form-especie">
-  <form method="post" action="{{ route('atualizarPet') }}">
+  <form action="{{ route('atualizar', $pets->id) }}" method="POST">
     
      @csrf
 

@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="/css/footer.css">
 
     <!-- Styles -->
-    {{-- <style>
-            .barrafinal {     
+     <style>
+            /* .barrafinal {     
                     float: left;
                     padding: 10px 10px 10px 10px;
                     font-size: 15px;
@@ -24,6 +24,7 @@
                     background-color: rgb(3, 152, 158);
                     height:40px;
                     position: absolute;
+                    color:white;
                     
                     margin-top:10px;
                     margin-left: 20px;
@@ -39,11 +40,8 @@
                     margin-left:400px;
                     float:center;
                     bottom: 0; 
-
-
-            }
-
-        </style> --}}
+            } */
+        </style>
               
 </head>
 
@@ -57,14 +55,15 @@
 
         </div>
 
-       <section>     
+        <section>     
         <div class="barrafinal">
-        {{-- <div class="container-fluid"> --}}
+        <div class="container">
             <a href="{{ route('sobre') }}" style="color:white">Sobre Nós</a>
             <a href="{{ route('trabalhe') }}" style="color:white">Trabalhe Conosco</a>
-            <a href="{{ route('cadastropet') }}"style="color:white">Dúvidas Frequentes</button></a>
-            <a href="{{ route('cadastropet') }}"style="color:white">Lojas Parceiras</button></a>
+            <a href="{{ route('perguntas') }}"style="color:white">Dúvidas Frequentes</button></a>
+            <a href="{{ route('lojas') }}"style="color:white">Lojas Parceiras</button></a>
             <a href="{{ route('login') }}"style="color:white">Política de privacidade</button></a>
+            </div>
         </div>
         
         </section> 

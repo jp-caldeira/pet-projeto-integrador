@@ -1,12 +1,10 @@
 body,
 html {
     font-family: 'Quicksand', sans-serif;
-    
 }
 
-.espacamento{
+.espacamento {
     margin-top: 150px;
-
 }
 
 .meioesquerda {
@@ -16,7 +14,9 @@ html {
     font-family: 'Quicksand', sans-serif;
 }
 
+
 /* ---titulo---- */
+
 .meioesquerda h1 {
     font-size: 30px;
     font-weight: bold;
@@ -30,19 +30,16 @@ html {
     color: rgb(114, 124, 124);
     font-family: 'Quicksand', sans-serif;
     width: 500px;
-
 }
 
 .imgav {
     width: 370px;
     height: 370px;
-    
 }
 
-.imagem-cupom{
+.imagem-cupom {
     padding-right: 15%;
-    float:right;
-    
+    float: right;
 }
 
 .botao {
@@ -60,43 +57,36 @@ html {
 }
 
 .meiodireita {
-    
     width: 50%;
     padding-left: 12%;
     float: left;
     font-family: 'Quicksand', sans-serif;
 }
 
-
 .meiodireita h1 {
     font-size: 30px;
     font-weight: bold;
     color: rgb(24, 110, 112);
     margin-top: 40px;
-
 }
 
 .meiodireita p {
-
     font-stretch: condensed;
     font-size: 15px;
     color: rgb(114, 124, 124);
     font-family: 'Quicksand', sans-serif;
     width: 500px;
-    
 }
 
-.imagem-racao{
+.imagem-racao {
     padding-right: 15%;
-    float:right;
-    
-}
-.imagem-parceiros{
-    padding-right: 13%;
-    float:right;
-    
+    float: right;
 }
 
+.imagem-parceiros {
+    padding-right: 13%;
+    float: right;
+}
 
 .meioesquerda h2 {
     /* font-stretch: condensed; */
@@ -112,7 +102,6 @@ a #perguntas {
     font-family: 'Quicksand', sans-serif;
     text-decoration: none;
 }
-
 
 .imgp {
     height: 220px;
@@ -134,8 +123,6 @@ a #perguntas {
     font-family: 'Quicksand', sans-serif;
 }
 
-
-
 .terceiro {
     width: 90%;
     text-align: center;
@@ -147,4 +134,42 @@ a #perguntas {
     margin-top: 5%;
     float: left;
     font-family: 'Quicksand', sans-serif;
+}
+
+
+/*---------------------LOJAS -----------------*/
+
+.parceiros {
+    margin-top: 150px;
+    float: center;
+    font-size: 25px;
+    color: rgb(43, 169, 169);
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+}
+
+.parceirosimg {
+    width: 180px;
+    text-align: center;
+    color: rgb(43, 169, 169);
+}
+
+.parceirostexto {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+    color: #555;
+    float: center;
+    margin-left: 50px;
+    text-align: center;
+}
+
+.parceiroemail {
+    margin-top: 20px;
+    width: 700px;
+    margin-left: 300px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+    color: rgb(43, 169, 169);
+    float: center;
+    text-align: center;
 }
