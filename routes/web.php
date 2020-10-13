@@ -75,6 +75,10 @@ Route::get('/sobre', function(){
     return view ('sobre');
 })->name("sobre");
 
+Route::get('/perguntas', function(){
+    return view ('perguntas');
+})->name("perguntas");
+
 
 Route::get('/trabalhe', function(){
     return view ('trabalhe');

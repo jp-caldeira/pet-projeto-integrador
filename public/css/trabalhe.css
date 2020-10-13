@@ -18,6 +18,17 @@ html {
     background-color: rgb(43, 169, 169);
 }
 
+.perguntas {
+    width: 70%;
+    margin-top: 100px;
+    margin-left: 200px;
+    float: left;
+    height: 650px;
+    text-align: center;
+    border-radius: 10px;
+    font-family: 'Quicksand', sans-serif;
+}
+
 .meioesquerda h1 {
     font-size: 30px;
     font-weight: bold;
@@ -61,4 +72,29 @@ html {
     margin-left: 90px;
     margin-top: 40px;
     font-family: 'Quicksand', sans-serif;
+}
+
+.collapsible {
+    background-color: rgb(43, 169, 169);
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+.active,
+.collapsible:hover {
+    background-color: #555;
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
 }

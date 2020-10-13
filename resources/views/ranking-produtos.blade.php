@@ -14,7 +14,7 @@
 @include('header')
 </header>
 
-  <section class="pesquisa">
+  <section class="pesquisa" style="margin-top:100px;">
             <!--Barra de Pesquisa-->
         <nav class="navbar navbar-expand-lg navbar-dark teal lighten-2 mb-4">
           <a class="navbar-brand" href="#" style="margin-left:150px;">Mundo Pet</a>

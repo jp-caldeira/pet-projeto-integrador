@@ -15,7 +15,7 @@
       <header>
         @include('header')
       </header>
-<div class="container-fluid">
+<div class="container">
       <div class="produtos">
         <img src="{{ asset('storage/img/' . $produtos->imagem) }}" class="img-fluid" alt="produto"><br>
         <br>
