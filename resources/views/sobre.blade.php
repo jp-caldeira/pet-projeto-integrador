@@ -37,7 +37,7 @@
 
  <!-- Parte Meio -->
     
-<div class="meiodireita" >
+<div class="meiodireita" style="margin-top:100px";>
     <h1>Descontos em Compras!</h1><hr>
     <p>A cada avaliação você ganha pontos que podem ser utilizado em nossos parceiros.
     Assim você consegue comprar o produto que já viu que vale a pena
@@ -50,7 +50,7 @@
 
 
 <!-- PARCEIROS -->
-<div class="meioesquerda" style="margin-top:30px;">
+<div class="meioesquerda" style="margin-top:200px;">
         <h1>Nossos parceiros</h1><hr>
         <p>Com tantas opções, às vezes fica difícil escolher, né? Não com a gente!
         Cadastre seu pet e indicaremos os itens mais bem avaliados de acordo com o cadastro </p>
@@ -60,7 +60,7 @@
         <p>Todos os itens avaliados estão disponiveis para compra em nossos parceiros com cupom de desconto adquirido após suas 5 Avaliações.</p>
         </div>
 
-    <div class="imagem-parceiros" >
+    <div class="imagem-parceiros" style="margin-top:50px;" >
         <img class="imgp" src="/img/parceiros.jpg" alt="Parceiros"></img>
 </div>
 
