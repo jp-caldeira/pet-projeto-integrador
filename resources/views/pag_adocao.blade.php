@@ -104,16 +104,17 @@
                 <option>Passaro</option>
               </select>
             </div>
-            <select id="inputState" class="form-control">
+
+            <!--<select id="inputState" class="form-control">
                 <option selected>Estado</option>
                   <option>São Paulo</option>
                   <option>Rio De Janeiro</option>
                 <option>Minas gerais</option>
-              </select><br>
+              </select><br> -->
                 <div class="busca">
                 <button type="submit"class="btn  btn-lg btn-block" style='color:white; background-color: rgb(3, 152, 158);'>Buscar</button></div>
             </div>
-              </div>
+              </div> 
             </label>
           </div>
         </form>

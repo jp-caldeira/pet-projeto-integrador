@@ -54,4 +54,9 @@ class AdocaoController extends Controller
         $listarAdocao = Adocao::all();        
         return view('pag_adocao', ["listarAdocao" => $listarAdocao]);
     }
+
+    public function exibirPetAdocao($id) {
+        $petAdocao = Adocao::find($id);  
+        return view('exibirPetAdocao', ["petAdocao"=> $petAdocao, "id"=>$id]);
+      }
 }

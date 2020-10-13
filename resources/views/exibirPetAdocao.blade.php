@@ -14,7 +14,7 @@
 
       <header>
         @include('header')
-      </header>
+      </header> <!--
 <div class="container">
       <div class="produtos">
         <img src="{{ asset('storage/img/' . $produtos->imagem) }}" class="img-fluid" alt="produto"><br>
@@ -45,9 +45,9 @@
                     <a href="https://www.petlove.com.br" style="color:white" >Disponivel na Petlove</a><br>
                     <a href="https://www.royalpets.com.br/" style="color:white" >Disponivel na Royal Pets</a><br>
                     </div>
-                </div>
-    </div>
+                </div> 
+    </div> -->
 
-<div class="box-avaliacao">
+<div class="box-avaliacao"> 
   @include('box-comments')
 </div>
