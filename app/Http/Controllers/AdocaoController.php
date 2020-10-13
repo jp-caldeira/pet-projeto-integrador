@@ -56,7 +56,14 @@ class AdocaoController extends Controller
     }
 
     public function exibirPetAdocao($id) {
-        $petAdocao = Adocao::find($id);  
-        return view('exibirPetAdocao', ["petAdocao"=> $petAdocao, "id"=>$id]);
+        $petAdocao = Adocao::find($id); 
+        return view('exibirPetAdocao', ["petAdocao"=> $petAdocao]);
       }
+
+    public function filtrar(Request $request){
+        $especie_adocao = $request -> especie;
+        $listarAdocao = Adocao::where('especie', '=', $especie_adocao)->GET();        
+        return view('pag_adocao', ["listarAdocao" => $listarAdocao]);
+
+    }  
 }
