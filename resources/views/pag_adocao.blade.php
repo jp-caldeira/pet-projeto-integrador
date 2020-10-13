@@ -94,26 +94,22 @@
       </div>
 <!-- FORMULARIO DE PESQUISA -->
 
-    <form class="form-adocao">
+    <form class="form-adocao" action="/filtrar_adocao" method="GET">
       <br>
+
         <label for="inputState"><b>Filtre pelo Pet que você deseja</b></label>
-        <select id="inputState" class="form-control">
-                <option selected>Espécie</option>
+        <select id="inputState" class="form-control" name="especie">
+                <option selected disabled>Espécie</option>
                 <option>Cachorro</option>
                 <option>Gato</option>
                 <option>Passaro</option>
               </select>
             </div>
-            <select id="inputState" class="form-control">
-                <option selected>Estado</option>
-                  <option>São Paulo</option>
-                  <option>Rio De Janeiro</option>
-                <option>Minas gerais</option>
-              </select><br>
-                <div class="busca">
-                <button type="submit"class="btn  btn-lg btn-block" style='color:white; background-color: rgb(3, 152, 158);'>Buscar</button></div>
+
+              <div class="busca">
+              <button type="submit"class="btn  btn-lg btn-block" style='color:white; background-color: rgb(3, 152, 158);'>Buscar</button></div>
             </div>
-              </div>
+              </div> 
             </label>
           </div>
         </form>
@@ -123,16 +119,18 @@
             <div class="row">
               <div class="col-lg-10 offset-lg-1">
                 <div class="row">
-          @foreach ($listarAdocao as $petsAdocao)  
+          @forelse ($listarAdocao as $petsAdocao)  
                   <div class="col-lg-6">
                     <br>
                     <img src="{{ asset('storage/img/' . $petsAdocao->imagem) }}" class="img-fluid img-adocao" alt="adocao">
                         <p><b>{{$petsAdocao->nome_pet}}</b></p>
                         <p>{{$petsAdocao->comentario}}</p>
                         <br>
-                        <a class='btn btn-lg' style='color:white; background-color: rgb(3, 152, 158);' href='/exibirPetAdocao'>Adotar</a>
+                        <a class='btn btn-lg' style='color:white; background-color: rgb(3, 152, 158);' href='/exibirPetAdocao/{{$petsAdocao->id}}'>Adotar</a>
                   </div>
-            @endforeach
+            @empty
+            <div> Não Temos essa epécie para adoção!</div>
+            @endforelse
                 </div>
               </div>
         </div>

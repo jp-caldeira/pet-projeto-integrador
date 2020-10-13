@@ -47,7 +47,7 @@ class PetController extends Controller
   // }
 
     public function adicionarUmPet(Request $request)
-  
+
     {
       $pets = new Pets();
       $pets->especie= $request->especie;
@@ -63,15 +63,15 @@ class PetController extends Controller
     }else{
       return redirect('cadastropet');
     }
-       
+
       }
 
       public function listarPet(){
-      $user= auth()->user();
+      $user = auth()->user();
       $pets = $user->pets;
       return view('/listarPet', ["pets" => $pets]);
     }
-      
+
       public function deletarPet($id){
       $pets= Pets::find($id);
       $pets->delete();
@@ -83,7 +83,7 @@ class PetController extends Controller
     function editarPet($id) {
     $pets = Pets::find($id);
     return view('atualizarUmPet', ["pets" => $pets]);
-   
+
 }
 
 function atualizarUmPet(Request $request, $id) {
@@ -95,7 +95,7 @@ function atualizarUmPet(Request $request, $id) {
       'comentarios' => 'String|required',
       'preferencias' => 'required',
       ]);
-      
+
       $pets = Pets::find($id);
       $pets->especie= $request->especie;
       $pets->nome = $request->nome;
@@ -108,16 +108,9 @@ function atualizarUmPet(Request $request, $id) {
       return redirect('/listarPet');
   }
 
-    
+
   public function __construct()
   {
       $this->middleware('auth');
   }
 }
-    
-
-
-
-
-
-   

@@ -47,6 +47,10 @@ Route::get('/cadastro-pet', function(){
     return view('formulario-cadastro-pet');
 })->name("cadastropet");
 
+Route::get('/exibirPetAdocao/{id}', 'AdocaoController@exibirPetAdocao')->name("exibiAdocao");
+
+Route::get('/filtrar_adocao', 'AdocaoController@filtrar');
+
 //Route::get('/listar', 'AdocaoController@listar')->name("listar");
 
 
@@ -129,8 +133,11 @@ Route::get('/produto/{id}', 'ProdutoController@editar');
 Route::post('/produto/{id}', 'ProdutoController@atualizarUmProduto');
 
 //Comentarios
-Route::get('/lista-comentarios', 'ComentariosController@exibirComentarios')->name("lista-comentarios");
-Route::get('/deletar-comentario/{id}', 'ComentariosController@deletarComentario');
+Route::get('/lista-comentarios', 'ComentariosController@exibirComentarios')
+  ->name("lista-comentarios")->middleware('checkAdmin');;
+Route::get('/deletar-comentario/{id}', 'ComentariosController@deletarComentario')->middleware('checkAdmin');
+Route::get('/editar-comentario/{id}','ComentariosController@editarComentario')->middleware('checkAdmin');
+Route::post('/editar-comentario/{id}','ComentariosController@atualizarComentario')->middleware('checkAdmin');
 
 
 //-------------------------------CADASTRO PET----------------------//
