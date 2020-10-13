@@ -49,7 +49,9 @@
     </div>
 </form>
 
-      <div class="produtos" style="margin-left:250px">
+      <div class="produtos" style="margin-left:210px">
+
+      
                 <div class="row">
                   <div class="col-lg-10">
                     <div class="row">
@@ -70,9 +72,13 @@
               <br>
             @endforeach
             </div>
+            
             <div class="row">
-              <div class="col-lg-8 offset-lg-3">{{ $produtos->links() }}</div>
-            </div>
+              {{-- <div class="col-lg-8 offset-lg-3">{{ $produtos->links() }}</div> --}}
+              <div class= "paginas" > {{ $produtos->links() }} </div>
+
+           </div>
+            
         </div>
 </div>
 </div>

@@ -22,12 +22,14 @@ class CadastroAdocao extends Migration
             $table->string('nome_responsavel');
             $table->string('email')->unique();
             $table->char('cpf')->unique();
-            $table->string('phone');
+            $table->string('fone');
             //$table->string('genero');
             //$table->date('nascimento');
             // $table->tinyInteger('receberPromocoes')->default(0);
             //$table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
+            $table->string('senha');
+            $table->string('comentario', 120)->nullable();
+            $table->string('imagem', 90);
             $table->rememberToken();
             $table->timestamps();
             $table->engine = 'InnoDB';

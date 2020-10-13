@@ -1,7 +1,7 @@
 html,
 body {
-    margin-left: 90px;
-    margin-right: 50px;
+    /* margin-left: 90px;
+    margin-right: 50px; */
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -25,3 +25,10 @@ label {
     font-family: 'Quicksand', sans-serif;
     position: relative;
     margin-top: 120px;
+}
+
+.base {
+    margin-top: 5%;
+    float: left;
+    font-family: 'Quicksand', sans-serif;
+}

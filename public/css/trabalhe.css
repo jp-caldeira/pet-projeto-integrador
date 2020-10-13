@@ -2,14 +2,12 @@ body,
 html {
     font-family: 'Quicksand', sans-serif;
     width: 100%;
-    left: 90px;
-    right: 50px;
 }
 
 .meioesquerda {
-    width: 50%;
+    width: 40%;
     margin-top: 200px;
-    margin-left: 40px;
+    margin-left: 100px;
     float: left;
     height: 300px;
     text-align: center;
@@ -33,7 +31,7 @@ html {
     font-size: 30px;
     font-weight: bold;
     color: rgb(254, 255, 255);
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 .meioesquerda p {
@@ -42,7 +40,7 @@ html {
     text-align: center;
     color: rgb(219, 255, 255);
     font-family: 'Quicksand', sans-serif;
-    margin-left: 100px;
+    margin-left: 20px;
     width: 500px;
     margin-top: 30px;
 }
@@ -69,8 +67,7 @@ html {
 
 .base {
     float: left;
-    margin-left: 90px;
-    margin-top: 40px;
+    margin-top: 5%;
     font-family: 'Quicksand', sans-serif;
 }
 

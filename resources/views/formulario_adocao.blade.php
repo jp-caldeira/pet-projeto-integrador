@@ -73,8 +73,8 @@
             </div>
           </div>
 
-          <div>
-          <!--<select name="genero"class="form-control">
+         <!-- <div>
+          <select name="genero"class="form-control">
                       <option selected disabled>Genero</option>
                       <option value="feminino">Feminino</option>
                       <option value="masculino">Masculino</option>
@@ -98,11 +98,19 @@
                   <br>
             </div>   
           </div>
-          <div class="caption"> <p>Envie uma foto do Pet</p>
-              <input type="file" name="arquivo" value =  " " >
-              <br>
-          </div>
+          
+          <div class = "comentarios">
+      <label for="comentarios">{{ __('Comentarios') }}</label>
+        
+        <textarea id="comentario" name="comentario" class="form-control" 
+        value="{{ old('comentario') }}"placeholder="Descreva em poucas palavra o PET" ></textarea>
+        <br>
+        </div>
             
+        <div class="caption"> <p>Envie uma foto do Pet</p>
+              <input type="file" name="imagem" id="imagem" value =  " " >
+              <br>
+        </div>
           <div>
               <button type="submit"  class="btn btn-lg btn-block" style='color:white; background-color:rgb(3, 152, 158);'>Cadastrar</button>
           </div>   

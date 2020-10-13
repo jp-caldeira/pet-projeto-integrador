@@ -1,9 +1,8 @@
 body,
 html {
     font-family: 'Quicksand', sans-serif;
-    /* width: 100%; */
-    /* left: 90px;
-    right: 50px; */
+    
+  
 }
 
 .container-pet-form {
@@ -12,11 +11,12 @@ html {
 }
 
 .container-login {
-    width: 80%;
-    float: center;
-    padding-left: 30%;
+    width: 45%;
+    float: right;
     padding-right: 10%;
+    /* padding-left: 10%; */
     font-family: 'Quicksand', sans-serif;
+
 }
 
 .cadastro {
@@ -31,14 +31,17 @@ p {
     font-stretch: condensed;
     font-size: 20px;
     text-align: center;
-    color: rgb(192, 192, 192);
+    color: rgb(163, 161, 161);
     font-family: 'Quicksand', sans-serif;
 }
 
 h1 {
     font-size: 27px;
-    padding-left: 10%;
+    /* padding-left: 10%; */
     font-family: 'Quicksand', sans-serif;
+    padding-top:5px;
+    padding-bottom:5px;
+    
 }
 h2 {
    
@@ -58,7 +61,12 @@ label {
 .base {
     margin-top: 100px;
     float: left;
-    margin-left: 50px;
+   
+}
+.base-login {
+    margin-top: 65px;
+    float: left;
+   
 }
 
 .senha {
@@ -100,6 +108,14 @@ label {
     width: 45%;
     float: left;
     padding-left: 10%;
+    margin-top: 110px;
+}
+
+.imagem-login {
+    width: 45%;
+    float: left;
+    padding-left: 10%;
+    margin-top: 15px;
 }
 
 

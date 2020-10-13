@@ -19,12 +19,12 @@
 <div class= "espacamento">
 </div>
 
-  <section class = "titulo">
+  {{-- <section class = "titulo">
 <nav class="navbar navbar-expand-lg navbar-dark teal lighten-2 mb-4">
 <h1>{{ __('Ops, atualize os dados do seu Pet') }}</h1>
 </nav>
 </section>
-<hr>
+<hr> --}}
 
 @if(isset($errors)&& count($errors)>0)
 <div class= "text-center mt-4 mb-4 p-2" alert-danger>
@@ -56,6 +56,7 @@
 
 <br>
 <section class="container-pet-dados">
+<h2>Ops errou? Atualize os dados do seu Pet,  {{$names = collect(explode(' ', Auth::user()->name))->slice(0,1)->implode(' ')}} </h2>
 <div class="form-nome">
 <br>
   <label for="nome">{{ __('Nome') }}</label> <br>

@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/homeadm.css') }}">
-    <meta name="csrf-token" content="{{ csrf_token() }}" />       
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
 </head>
 
 <body>
@@ -20,14 +20,14 @@
 @method('POST')
 
     <!-- Paineis administrativos -->
-           
+
 
         <section class="primeirobloco">
             <br>
             <p style="font-size:15px">Gerencie os comentários e<br> usuários da Plataforma</p>
             <img class="primeiraimg" src="/img/admin.jpg" alt="catiorro trabalhador"><br>
             <p><a href="/lista" class="btn btn-default" role="button">Usuarios</a></p>
-            <p><a href="/lista" class="btn btn-default" role="button">Comentários</a></p>
+            <p><a href="/lista-comentarios" class="btn btn-default" role="button">Comentários</a></p>
 
             <br>
         </section>
@@ -47,16 +47,16 @@
         @method('POST')
             <form action="{{ route('criarUmProduto') }}" method="POST" enctype="multipart/form-data">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
-            
 
-           
+
+
             <div class="adm">
             <div class="col-sm-9"><h2 style="font-size:15px">Ola Administrador!</h2>
                     <h2 style="font-size:15px">Aqui geramos o acesso do nosso banco de produtos e moderamos as avaliações da nossa comunidade</h2></div>
                     <div class="col-sm-9"><p>Cadastre Novos Produtos</p></div>
                 </div>
             <br>
-             
+
             <div class="form">
             <br>
             <div class="col-sm-9"><label >Nome</label></div>
@@ -100,14 +100,14 @@
                     <input class="form-control" type="text" name="raca" value="" placeholder="Labrador">
 
                 <label>{{ __('Linha') }}</label>
-                    <input class="form-control" type="text" name="linha" value="" placeholder="Golden">                
-                
+                    <input class="form-control" type="text" name="linha" value="" placeholder="Golden">
+
                 <label>{{ __('Preço') }}</label>
-                <input class="form-control" type="number" min="0.00" max="10000.00" name="preco" placeholder="109.90">      
-                          
+                <input class="form-control" type="number" min="0.00" max="10000.00" name="preco" placeholder="109.90">
+
                 <label>{{ __('Peso') }}</label>
                     <input class="form-control" type="text" name="peso" placeholder="15kl">
-                
+
                 <label>{{ __('Sabor') }}</label>
                     <input class="form-control" type="text" name="sabor" placeholder="Frango">
 
@@ -149,10 +149,10 @@
 
                       <label>{{ __('Nota') }}</label>
                     <input  name="nota" class="form-control" type="text" value="" placeholder="Adicionar nota de 1 a 5">
-                    
+
                     <label>{{ __('Comentário') }}</label>
                     <textarea name="comentários" class="form-control" value="" cols="20" rows="5" placeholder="Gostei muito do produto" class="form-control"></textarea>
- 
+
 
                     <section class="md-form" style="float:left;  margin-left:50px;">
                         <div class="file-field">

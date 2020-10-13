@@ -18,12 +18,6 @@
 <div class= "espacamento">
 </div>
 
-  <section class = "titulo">
-<nav class="navbar navbar-expand-lg navbar-dark teal lighten-2 mb-4">
-<h1>{{ __('Cadastre o seu Pet') }}</h1>
-</nav>
-</section>
-<hr>
 
 @if(isset($errors)&& count($errors)>0)
 <div class= "text-center mt-4 mb-4 p-2" alert-danger>
@@ -54,6 +48,7 @@
 
 <br>
 <section class="container-pet-dados">
+<h1>{{ __('Cadastre o seu Pet') }}</h1>
 <div class="form-nome">
 <br>
   <label for="nome">{{ __('Nome') }}</label> <br>
@@ -81,7 +76,8 @@
         <textarea id="comentarios" name="comentarios" class="form-control" value="{{ old('comentarios') }}"placeholder="Conte nos um pouco mais sobre o seu Pet" ></textarea>
         <br>
         </div>
-     
+
+   
 <br>
 
 </section>
@@ -108,13 +104,15 @@
 
 <section class="container-botao">
      <button type="submit"  class="btn btn-lg btn-block" style='color:white; background-color:rgb(3, 152, 158);'> {{ __('Cadastrar') }}</button>
-   
-     
+       
 </section>
     </form>
     <section class="base">
+
+
           @include('footer')
     </section>
+   
 </body>
 </html>
 

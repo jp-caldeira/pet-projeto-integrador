@@ -1,7 +1,7 @@
 html,
 body {
-    margin-left: 90px;
-    margin-right: 50px;
+    /* margin-left: 90px; */
+    /* margin-right: 50px; */
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -13,22 +13,27 @@ body {
     width: 100%;
     font-size: 20px;
     font-family: 'Quicksand', sans-serif;
-    margin-left: 90px;
-    margin-right: 90px;
+    /* margin-left: 90px;
+    margin-right: 90px; */
     color: rgb(125, 129, 136);
+ 
 }
 
 
-/* 
+
 .ranking {
-    padding: 60px 10px;
+    /* padding: 60px 10px;
     width: 100%;
     font-size: 20px;
     font-family: 'Quicksand', sans-serif;
     left: 90px;
     color: rgb(125, 129, 136);
-    right: 50px;
-} */
+    right: 50px; */
+    /* margin-left:20px; */
+    width: 100%;
+    margin-top: 60px;
+
+}
 
 
 /*imagem principal gatito*/
@@ -42,6 +47,10 @@ body {
     top: 50px;
 }
 
+.texto{
+    width: 40%;
+    margin-left: 7%;
+}
 
 /*botao visite nosso ranking*/
 
@@ -140,4 +149,9 @@ a {
     color: rgb(204, 204, 204);
     text-decoration: none;
     cursor: pointer;
+}
+.base {
+    float: left;
+    margin-top: 5%;
+    font-family: 'Quicksand', sans-serif;
 }

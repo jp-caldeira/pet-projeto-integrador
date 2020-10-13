@@ -15,7 +15,7 @@
 <div style="margin-top:20px;">
 
 <div style="float:right">
-<div class="hero-image" style="width:300px"><img style="width:250px; margin-left:40px;" src="/img/racoes.png" alt="Rações">
+<div class="hero-image" style="width:300px"><img style="width:250px; margin-left:150px;" src="/img/racoes.png" alt="Rações">
   <div class="hero-text" style="margin-left:300px;">
     <h1 style="font-size:30px">Rações</h1>
     <p class="texto">Enchendo o buchinho com qualidade</p>
@@ -27,7 +27,7 @@
 </div>
 
 
-<div class="hero-image" style="width:300px"><img style="width:250px; margin-left:300px" src="/img/brinquedos.png" alt="brinquedos">
+<div class="hero-image" style="width:300px"><img style="width:250px; margin-left:370px" src="/img/brinquedos.png" alt="brinquedos">
   <div class="hero-text">
     <h1 style="font-size:30px">Brinquedos</h1>
     <p class="texto">Varinhas, bolinhas e diversão!</p>
@@ -40,7 +40,7 @@
 
 
 <div style="float:right">
-<div class="hero-image" style="width:300px"><img style="width:250px; margin-left:40px;" src="/img/remedios.png" alt="Rações">
+<div class="hero-image" style="width:300px"><img style="width:250px; margin-left:150px;" src="/img/remedios.png" alt="Rações">
   <div class="hero-text" style="margin-left:300px;">
     <h1 style="font-size:30px">Remédios</h1>
     <p class="texto">Bom saber o que é o melhor pra quem a gente ama né?</p>
@@ -52,12 +52,12 @@
 </div>
 
 
-<div class="hero-image" style="width:300px"><img  style="width:250px; margin-left:300px" src="/img/camas.png" alt="brinquedos">
+<div class="hero-image" style="width:300px"><img  style="width:250px; margin-left:370px" src="/img/camas.png" alt="brinquedos">
   <div class="hero-text">
     <h1 style="font-size:30px">Camas</h1>
     <p class="texto">Conforto, Praticidade e Pelúcias</p>
     <button>
-      <a href="{{url('/filtrar?pet=Pet&produtos=higiene+e+bem-estar')}}">Temos!</a>
+      <a href="{{url('/filtrar?pet=Pet&produtos=higiene+e+bem-estar')}}">Temos vários formatos!</a>
     </button>
   </div>
 </div>

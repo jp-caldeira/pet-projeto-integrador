@@ -12,7 +12,11 @@
     <link rel="stylesheet" href="/css/footer.css">
 
     <!-- Styles -->
+<<<<<<< HEAD
      <style>
+=======
+    {{-- <style>
+>>>>>>> cf33c9b50ba6093941760cb99922fffdf9c66595
             .barrafinal {     
                     float: left;
                     padding: 10px 10px 10px 10px;
@@ -41,7 +45,12 @@
                     float:center;
                     bottom: 0; 
             }
+<<<<<<< HEAD
         </style>
+=======
+
+        </style> --}}
+>>>>>>> cf33c9b50ba6093941760cb99922fffdf9c66595
               
 </head>
 
@@ -57,10 +66,17 @@
 
         <section>     
         <div class="barrafinal">
+<<<<<<< HEAD
          <div class="container">
             <a href="{{ route('sobre') }}" style="color:white">Sobre Nós</a>
             <a href="{{ route('trabalhe') }}" style="color:white">Trabalhe Conosco</a>
             <a href="{{ route('perguntas') }}"style="color:white">Dúvidas Frequentes</button></a>
+=======
+        {{-- <div class="container-fluid"> --}}
+            <a href="{{ route('sobre') }}" style="color:white">Sobre Nós</a>
+            <a href="{{ route('trabalhe') }}" style="color:white">Trabalhe Conosco</a>
+            <a href="{{ route('cadastropet') }}"style="color:white">Dúvidas Frequentes</button></a>
+>>>>>>> cf33c9b50ba6093941760cb99922fffdf9c66595
             <a href="{{ route('cadastropet') }}"style="color:white">Lojas Parceiras</button></a>
             <a href="{{ route('login') }}"style="color:white">Política de privacidade</button></a>
         </div>

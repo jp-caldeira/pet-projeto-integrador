@@ -18,6 +18,13 @@
 
 <div class= "espacamento"><div>
     <!-- login -->
+<section class = "imagem-login">
+<img class="img" src="/img/imagem1.png" alt="Gato"></img>
+<p id="texto">Os mimos que seu Pet Ama com as melhores Avaliações!</p>
+
+<br>
+        
+</section>
 
     <section class="container-login">
     <div class="login">
@@ -28,7 +35,7 @@
      @csrf
 
          
-        <h2>{{ __('Entrar') }} </h2><br>
+        <h1>{{ __('Entrar') }} </h1><br>
            
         <label for="email">{{ __('E-Mail') }}</label>
         <br>
@@ -60,7 +67,7 @@
     </form> 
     </section>
 
-        <section class="base">
+        <section class="base-login">
             @include('footer')
         </section>
 

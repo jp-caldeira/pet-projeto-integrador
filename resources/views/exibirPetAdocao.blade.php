@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{$produtos->nome}} - Mundo Pet</title>
+    <title>Pagina Adoção - Mundo-PET</title>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/exibir.css') }}">
@@ -51,20 +51,3 @@
 <div class="box-avaliacao">
   @include('box-comments')
 </div>
-
-
-    <div class="caixa">
-          @include('comentarios')
-        </div>
-
-        <div class="botaofooter">
-          <a href="{{ route('ranking') }}">Voltar para o ranking geral</a>
-        </div>
-
-    <section class="base">
-      @include('footer')
-    </section>
-    <br>
-
-  </body>
-</html>
