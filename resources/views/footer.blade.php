@@ -59,7 +59,7 @@
 
        <section>     
         <div class="barrafinal">
-        {{-- <div class="container-fluid"> --}}
+       
             <a href="{{ route('sobre') }}" style="color:white">Sobre Nós</a>
             <a href="{{ route('trabalhe') }}" style="color:white">Trabalhe Conosco</a>
             <a href="{{ route('cadastropet') }}"style="color:white">Dúvidas Frequentes</button></a>
