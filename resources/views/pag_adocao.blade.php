@@ -129,7 +129,7 @@
                         <a class='btn btn-lg' style='color:white; background-color: rgb(3, 152, 158);' href='/exibirPetAdocao/{{$petsAdocao->id}}'>Adotar</a>
                   </div>
             @empty
-            <div> Não Temos essa epécie para adoção!</div>
+            <div> Não Temos essa epécie para adoção</div>
             @endforelse
                 </div>
               </div>
