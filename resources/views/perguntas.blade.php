@@ -32,15 +32,20 @@
 
     <button type="button" class="collapsible">Por que devo cadastrar meu Pet?</button>
         <div class="content">
-            <p>Cadastrando seu pet você passa a receber novos comentários sobre os produtos de interesse dele. Como petiscos, rações e brinquedos de acordo com a sua espécie dele.
-         Assim você passa a receber organicamente por e-mail avaliações de novos produtos, evitando compras desnecessárias que podem te decepcionar.
+            <p>Cadastrando seu pet você passa a receber novos comentários sobre os produtos que possam interessar seu iti malia. Como petiscos, rações e brinquedos.
+         Assim você passa a receber organicamente por e-mail avaliações de novos produtos, evitando compras desnecessárias futuras que poderiam te decepcionar, assim como recebendo recomendações de produtos que você vai adorar!
     </p></div>
 
     <button type="button" class="collapsible">Preciso pagar para utilizar a Mundo Pet?</button>
             <div class="content">
         <p>Não. O a Mundo Pet é um serviço totalmente gratuito.</p>
     </div>
-
+    
+    <button type="button" class="collapsible">Realizo minha compra pela Mundo Pet?</button>
+            <div class="content">
+                    <p>Não. Aqui você consegue ver avaliações de produtos que são vendidos em diversas lojas, e pode ser direcionado para
+                 um de nossos parceiros. Outra vantagem é avaliar 5 produtos e ganhar cupons de desconto exclusivos com os nossos parceiros.</p>
+            </div>
 
             <button type="button" class="collapsible">Critiquei um produto, posso ter problema?</button>
                 <div class="content">

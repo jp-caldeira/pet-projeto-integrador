@@ -27,31 +27,31 @@
 <div class= "espacamento">
 </div>
 
-@forelse($pets as $pets)
-{{-- -----------------quando a pessoa tem pets cadastrados------------------ --}}
 <section class="container-listagem">
-<h2> Seus Pets,  {{$names = collect(explode(' ', Auth::user()->name))->slice(0,1)->implode(' ')}} </h2>
-<br>
-<table class="lista">
-<li> Nome: {{$pets ['nome']}} <a id=edicoes href="/deletarPet/{{$pets->id}}">Deletar</a> <a id=edicoes href="/editarPet/{{$pets->id}}">Editar</a> </li>
-<li> Especie: {{$pets ['especie']}} </li>
-
-<hr> 
-</table>
-<a id="finalizar" href="/ranking-produtos">Finalizar</a> <a id="inserir" href="/cadastro-pet">Inserir outro Pet</a> 
-@empty
+@if(count($pets) > 0)
+    {{-- -----------------quando a pessoa tem pets cadastrados------------------ --}}
+    <h2> Seus Pets,  {{$names = collect(explode(' ', Auth::user()->name))->slice(0,1)->implode(' ')}} </h2>
+    <br>
+    <table class="lista">
+@foreach($pets as $pets)
+        <li> Nome: {{$pets ['nome']}} <a id=edicoes href="/deletarPet/{{$pets->id}}">Deletar</a> <a id=edicoes href="/editarPet/{{$pets->id}}">Editar</a> </li>
+        <li> Especie: {{$pets ['especie']}} </li>
+    <hr>
+@endforeach
+    </table>
+    <a id="finalizar" href="/ranking-produtos">Finalizar</a> <a id="inserir" href="/cadastro-pet">Inserir outro Pet</a> 
+@else
 {{-- -----------------quando a pessoa NÂO tem pets cadastrados no site------------------ --}}
-<section class="container-listagem">
-<h2> Olá,  {{$names = collect(explode(' ', Auth::user()->name))->slice(0,1)->implode(' ')}} </h2>
-
-<br>
-<table class="lista">
-         <h3>Gostariamos de conhecer os seus Pets!</h3> <br></h4>Cadastre-os agora para receber as melhores indicações de produtos e avaliações de consumidores como você.</h4><hr>
+    <h2> Olá,  {{$names = collect(explode(' ', Auth::user()->name))->slice(0,1)->implode(' ')}} </h2>
+    <br>
+    <table class="lista">
+        <h3>Gostariamos de conhecer os seus Pets!</h3> <br></h4>Cadastre-os agora para receber as melhores indicações de produtos e avaliações de consumidores como você.</h4><hr>
      </table>
-     <a id=edicoes href="/ranking-produtos">Ir para Ranking</a><a id=edicoes href="/cadastro-pet">Adicionar Pet</a> 
-@endforelse
- 
+     <a id=edicoes href="/ranking-produtos">Ir para Ranking</a><a id=edicoes href="/cadastro-pet">Adicionar Pet</a>
+@endif
 </section>
+
+
 
 </div>
     <section class="base-listagem">
