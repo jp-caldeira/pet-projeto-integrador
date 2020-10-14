@@ -2,19 +2,18 @@ body {
     font-family: 'Quicksand', sans-serif;
 }
 
-.exibir{
+.exibir {
     position: relative;
     top: 130px;
     left: 350px;
     font-family: 'Quicksand', sans-serif;
-
 }
 
 .img-fluid {
-    border-radius: 40%;
+    border-radius: 50%;
     width: 300px;
     height: 300px;
-    border:5px solid rgb(3, 152, 158);
+    border: 2px solid rgb(3, 152, 158);
 }
 
 .descricao_exibir {
@@ -22,6 +21,7 @@ body {
     left: 770px;
     bottom: 150px;
     font-family: 'Quicksand', sans-serif;
+    color: rgb(3, 152, 158);
 }
 
 .titulo {
@@ -29,6 +29,7 @@ body {
     top: 110px;
     left: 330px;
     font-family: 'Quicksand', sans-serif;
+    color: rgb(114, 124, 124);
 }
 
 .whatsapp {

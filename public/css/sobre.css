@@ -8,9 +8,25 @@ html {
 }
 
 .meioesquerda {
-    width: 70%;
+    width: 50%;
     padding-left: 12%;
     float: left;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.primeirodireita {
+    width: 50%;
+    margin-top: 50px;
+    float: right;
+    font-family: 'Quicksand', sans-serif;
+    color: rgb(114, 124, 124);
+}
+
+.segundodireita {
+    width: 50%;
+    padding-left: 12%;
+    margin-top: 150px;
+    float: right;
     font-family: 'Quicksand', sans-serif;
 }
 
