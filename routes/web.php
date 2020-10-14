@@ -136,8 +136,13 @@ Route::post('/produto/{id}', 'ProdutoController@atualizarUmProduto');
 Route::get('/lista-comentarios', 'ComentariosController@exibirComentarios')
   ->name("lista-comentarios")->middleware('checkAdmin');;
 Route::get('/deletar-comentario/{id}', 'ComentariosController@deletarComentario')->middleware('checkAdmin');
-Route::get('/editar-comentario/{id}','ComentariosController@editarComentario')->middleware('checkAdmin');
+Route::get('/editar-comentario/{id}','ComentariosController@editarComentario');
 Route::post('/editar-comentario/{id}','ComentariosController@atualizarComentario')->middleware('checkAdmin');
+//comentários do usuário
+Route:: get('/coments-user','ComentariosController@comentsUser')->name("coments-user");
+Route::post('/edit-coments-user','ComentariosController@editComentsUser');
+Route::post('/atualizar-coments-user','ComentariosController@atualizarComentarioUser');
+Route::get('/delete-coments-user/{id}', 'ComentariosController@deletarComentarioUser');
 
 
 //-------------------------------CADASTRO PET----------------------//
