@@ -130,6 +130,6 @@
           @include('footer')
     </section>
 
-
+    <script src="{{ asset('js/alert.js')}}"></script>
 </body>
 </html>

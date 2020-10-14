@@ -23,13 +23,17 @@
               <h1>Nome: {{$petAdocao->nome_pet}}</h1>
               <h4>Raça: {{$petAdocao->raca}}</h4>
               <h4>Porte: {{$petAdocao->porte}}</h4>
-              <h4>Descrição: {{$petAdocao->comentario}}</h4>
-              <h4>Contatos para adoção abaixo: </h4>
-              <h5>Responsável pelo Pet: {{$petAdocao->nome_responsavel}}</h5>
-              <h5>Fale sobre o Pet pelo Whatsapp, clique no botão abaixo:</h5>
+              <h4>Descrição: {{$petAdocao->comentario}}</h4> 
+              <h4>Responsável pela Adoção: <b> {{$petAdocao->nome_responsavel}} </b></h4>
+          </div>
+          <div class="link">
+              <a href="mailto:{{$petAdocao->email}}?subject=Questions" title="" style="color:rgb(3, 152, 158)">E-mail: {{$petAdocao->email}}</a>
+              
+          </div>
+          <div class="link2">
+            <h5>Telefone: {{$petAdocao->fone}}</h5>
               <a href="https://api.whatsapp.com/send?phone={{$petAdocao->fone}}&text=Quero adotar o Pet" target="_blank">
               <img class="whatsapp" src="{!! asset('img/whatsapp.png') !!}"></a>
-
           </div>          
       
       <section class="base">

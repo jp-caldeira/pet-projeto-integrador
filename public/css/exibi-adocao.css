@@ -1,5 +1,6 @@
 body {
     font-family: 'Quicksand', sans-serif;
+    overflow-x: hidden;
 }
 
 .exibir {
@@ -13,7 +14,7 @@ body {
     border-radius: 50%;
     width: 300px;
     height: 300px;
-    border: 2px solid rgb(3, 152, 158);
+    border: 3px solid rgb(92, 91, 91);
 }
 
 .descricao_exibir {
@@ -36,5 +37,19 @@ body {
     position: relative;
     width: 100px;
     height: 100px;
-    left: 20px;
+    
+}
+
+.link {
+    position: relative;
+    left: 691px;
+    color: rgb(3, 152, 158);
+    bottom: 149px;
+}
+
+.link2 {
+    position: relative;
+    left: 770px;
+    color: rgb(3, 152, 158);
+    bottom: 149px;
 }
