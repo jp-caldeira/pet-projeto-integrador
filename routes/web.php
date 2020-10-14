@@ -88,6 +88,10 @@ Route::get('/trabalhe', function(){
     return view ('trabalhe');
 })->name("trabalhe");
 
+Route::get('/politica', function(){
+    return view ('politica');
+})->name("politica");
+
 
 //-------------------------------HEADER E FOOTER------------------------------//
 

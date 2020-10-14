@@ -8,10 +8,18 @@ html {
 }
 
 .meioesquerda {
-    width: 50%;
+    width: 70%;
     padding-left: 12%;
     float: left;
     font-family: 'Quicksand', sans-serif;
+}
+
+.politica {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+    color: rgb(114, 124, 124);
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
 
