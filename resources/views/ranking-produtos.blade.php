@@ -49,7 +49,7 @@
     </div>
 </form>
 
-      <div class="produtos" style="margin-left:210px">
+      <div class="produtos" style="margin-left:12%">
 
 
                 <div class="row">
@@ -64,7 +64,7 @@
                       <div class="col-lg-6 text-center">
                     <img src="{{ asset('storage/img/' . $produto->imagem) }}" class="img-fluid img-ranking" alt="produto">
                       <h3>{{$produto->nome}}</h3>
-                      <p >{{$produto->tipo_produto}}</p>
+                      <p>{{$produto->tipo_produto}}</p>
                       <h4>R$ {{$produto->preco}}</h3>
                       <a class='btn btn-lg active' style="background-color:rgb(3, 152, 158); color:white; width:200px; margin-bottom: 55px" href="/exibirUmProduto/{{ $produto->id }}">Ver Avaliação</a><br>
                   </div>

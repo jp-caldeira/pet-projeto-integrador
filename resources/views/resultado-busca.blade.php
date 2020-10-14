@@ -6,7 +6,6 @@
     <title>Busca - {{$pesquisa}} - Mundo Pet</title>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="/home.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="css/ranking.css">
   </head>
@@ -31,18 +30,18 @@
     </nav>
   </section>
 
-      <div class="produtos" style="margin-left:250px">
+      <div class="produtos" style="margin-left:15%">
                 <div class="row">
                   <div class="col-lg-10">
                     <div class="row">
-                      <div class="col-lg-10 offset-2" style="margin-top: 20px; margin-bottom: 60px">
+                      <div class="col-lg-10" style="margin-top: 5%; margin-bottom: 5%; margin-left:15%;">
                     <h1>Resultados para {{$pesquisa}}</h1>
                     </div>
                     </div>
                     <div class="row">
             @forelse ($produtos as $produto)
                       <div class="col-lg-6 text-center">
-                    <img src="{{ asset('storage/img/' . $produto->imagem) }}" class="img-fluid imagem" alt="produto">
+                    <img src="{{ asset('storage/img/' . $produto->imagem) }}" class="img-fluid img-ranking" alt="produto">
                       <h4 style="">{{$produto->nome}}</h4>
                       <p style="">{{$produto->tipo_produto}}</p>
                       <h4>R$ {{$produto->preco}}</h4>
