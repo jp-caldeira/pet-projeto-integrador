@@ -5,9 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Edição de comentário</title>
     <!-- Fonte do google pra entrar no codigo -->
+
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/homeadm.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/exibir.css') }}">
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 
 </head>
@@ -18,22 +19,22 @@
 </header>
 
 
-  <div class="container" style="margin-left:10%; margin-top:8%;">
-@isset($mensagem)
-  <div class="alert alert-warning alert-dismissible fade show" style="width:40%; margin-left:10%; margin-top:2%;" role="alert">
-    <h4>{{ $mensagem }}</h4>
-   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-     <span aria-hidden="true">&times;</span>
-   </button>
- </div>
-@endisset
 
+<div class="container box-edicao" style="margin-left:10%; margin-top:10%;">
+  <div class="container">
+  <div class="container col-sm-9" style="margin:1%;" >
+        <h1 class=''>Editar Comentário</h1>
 
-<div class="container">
-  <div class="container" style="margin: 2%;">
-    <h1 class=''>Editar Comentário</h1>
+         @isset($mensagem)
+        <div class="alert alert-warning alert-dismissible col-sm-4" role="alert">
+           <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+           <h5>{{ $mensagem }}</h5>
+        </div>
+
+       @endisset
+
   </div>
-  <div class="col-sm-9" style="background-color:white;">
+  <div class="col-sm-9">
     <p style="text-align:left; margin-left:auto;">Produto: <a style="padding: 0%" href="/produto/{{$comentario->produtos_id}}">{{$comentario->produto->nome}}</a></p>
     <p style="text-align:left;  margin-left:auto;">Sua nota: {{$comentario->nota}}</p>
     <p style="text-align:left; margin-left:auto;">Sua avaliação: <em>{{$comentario->body}}</em></p>
@@ -58,6 +59,8 @@
       </hr>
   </div>
 
+
+
 @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
@@ -68,6 +71,9 @@
     </div>
 @endif
 </div>
+
+
+
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -21,7 +21,7 @@
 <p id="texto">Os mimos que seu Pet Ama com as melhores Avaliações!</p>
 
 <br>
-        
+
 </section>
 
 <div class= "espacamento">
@@ -39,7 +39,8 @@
     <hr>
 @endforeach
     </table>
-    <a id="finalizar" href="/ranking-produtos">Finalizar</a> <a id="inserir" href="/cadastro-pet">Inserir outro Pet</a> 
+    <a id="finalizar" href="/ranking-produtos">Finalizar</a><a id="inserir" href="/cadastro-pet">Inserir outro Pet</a>
+    <a id="avaliacoes2" href="/coments-user">Suas avaliações</a>
 @else
 {{-- -----------------quando a pessoa NÂO tem pets cadastrados no site------------------ --}}
     <h2> Olá,  {{$names = collect(explode(' ', Auth::user()->name))->slice(0,1)->implode(' ')}} </h2>
@@ -48,6 +49,8 @@
         <h3>Gostariamos de conhecer os seus Pets!</h3> <br></h4>Cadastre-os agora para receber as melhores indicações de produtos e avaliações de consumidores como você.</h4><hr>
      </table>
      <a id=edicoes href="/ranking-produtos">Ir para Ranking</a><a id=edicoes href="/cadastro-pet">Adicionar Pet</a>
+     <br>
+     <a id="avaliacoes" href="/coments-user">Suas avaliações</a>
 @endif
 </section>
 

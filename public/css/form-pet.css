@@ -3,25 +3,25 @@ html {
     /* margin-left: 90px;
     margin-right: 50px; */
     font-family: 'Quicksand', sans-serif;
-    
+
 }
-   
+
 
 /* ---------------Listagem--------------- */
 
 .container-listagem{
   width: 45%;
   float: right;
-  padding-right: 10%; 
+  padding-right: 10%;
   font-family: 'Quicksand', sans-serif;
   font-size: 16px;
   list-style: none;
   margin-top: 20px;
-  
+
 }
 .base-listagem {
   float: left;
-  
+
 }
 .img {
   height: 280px;
@@ -49,15 +49,30 @@ html {
   font-size: 25px;
   float: right;
   text-decoration:none;
-  
+
 }
 #finalizar{
   color:  rgb(3, 152, 158);
   font-size: 25px;
   float: right;
   text-decoration:none;
-} 
- 
+}
+
+#avaliacoes{
+  color:  rgb(3, 152, 158);
+  text-decoration:none;
+  float: right;
+  padding-top: 2%;
+}
+
+#avaliacoes2{
+  color:  rgb(3, 152, 158);
+  font-size: 25px;
+  float: right;
+  text-decoration:none;
+  padding-top: 5%;
+}
+
 h4{
   font-family: 'Quicksand', sans-serif;
   font-size: 16px;
@@ -91,11 +106,11 @@ h4{
 }
 
 .container-pet-dados{
-    
+
     width: 45%;
     float: right;
     padding-right: 10%;
-   
+
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -114,39 +129,39 @@ h4{
 
     width: 45%;
     float: left;
-    padding-left: 13%;  
+    padding-left: 13%;
     font-family: 'Quicksand', sans-serif;
     font-size: 14px;
-   
+
 }
 .container-botao{
     width: 45%;
     float: right;
-    padding-right: 10%; 
+    padding-right: 10%;
 }
 button[type=submit]{
     margin-top: 50px;
     margin-bottom: 50px;
     /* margin-right: 115px; */
     float: right;
-    
+
 }
 
 #comentarios {
     width: 100%;
-    height: 100px; 
+    height: 100px;
     resize: none;
 }
 
 /* .titulo{
   background-color: rgb(3, 152, 158);
- 
+
 } */
 h1 {
     font-size: 27px;
-   
-    
-   
+
+
+
 }
 
 p {
@@ -184,14 +199,14 @@ input[type=radio] {
 }
   input#cachorro + label {
     background-image: url("../img/cao.jpg");
-    
+
   }
   input#cachorro:checked + label {
     border:3px solid #3F51B5;
     background-image: url("../img/memecachorro.jpg");
-      
+
   }
-  
+
   #gato+label {
     display: block;
     float: left;
@@ -206,7 +221,7 @@ input[type=radio] {
   input#gato:checked + label {
     border:3px solid #3F51B5;
     background-image: url("../img/memegato.jpg");
-  } 
+  }
 
 
   #passaro+label {
@@ -223,7 +238,7 @@ input[type=radio] {
   input#passaro:checked + label {
     border:3px solid #3F51B5;
     background-image: url("../img/memepassaro.jpg");
-  } 
+  }
 
   #roedor+label {
     display: block;
@@ -272,9 +287,3 @@ input[type=radio] {
     border:3px solid #3F51B5;
     background-image: url("../img/memepeixe.jpg");
   }
-
-  
-  
- 
-  
-

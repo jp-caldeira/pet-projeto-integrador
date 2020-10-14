@@ -146,10 +146,10 @@ Route::get('/deletar-comentario/{id}', 'ComentariosController@deletarComentario'
 Route::get('/editar-comentario/{id}','ComentariosController@editarComentario');
 Route::post('/editar-comentario/{id}','ComentariosController@atualizarComentario')->middleware('checkAdmin');
 //comentários do usuário
-Route:: get('/coments-user','ComentariosController@comentsUser')->name("coments-user");
-Route::post('/edit-coments-user','ComentariosController@editComentsUser');
-Route::post('/atualizar-coments-user','ComentariosController@atualizarComentarioUser');
-Route::get('/delete-coments-user/{id}', 'ComentariosController@deletarComentarioUser');
+Route:: get('/coments-user','ComentariosController@comentsUser')->name("coments-user")->middleware('auth');
+Route::post('/edit-coments-user','ComentariosController@editComentsUser')->middleware('auth');
+Route::post('/atualizar-coments-user','ComentariosController@atualizarComentarioUser')->middleware('auth');
+Route::get('/delete-coments-user/{id}', 'ComentariosController@deletarComentarioUser')->middleware('auth');
 
 
 //-------------------------------CADASTRO PET----------------------//

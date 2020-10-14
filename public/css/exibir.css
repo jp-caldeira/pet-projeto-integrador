@@ -102,6 +102,10 @@ h1 {
       box-shadow: inset 1px 1px 10px rgba(3, 152, 158, 0.2), 1px 1px 10px rgba(3, 152, 158, 0.2);
 }
 
+.box-edicao {
+    box-shadow: inset 1px 1px 10px rgba(3, 152, 158, 0.2), 1px 1px 10px rgba(3, 152, 158, 0.2);
+}
+
 .comment-texto {
     font-size: 1.5vw;
 }
@@ -117,9 +121,18 @@ h1 {
 
 .botaofooter a{
   color: rgb(3, 152, 158);
-  margin-left: 22%;  
+  margin-left: 22%;
   text-decoration: none;
 }
+
+.btn-editar {
+  background-color: rgb(3, 152, 158);
+  color: white;
+  margin-left: 0;
+}
+
+
+
 
 .botaofooter a:hover{
   text-decoration: none;
