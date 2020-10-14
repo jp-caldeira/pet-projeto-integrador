@@ -32,7 +32,7 @@
 
           </div>          
       
-      <section class="base">
+      <section>
           @include('footer')
       </section>
           <br>

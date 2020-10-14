@@ -106,6 +106,9 @@ Auth::routes();
 
 Route::get('/home','HomeController@index')->name('home');
 
+Route::get('/listausuarios', function(){
+    return view ('listausuarios');
+})->name("listausuarios");
 //-------------------------------PAGINA ADM----------------------//
 
 

@@ -45,6 +45,7 @@
                     <div class="parceiros">
                     <a href="https://www.petlove.com.br" style="color:white" >Disponivel na Petlove</a><br>
                     <a href="https://www.royalpets.com.br/" style="color:white" >Disponivel na Royal Pets</a><br>
+                    <a href="https://www.cobasi.com.br/" style="color:white" >Disponivel na Cobasi</a><br>
                     </div>
                 </div>
     </div>
@@ -58,11 +59,11 @@
           @include('comentarios')
         </div>
 
-        <div class="botaofooter">
+        <div class="botaofooter" style="font-size:30px; margin-left:60px;">
           <a href="{{ route('ranking') }}">Voltar para o ranking geral</a>
         </div>
 
-    <section class="base">
+    <section>
       @include('footer')
     </section>
     <br>
