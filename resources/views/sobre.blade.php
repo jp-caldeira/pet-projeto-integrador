@@ -24,9 +24,9 @@
 
     <p>A Mundo Pet é um site onde você encontra as melhores avaliações para os produtos que trazem a felicidade do seu pet.
     São opiniões de outros clientes que como você querem ter suas expectativas alcançadas com suas compras.</p>
-    <button class="botao" href="#" role="button">Cadastre-se e Avalie</button>
+    <a  class='btn btn-lg active' style="margin-left:10px;" href="{{ route('login') }}">Cadastre-se e Avalie</a>
    
-    {{-- <h2 >Ainda com dúvidas? Confira em nossas</h2> <a id="perguntas" href="#">"Perguntas Frequentes"</a> --}}
+     <h2 >Ainda com dúvidas? Confira em nossas</h2> <a id="perguntas"  href="{{ route('perguntas') }}">"Perguntas Frequentes"</a> 
 </div>
 
 <div class=imagem-cupom>

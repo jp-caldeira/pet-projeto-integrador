@@ -136,8 +136,10 @@
                                 <div class="file-path-wrapper"></div>
                         </div><br>
                         </div>
-                    
+                    <br>
+                    <br>
                             <button class="botao" type="submit">Atualize</button><br>
+                            <br>
                             <div class="botaovoltar"> <a onclick="location.href='/lista'"><br>Voltar e não atualizar</a></div>
                         <br>
         </form>

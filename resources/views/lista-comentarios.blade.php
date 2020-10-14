@@ -27,7 +27,7 @@
           <div class="container" style="margin-top:3%;">
             <h1 class="text-center" style="margin-bottom: 5%;">Lista de Comentários</h1>
                 <table class="table table-bordered" style="font-size:1vw; background-color:white;">
-                  <thead class="thead-dark">
+                  <thead class="thead-light">
                     <tr>
                       <th scope="col">id</th>
                       <th scope="col">Comentário</th>

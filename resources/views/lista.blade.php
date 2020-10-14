@@ -69,10 +69,10 @@
               </table>
                 </div>
                 <div class="file-path-wrapper">
-                     <button class="botao" style="margin-left:500px; font-size:13px;"> <a onclick="location.href='/adminlog'"> <br>Cadastrar mais Produtos </a></button>
+                <a type="button" class="botao" onclick="location.href='/adminlog'" style="color: white; margin-left:500px; height:35px;"> Cadastrar mais Produtos </a>
 </div>
                <br>
-            <section class="base">
+            <section >
                   @include('footer')
             </section>
       </body>

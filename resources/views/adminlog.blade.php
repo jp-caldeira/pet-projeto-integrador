@@ -26,8 +26,8 @@
             <br>
             <p style="font-size:15px">Gerencie os comentários e<br> usuários da Plataforma</p>
             <img class="primeiraimg" src="/img/admin.jpg" alt="catiorro trabalhador"><br>
-            <p><a href="/lista" class="btn btn-default" role="button">Usuarios</a></p>
-            <p><a href="/lista-comentarios" class="btn btn-default" role="button">Comentários</a></p>
+            <p><a href="/lista" class="btn btn-default" style="background-color: rgb(3, 152, 158); color: white;" role="button">Usuarios</a></p>
+            <p><a href="/lista-comentarios" class="btn btn-default" style="background-color: rgb(3, 152, 158); color: white;" role="button">Comentários</a></p>
 
             <br>
         </section>
@@ -37,7 +37,7 @@
                         <div class="caption">
                         <p>Todos os produtos</p>
                     <p>Aqui temos acesso ao banco de dados para editar, excluir e visualizar produtos</p><br>
-                <p><a href="/lista" class="btn btn-default" role="button">Veja nossos produtos</a></p>
+                <p><a href="/lista" class="btn btn-default" style="background-color: rgb(3, 152, 158); color: white;" role="button">Veja nossos produtos</a></p>
             <br>
             <br>
             </div>
@@ -165,8 +165,9 @@
                         </div>
                     </div>
                     <br>
-                        <button type="submit" class="botao">Cadastrar</button> <br>
-
+                    
+                        <button type="submit" style="margin-top:50px; height:30px;" class="botao">Cadastrar</button><br><br>
+ 
                 </form>
             </div>
                 </div>
@@ -180,11 +181,9 @@
                 </div>
         </div>
 
-                <div class="base">
                     <section>
                          @include('footer')
                  </section>
-            </div>
 
     </body>
   </html>
